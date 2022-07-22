@@ -42,3 +42,49 @@ extension Solution {
     }
   }
 }
+
+extension Solution {
+  func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+    guard left != right else { return head }
+    
+    let result = head
+    var count = 1
+    var head = head
+    var tempArray: [ListNode] = []
+    
+    while head != nil {
+      if count >= left && count <= right {
+        tempArray.append(head!)
+      } else if count > right {
+        break
+      }
+      head = head?.next
+      count += 1
+    }
+    
+    var temp: Int
+    count = tempArray.count - 1
+    for index in 0...count / 2 {
+      temp = tempArray[index].val
+      tempArray[index].val = tempArray[count - index].val
+      tempArray[count - index].val = temp
+    }
+    
+    return result
+  }
+  
+  func testReverseBetween() {
+    let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3))))))
+    var result: ListNode? = Solution().reverseBetween(a, 2, 5)
+
+    while result != nil {
+     print("result: \(result?.val)")
+      result = result?.next
+    }
+    
+//    [3,5] == [5,3]
+//    1
+//    2
+  }
+}
+
