@@ -54,7 +54,7 @@ extension Solution.Easy {
     }
     head = result
     let max = array.count - 1
-    for index in 0...max {
+    for index in 0..<array.count {
       head?.val = array[max - index]
       head = head?.next
     }
@@ -70,5 +70,33 @@ extension Solution.Easy {
      print("result: \(result!.val)")
       result = result?.next
     }
+  }
+}
+
+// MARK: Reverse list
+extension Solution.Easy {
+  static func isPalindrome(_ head: ListNode?) -> Bool {
+    var head = head
+    var array: [Int] = []
+    
+    while head != nil {
+      array.append(head!.val)
+      head = head?.next
+    }
+    
+    let max = array.count - 1
+    for (index, value) in array.enumerated() {
+      if array[index] != array[max - index] {
+        return false
+      }
+    }
+    
+    return true
+  }
+  
+  static func testIsPalindrome() {
+    let a =  ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(2, ListNode(1))))))
+    
+     print("result: \(Solution.Easy.isPalindrome(a))")
   }
 }

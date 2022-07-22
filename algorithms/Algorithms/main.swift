@@ -8,4 +8,4 @@
 import Foundation
 
 //Solution().testDeleteDuplicates()
-Solution.Easy.testReverseList()
+Solution.Easy.testIsPalindrome()
