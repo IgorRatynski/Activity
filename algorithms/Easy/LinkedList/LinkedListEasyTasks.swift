@@ -35,7 +35,7 @@ extension Solution.Easy {
     var result: ListNode? = deleteDuplicates(a)
 
     while result != nil {
-     print("result: \(result?.val)")
+     print("result: \(result!.val)")
       result = result?.next
     }
   }
@@ -67,7 +67,7 @@ extension Solution.Easy {
     var result: ListNode? = Solution.Easy.reverseList(a)
 
     while result != nil {
-     print("result: \(result?.val)")
+     print("result: \(result!.val)")
       result = result?.next
     }
   }
