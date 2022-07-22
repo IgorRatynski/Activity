@@ -1,5 +1,5 @@
 //
-//  LinkedListTasks.swift
+//  LinkedListMediumTasks.swift
 //  Medium
 //
 //  Created by Igor Ratynski on 17.07.2022.
@@ -8,8 +8,8 @@
 import Foundation
 
 // MARK: - Delete duplicates
-extension Solution {
-  func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+extension Solution.Medium {
+  static func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     let result = ListNode()
     var lastValue: Int?
     var currentNode: ListNode? = result
@@ -32,9 +32,9 @@ extension Solution {
     return result.next
   }
   
-  func testDeleteDuplicates() {
+  static func testDeleteDuplicates() {
     let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(3)))))))
-    var result: ListNode? = Solution().deleteDuplicates(a)
+    var result: ListNode? = deleteDuplicates(a)
 
     while result != nil {
      print("result: \(result!.val)")
@@ -43,8 +43,8 @@ extension Solution {
   }
 }
 
-extension Solution {
-  func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+extension Solution.Medium {
+  static func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
     guard left != right else { return head }
     
     let result = head
@@ -73,9 +73,9 @@ extension Solution {
     return result
   }
   
-  func testReverseBetween() {
+  static func testReverseBetween() {
     let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3))))))
-    var result: ListNode? = Solution().reverseBetween(a, 2, 5)
+    var result: ListNode? = reverseBetween(a, 2, 5)
 
     while result != nil {
      print("result: \(result?.val)")
