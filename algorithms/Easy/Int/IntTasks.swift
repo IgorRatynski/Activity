@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Solution {
+extension Solution.Easy {
 //  func descendingOrder(of number: Int) -> Int {
 ////    Int(String(number).sorted(by: { Int($0) > Int($1) }))
 //    String(number).sorted(by: { Int($0) > Int($1) })
