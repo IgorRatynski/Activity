@@ -8,5 +8,11 @@
 import Foundation
 
 class Solution {
+  enum Easy {
   
+  }
+  
+  enum Medium {
+    
+  }
 }

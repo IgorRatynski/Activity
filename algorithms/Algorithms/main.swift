@@ -7,4 +7,4 @@
 
 import Foundation
 
-Solution().testDeleteDuplicates()
+Solution.Easy.testIsPalindromeString()
