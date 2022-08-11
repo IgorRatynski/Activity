@@ -7,4 +7,4 @@
 
 import Foundation
 
-Solution.Easy.testIsPalindromeString()
+Solution.Hard.testCountSmaller()

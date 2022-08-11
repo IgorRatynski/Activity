@@ -15,4 +15,8 @@ class Solution {
   enum Medium {
     
   }
+  
+  enum Hard {
+    
+  }
 }
