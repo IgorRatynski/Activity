@@ -8,15 +8,15 @@
 import Foundation
 
 class Solution {
-  enum Easy {
+  struct Easy {
   
   }
   
-  enum Medium {
+  struct Medium {
     
   }
   
-  enum Hard {
+  struct Hard {
     
   }
 }

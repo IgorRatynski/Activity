@@ -7,4 +7,4 @@
 
 import Foundation
 
-Solution.Easy.testIsHappy()
+Solution.Easy().testMostWordsFound()
