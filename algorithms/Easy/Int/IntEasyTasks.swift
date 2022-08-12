@@ -35,9 +35,8 @@ extension Solution.Easy {
       } else {
         cache.insert(n)
       }
-      tempResult = 0
-      print("### n in: \(n) ")
       
+      tempResult = 0
       while n > 9 {
         tempLast = n % 10
         n = n / 10
@@ -45,7 +44,6 @@ extension Solution.Easy {
       }
       
       tempResult += n * n
-      
       n = tempResult
     }
     

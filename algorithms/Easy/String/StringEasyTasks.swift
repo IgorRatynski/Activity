@@ -39,3 +39,24 @@ extension Solution.Easy {
     print(isPalindrome(s))
   }
 }
+
+// MARK: Most words found
+extension Solution.Easy {
+  func mostWordsFound(_ sentences: [String]) -> Int {
+    var result = 1, tempResult: Int
+    
+    for sentence in sentences {
+      tempResult = 1
+      for letter in sentence {
+        guard letter == " " else { continue }
+        tempResult += 1
+      }
+      
+      if result < tempResult {
+        result = tempResult
+      }
+    }
+    
+    return result
+  }
+}
