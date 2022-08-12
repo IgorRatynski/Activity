@@ -7,4 +7,4 @@
 
 import Foundation
 
-Solution.Hard.testCountSmaller()
+Solution.Easy.testIsHappy()
