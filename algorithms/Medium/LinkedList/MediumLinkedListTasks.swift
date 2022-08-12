@@ -1,5 +1,5 @@
 //
-//  LinkedListMediumTasks.swift
+//  MediumLinkedListTasks.swift
 //  Medium
 //
 //  Created by Igor Ratynski on 17.07.2022.

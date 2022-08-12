@@ -1,5 +1,5 @@
 //
-//  LinkedListEasyTasks.swift
+//  EasyLinkedListTasks.swift
 //  Easy
 //
 //  Created by Igor Ratynski on 17.07.2022.
