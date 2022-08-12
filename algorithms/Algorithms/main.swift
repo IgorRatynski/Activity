@@ -7,4 +7,4 @@
 
 import Foundation
 
-Solution.Easy().testCheckTree()
+Solution.Easy().testAddString()

@@ -100,3 +100,35 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: Add strings
+extension Solution.Easy {
+  func addStrings(_ num1: String, _ num2: String) -> String {
+    var result = "", addToNext = false, tempResult: Int, num1 = num1, num2 = num2, temp1: Int, temp2: Int
+    
+    while !num1.isEmpty || !num2.isEmpty || addToNext {
+      temp1 = 0; temp2 = 0
+      
+      if !num1.isEmpty {
+        temp1 = Int(String(num1.removeLast()))!
+      }
+      if !num2.isEmpty {
+        temp2 = Int(String(num2.removeLast()))!
+      }
+      
+      tempResult = temp1 + temp2 + (addToNext ? 1 : 0)
+      if addToNext {
+        addToNext = false
+      }
+      
+      if tempResult > 9 {
+        print("more!")
+        tempResult -= 10
+        addToNext = true
+      }
+      result.append(String(tempResult))
+    }
+    
+    return String(result.reversed())
+  }
+}
