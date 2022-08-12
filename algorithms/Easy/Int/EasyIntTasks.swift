@@ -1,5 +1,5 @@
 //
-//  IntEasyTasks.swift
+//  EasyIntTasks.swift
 //  Easy
 //
 //  Created by Igor Ratynski on 22.07.2022.

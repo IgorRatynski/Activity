@@ -1,5 +1,5 @@
 //
-//  IntArrayHardTasks.swift
+//  HardIntArrayTasks.swift
 //  Hard
 //
 //  Created by Igor Ratynski on 23.07.2022.

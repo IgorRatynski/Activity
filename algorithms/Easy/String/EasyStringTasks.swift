@@ -1,5 +1,5 @@
 //
-//  StringEasyTasks.swift
+//  EasyStringTasks.swift
 //  Easy
 //
 //  Created by Igor Ratynski on 22.07.2022.
@@ -37,6 +37,46 @@ extension Solution.Easy {
     print(isPalindrome(s))
     s = " "
     print(isPalindrome(s))
+  }
+}
+
+// MARK: Valip polindrome
+extension Solution.Easy {
+  static func validPalindrome(_ s: String) -> Bool {
+    var firstPtr = 0
+    var secondPtr = s.count - 1
+    let s = s.utf8CString
+    var fails = 0
+    
+    while firstPtr < secondPtr {
+      print("# 1: \(s[firstPtr]) c: \(firstPtr), 2: \(s[secondPtr]) c: \(secondPtr)")
+      if s[firstPtr] != s[secondPtr] {
+//        if fails == 0 && secondPtr - firstPtr > 1 {
+//          fails += 1
+//        } else {
+//          return secondPtr - firstPtr < 2
+//        }
+        if secondPtr + 1 - firstPtr - 1 >= 0 {
+          fails += 1
+        } else {
+          return secondPtr - firstPtr < 2
+        }
+      }
+      firstPtr += 1
+      secondPtr -= 1
+    }
+    
+    return true
+  }
+  
+  static func testIsValindromeString() {
+    var s = "abcddffcba"
+//    var s = "abc"
+    print(validPalindrome(s))
+//    s = "abcddfcba"
+//    print(validPalindrome(s))
+//    s = "abcdddcba"
+//    print(validPalindrome(s))
   }
 }
 
