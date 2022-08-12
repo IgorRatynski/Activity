@@ -1,3 +1,12 @@
+//
+//  EasyIntArrayTasks.swift
+//  Algorithms
+//
+//  Created by Igor Ratynski on 23.07.2022.
+//
+
+import Foundation
+
 //  print("# m: \(m), n: \(n), ip: \(inoutPointer), nums1: \(nums1)")
 extension Solution.Easy {
   static func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {

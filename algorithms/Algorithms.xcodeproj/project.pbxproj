@@ -16,6 +16,7 @@
 		472A99602883985B00D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472A99612883986600D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472A99622883986600D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
+		4762805728A69FD10068F752 /* EasyBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780DB0D28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift */; };
 		476DFD562883A092009C266B /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		476DFD582883A099009C266B /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		476DFD592883A09D009C266B /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
@@ -392,6 +393,7 @@
 				472A99602883985B00D7ACEE /* Solution.swift in Sources */,
 				476DFD6F288A43C0009C266B /* EasyStringTasks.swift in Sources */,
 				472A995D2883984000D7ACEE /* main.swift in Sources */,
+				4762805728A69FD10068F752 /* EasyBinaryTreeTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
