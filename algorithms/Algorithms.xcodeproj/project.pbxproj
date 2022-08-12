@@ -177,6 +177,7 @@
 		472A99342883958200D7ACEE /* Easy */ = {
 			isa = PBXGroup;
 			children = (
+				4780DB0C28A69A8D00CC3615 /* BinaryTree */,
 				472621D0288C910D00B8D183 /* IntArray */,
 				476DFD6C288A43A1009C266B /* String */,
 				476DFD60288A1108009C266B /* Int */,
@@ -239,6 +240,13 @@
 				476DFD6D288A43B1009C266B /* StringEasyTasks.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		4780DB0C28A69A8D00CC3615 /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BinaryTree;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
