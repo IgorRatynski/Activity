@@ -144,3 +144,27 @@ extension Solution.Easy {
     return String(result)
   }
 }
+
+// MARK: Find the difference
+extension Solution.Easy {
+  func findTheDifference(_ s: String, _ t: String) -> Character {
+    let last = t.last!, s = Array<Character>(s), t = Array<Character>(t)
+    var sDictionary: [Character:Int] = [:], tDictionary: [Character:Int] = [:]
+    
+    for index in 0..<s.count {
+      sDictionary[s[index]] = (sDictionary[s[index]] ?? 0) + 1
+      tDictionary[t[index]] = (tDictionary[t[index]] ?? 0) + 1
+    }
+    tDictionary[last]  = (tDictionary[last] ?? 0) + 1
+    
+    for key in tDictionary.keys {
+      if sDictionary[key] != nil {
+        guard sDictionary[key] != tDictionary[key] else { continue }
+        return key
+      } else {
+        return key
+      }
+    }
+    return last
+  }
+}
