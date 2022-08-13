@@ -117,18 +117,30 @@ extension Solution.Easy {
       }
       
       tempResult = temp1 + temp2 + (addToNext ? 1 : 0)
-      if addToNext {
-        addToNext = false
-      }
+//      if addToNext {
+//        addToNext = false
+//      }
       
       if tempResult > 9 {
-        print("more!")
         tempResult -= 10
         addToNext = true
+      } else {
+        addToNext = false
       }
       result.append(String(tempResult))
     }
     
     return String(result.reversed())
+  }
+}
+
+// MARK: Letter combinations
+extension Solution.Easy {
+  func restoreString(_ s: String, _ indices: [Int]) -> String {
+    var result = Array<Character?>(repeating: nil, count: s.count)
+    for (index, item) in s.enumerated() {
+      result[indices[index]] = item
+    }
+    return String(result.compactMap { $0 })
   }
 }
