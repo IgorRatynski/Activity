@@ -19,6 +19,8 @@
 		4762805728A69FD10068F752 /* EasyBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780DB0D28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift */; };
 		4762805B28A6F3EB0068F752 /* MediumHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805A28A6F3EB0068F752 /* MediumHashMap.swift */; };
 		4762805C28A6F3EB0068F752 /* MediumHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805A28A6F3EB0068F752 /* MediumHashMap.swift */; };
+		4762805F28A836990068F752 /* MediumIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805E28A836990068F752 /* MediumIntArrayTasks.swift */; };
+		4762806028A8384A0068F752 /* MediumIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805E28A836990068F752 /* MediumIntArrayTasks.swift */; };
 		476DFD562883A092009C266B /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		476DFD582883A099009C266B /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		476DFD592883A09D009C266B /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
@@ -84,6 +86,7 @@
 		472A99532883975B00D7ACEE /* MediumLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumLinkedListTasks.swift; sourceTree = "<group>"; };
 		472A995F2883985B00D7ACEE /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		4762805A28A6F3EB0068F752 /* MediumHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumHashMap.swift; sourceTree = "<group>"; };
+		4762805E28A836990068F752 /* MediumIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumIntArrayTasks.swift; sourceTree = "<group>"; };
 		476DFD4D2883A04D009C266B /* EasyLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyLinkedListTasks.swift; sourceTree = "<group>"; };
 		476DFD4F2883A066009C266B /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		476DFD61288A111B009C266B /* EasyIntTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyIntTasks.swift; sourceTree = "<group>"; };
@@ -196,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				4762805928A6F3D50068F752 /* HashMap */,
+				4762805D28A8367A0068F752 /* IntArray */,
 				472A99522883975200D7ACEE /* LinkedList */,
 			);
 			path = Medium;
@@ -223,6 +227,14 @@
 				4762805A28A6F3EB0068F752 /* MediumHashMap.swift */,
 			);
 			path = HashMap;
+			sourceTree = "<group>";
+		};
+		4762805D28A8367A0068F752 /* IntArray */ = {
+			isa = PBXGroup;
+			children = (
+				4762805E28A836990068F752 /* MediumIntArrayTasks.swift */,
+			);
+			path = IntArray;
 			sourceTree = "<group>";
 		};
 		476DFD4C2883A04D009C266B /* LinkedList */ = {
@@ -401,6 +413,7 @@
 				476DFD582883A099009C266B /* DataStructures.swift in Sources */,
 				476DFD5F2883A108009C266B /* MediumLinkedListTasks.swift in Sources */,
 				476DFD6A288A3931009C266B /* EasyLinkedListTasks.swift in Sources */,
+				4762806028A8384A0068F752 /* MediumIntArrayTasks.swift in Sources */,
 				4762805B28A6F3EB0068F752 /* MediumHashMap.swift in Sources */,
 				472621D2288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */,
 				472A99602883985B00D7ACEE /* Solution.swift in Sources */,
@@ -432,6 +445,7 @@
 				4762805C28A6F3EB0068F752 /* MediumHashMap.swift in Sources */,
 				476DFD592883A09D009C266B /* DataStructures.swift in Sources */,
 				472A99612883986600D7ACEE /* Solution.swift in Sources */,
+				4762805F28A836990068F752 /* MediumIntArrayTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
