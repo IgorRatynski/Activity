@@ -118,4 +118,22 @@ extension Solution.Easy {
     return result
   }
 }
-        
+
+// MARK: Single number
+extension Solution.Easy {
+  func singleNumber(_ nums: [Int]) -> Int {
+    var result: [Int] = [], cache: [Int:Int] = [:]
+    
+    for value in nums {
+      cache[value] = (cache[value] ?? 0) + 1
+      if cache[value] == 1 {
+        result.append(value)
+      } else {
+        guard let index = result.firstIndex(of: value) else { continue }
+        result.remove(at: index)
+      }
+    }
+    
+    return result.first!
+  }
+}
