@@ -137,10 +137,10 @@ extension Solution.Easy {
 // MARK: Letter combinations
 extension Solution.Easy {
   func restoreString(_ s: String, _ indices: [Int]) -> String {
-    var result = Array<Character?>(repeating: nil, count: s.count)
+    var result = Array<Character>(repeating: " ", count: s.count)
     for (index, item) in s.enumerated() {
       result[indices[index]] = item
     }
-    return String(result.compactMap { $0 })
+    return String(result)
   }
 }

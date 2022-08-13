@@ -103,4 +103,25 @@ extension Solution.Easy {
 //  }
 }
 
+// MARK: Good pairs
+extension Solution.Easy {
+  func testNumIdenticalPairs() {
+    let nums = [1,2,3,1,1,3]
+    
+    print(numIdenticalPairs(nums))
+  }
+  
+  func numIdenticalPairs(_ nums: [Int]) -> Int {
+    var result = 0
+
+    for indexI in 0..<(nums.count - 1) {
+      for indexJ in (indexI + 1)..<nums.count {
+        guard nums[indexI] == nums[indexJ] else { continue }
+        result += 1
+      }
+    }
+    
+    return result
+  }
+}
         
