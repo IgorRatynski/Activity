@@ -158,13 +158,28 @@ extension Solution.Easy {
     tDictionary[last]  = (tDictionary[last] ?? 0) + 1
     
     for key in tDictionary.keys {
-      if sDictionary[key] != nil {
-        guard sDictionary[key] != tDictionary[key] else { continue }
-        return key
-      } else {
-        return key
-      }
+      guard sDictionary[key] != nil else { return key }
+      guard sDictionary[key] != tDictionary[key] else { continue }
+      return key
     }
     return last
+  }
+}
+
+// MARK: Truncate sentence
+extension Solution.Easy {
+  func truncateSentence(_ s: String, _ k: Int) -> String {
+    var wordsIndex = 0, resultIndex = s.count
+    
+    for (index, value) in s.enumerated() {
+      guard value == " " else { continue }
+      wordsIndex += 1
+      guard k == wordsIndex else { continue }
+      resultIndex = index
+      break
+    }
+    
+    let index = s.index(s.startIndex, offsetBy: resultIndex)
+    return s.substring(to: index)
   }
 }
