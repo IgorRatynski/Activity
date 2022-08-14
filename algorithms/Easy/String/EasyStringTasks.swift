@@ -183,3 +183,21 @@ extension Solution.Easy {
     return s.substring(to: index)
   }
 }
+
+// MARK: Unique morse representations
+extension Solution.Easy {
+  func uniqueMorseRepresentations(_ words: [String]) -> Int {
+    let letters: [Character:String] = ["a":".-","b":"-...","c":"-.-.","d":"-..","e":".","f":"..-.","g":"--.","h":"....","i":"..","j":".---","k":"-.-","l":".-..","m":"--","n":"-.","o":"---","p":".--.","q":"--.-","r":".-.","s":"...","t":"-","u":"..-","v":"...-","w":".--","x":"-..-","y":"-.--","z":"--.."]
+    var result = Set<String>(), tempString: String
+    
+    for word in words {
+      tempString = ""
+      for character in word {
+        tempString.append(letters[character]!)
+      }
+      result.insert(tempString)
+    }
+    
+    return result.count
+  }
+}
