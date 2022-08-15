@@ -201,3 +201,25 @@ extension Solution.Easy {
     return result.count
   }
 }
+
+// MARK: Is isomorphic
+extension Solution.Easy {
+  func isIsomorphic(_ s: String, _ t: String) -> Bool {
+    guard s.count == t.count else { return false }
+    let s = Array<Character>(s), t = Array<Character>(t)
+    var sMap: [Character:Int] = [:], tMap: [Character:Int] = [:]
+    for index in 0..<s.count {
+      if sMap[s[index]] == nil {
+        sMap[s[index]] = index
+      }
+      if tMap[t[index]] == nil {
+        tMap[t[index]] = index
+      }
+      if sMap[s[index]] != tMap[t[index]] {
+        return false
+      }
+    }
+    
+    return true
+  }
+}
