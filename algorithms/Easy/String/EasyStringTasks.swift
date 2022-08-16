@@ -223,3 +223,23 @@ extension Solution.Easy {
     return true
   }
 }
+
+  // MARK: Max score
+extension Solution.Easy {
+  func maxScore(_ s: String) -> Int {
+    var result = 0, left: Substring, right: Substring, sIndex: String.Index
+    
+    // TODO: optimization: check is need to go further
+    // string -> [Int] of 0 indexes and count how many before string devider and fullCount - devider - zeroCount after
+    for index in 1..<s.count {
+      sIndex = s.index(s.startIndex, offsetBy: index)
+      left = s[s.startIndex..<sIndex]
+      right = s[sIndex..<s.endIndex]
+      
+      result = max(result, left.filter { $0 == "0" }.count + right.filter { $0 == "1" }.count)
+    }
+
+    return result
+  }
+}
+}
