@@ -7,7 +7,10 @@
 
 import Foundation
 
-Solution.Easy().testLetterCombinations()
+//Solution.Easy().testLetterCombinations()
+
+let nums = [1,2,3,4,5,4,4,5,4,4,3,5,5,3,4,5,54,5,4,543,3,5,3,4,5,4]
+Solution.Easy().containsDuplicate(nums)
 
 //let n = 5
 //var input =
