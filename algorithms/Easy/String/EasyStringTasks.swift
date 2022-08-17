@@ -7,79 +7,6 @@
 
 import Foundation
 
-extension Solution.Easy {
-  static func isPalindrome(_ s: String) -> Bool {
-//    let a = Array(s.lowercased().replacingOccurrences(of:"[^0-9a-z]", with: "", options: .regularExpression))
-//
-//    var max = a.count - 1
-//    for index in 0..<a.count / 2 {
-//      if a[index] == a[max] {
-//        max -= 1
-//      } else {
-//        return false
-//      }
-//    }
-    
-    var a = s.lowercased().replacingOccurrences(of:"[^0-9a-z]", with: "", options: .regularExpression)
-    
-    while true {
-      if a.removeFirst() != a.removeLast() {
-        return false
-      }
-    }
-    return true
-  }
-  
-  static func testIsPalindromeString() {
-    var s = "A man, a plan, a canal: Panama"
-    print(isPalindrome(s))
-    s = "race a car"
-    print(isPalindrome(s))
-    s = " "
-    print(isPalindrome(s))
-  }
-}
-
-// MARK: Valip polindrome
-extension Solution.Easy {
-  static func validPalindrome(_ s: String) -> Bool {
-    var firstPtr = 0
-    var secondPtr = s.count - 1
-    let s = s.utf8CString
-    var fails = 0
-    
-    while firstPtr < secondPtr {
-      print("# 1: \(s[firstPtr]) c: \(firstPtr), 2: \(s[secondPtr]) c: \(secondPtr)")
-      if s[firstPtr] != s[secondPtr] {
-//        if fails == 0 && secondPtr - firstPtr > 1 {
-//          fails += 1
-//        } else {
-//          return secondPtr - firstPtr < 2
-//        }
-        if secondPtr + 1 - firstPtr - 1 >= 0 {
-          fails += 1
-        } else {
-          return secondPtr - firstPtr < 2
-        }
-      }
-      firstPtr += 1
-      secondPtr -= 1
-    }
-    
-    return true
-  }
-  
-  static func testIsValindromeString() {
-    var s = "abcddffcba"
-//    var s = "abc"
-    print(validPalindrome(s))
-//    s = "abcddfcba"
-//    print(validPalindrome(s))
-//    s = "abcdddcba"
-//    print(validPalindrome(s))
-  }
-}
-
 // MARK: Most words found
 extension Solution.Easy {
   func mostWordsFound(_ sentences: [String]) -> Int {
@@ -117,9 +44,6 @@ extension Solution.Easy {
       }
       
       tempResult = temp1 + temp2 + (addToNext ? 1 : 0)
-//      if addToNext {
-//        addToNext = false
-//      }
       
       if tempResult > 9 {
         tempResult -= 10
@@ -224,11 +148,10 @@ extension Solution.Easy {
   }
 }
 
-  // MARK: Max score
+// MARK: Max score
 extension Solution.Easy {
   func maxScore(_ s: String) -> Int {
     var result = 0, left: Substring, right: Substring, sIndex: String.Index
-    
     // TODO: optimization: check is need to go further
     // string -> [Int] of 0 indexes and count how many before string devider and fullCount - devider - zeroCount after
     for index in 1..<s.count {
@@ -238,8 +161,117 @@ extension Solution.Easy {
       
       result = max(result, left.filter { $0 == "0" }.count + right.filter { $0 == "1" }.count)
     }
-
     return result
   }
 }
+
+// TODO: is palindrome
+extension Solution.Easy {
+  func isPalindrome(_ s: String) -> Bool {
+//    let a = Array(s.lowercased().replacingOccurrences(of:"[^0-9a-z]", with: "", options: .regularExpression))
+//
+//    var max = a.count - 1
+//    for index in 0..<a.count / 2 {
+//      if a[index] == a[max] {
+//        max -= 1
+//      } else {
+//        return false
+//      }
+//    }
+    
+//    var a = s.lowercased().replacingOccurrences(of:"[^0-9a-z]", with: "", options: .regularExpression)
+//
+//    while true {
+//      if a.removeFirst() != a.removeLast() {
+//        return false
+//      }
+//    }
+    return true
+  }
 }
+
+// TODO: Valid polindrome
+extension Solution.Easy {
+  func validPalindrome(_ s: String) -> Bool {
+    var firstPtr = 0, secondPtr = s.count - 1, fails = 0
+    let s = s.utf8CString
+    
+    while firstPtr < secondPtr {
+      print("# 1: \(s[firstPtr]) c: \(firstPtr), 2: \(s[secondPtr]) c: \(secondPtr)")
+      if s[firstPtr] != s[secondPtr] {
+//        if fails == 0 && secondPtr - firstPtr > 1 {
+//          fails += 1
+//        } else {
+//          return secondPtr - firstPtr < 2
+//        }
+        if secondPtr + 1 - firstPtr - 1 >= 0 {
+          fails += 1
+        } else {
+          return secondPtr - firstPtr < 2
+        }
+      }
+      firstPtr += 1
+      secondPtr -= 1
+    }
+    
+    return true
+  }
+}
+
+// TODO: Letter combinations
+extension Solution.Easy {
+  func testLetterCombinations() {
+    let s = "2232"
+    
+    print(letterCombinations(s))
+////    let didgitLetters: [String : String] = ["2":"abc", "3":"def", "4":"ghi", "5":"jkl", "6":"mno", "7":"pqrs", "8":"tuv", "9":"xyz"]
+//    let didgitLetters: [String : [String]] = ["2": ["a","b","c"], "3":["d","e","f"], "4":["g","h","i"], "5":["j","k","l"], "6":["m","n","o"], "7":["p","q","r","s"], "8":["t","u","v"], "9":["x","y","z"]]
+  }
+    
+    struct DidgitsEnumerator {
+      let didgitLetters: [String : [String]] = ["2":["a","b","c"], "3":["d","e","f"],     "4":["g","h","i"], "5":["j","k","l"],
+                                                "6":["m","n","o"], "7":["p","q","r","s"], "8":["t","u","v"], "9":["x","y","z"]]
+      
+      var value: String {
+        var result = ""
+  //      didgitLetters.map { $0.key[$0.value] }
+        for index in 0..<counterArray.count {
+          result.append(counterArray[index][indexesArray[index]])
+        }
+        
+//        counterArray.map { $0 }
+        
+        return result
+      }
+      
+      var currentIndex: Int
+
+      private var counterArray: [[String]] = []
+      private var indexesArray: [Int] = []
+      
+      init(digits: String) {
+  //      counterArray = digits.map { [String($0) : didgitLetters[String($0)]!] }
+        currentIndex = digits.count - 1
+        for digit in digits.reversed() {
+          let digitsArray = didgitLetters[String(digit)]!
+          
+          counterArray.append(digitsArray)
+          indexesArray.append(digitsArray.count - 1)
+        }
+        
+        // TODO: index iteration
+//        if indexesArray[currentIndex]
+        
+        print("counterArray: \(counterArray)")
+      }
+    }
+//  static let didgitLetters: [Int : String] = [2:"abc", 3:"def", 4:"ghi", 5:"jkl", 6:"mno", 7:"pqrs", 8:"tuv", 9:"xyz"]
+//    static let didgitLetters: [String : String] = ["2":"abc", "3":"def", "4":"ghi", "5":"jkl", "6":"mno", "7":"pqrs", "8":"tuv", "9":"xyz"]
+  func letterCombinations(_ digits: String) -> [String] {
+    DidgitsEnumerator(digits: digits)
+    return []
+  }
+}
+//["aaaa","aaab","aaac","aaba","aabb","aabc","aaca","aacb","aacc","abaa","abab","abac","abba","abbb","abbc","abca","abcb","abcc","acaa","acab","acac","acba","acbb","acbc","acca","accb","accc",
+//     "baaa","baab","baac","baba","babb","babc","baca","bacb","bacc","bbaa","bbab","bbac","bbba","bbbb","bbbc","bbca","bbcb","bbcc","bcaa","bcab","bcac","bcba","bcbb","bcbc","bcca","bccb","bccc","caaa","caab","caac","caba","cabb","cabc","caca","cacb","cacc","cbaa","cbab","cbac","cbba","cbbb","cbbc","cbca","cbcb","cbcc","ccaa","ccab","ccac","ccba","ccbb","ccbc","ccca","cccb","cccc"]
+

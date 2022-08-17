@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Delete duplicates
 extension Solution.Medium {
-  static func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+  func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     let result = ListNode()
     var lastValue: Int?
     var currentNode: ListNode? = result
@@ -32,7 +32,7 @@ extension Solution.Medium {
     return result.next
   }
   
-  static func testDeleteDuplicates() {
+  func testDeleteDuplicates() {
     let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(3)))))))
     var result: ListNode? = deleteDuplicates(a)
 
@@ -44,7 +44,7 @@ extension Solution.Medium {
 }
 
 extension Solution.Medium {
-  static func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
+  func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
     guard left != right else { return head }
     
     let result = head
@@ -73,7 +73,7 @@ extension Solution.Medium {
     return result
   }
   
-  static func testReverseBetween() {
+  func testReverseBetween() {
     let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3))))))
     var result: ListNode? = reverseBetween(a, 2, 5)
 

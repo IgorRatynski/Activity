@@ -8,7 +8,7 @@
 import Foundation
 
 extension Solution.Hard {
-  static func countSmaller(_ nums: [Int]) -> [Int] {
+  func countSmaller(_ nums: [Int]) -> [Int] {
 //    var result: [Int] = []
 //    var count: Int
 //    for leftComparableIndex in 0..<nums.count {
@@ -56,7 +56,7 @@ extension Solution.Hard {
     return result.values.flatMap {$0}
   }
   
-  static func testCountSmaller() {
+  func testCountSmaller() {
 //    let filePath = Bundle.main.path(forResource: "LongTextCase", ofType: "txt")!
 //    var data     = try! Data(contentsOf: URL(fileURLWithPath: filePath))
 //
