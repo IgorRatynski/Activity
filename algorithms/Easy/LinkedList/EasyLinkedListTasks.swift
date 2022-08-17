@@ -100,3 +100,20 @@ extension Solution.Easy {
      print("result: \(Solution.Easy.isPalindrome(a))")
   }
 }
+
+//extension Solution.Easy {
+//  func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
+//    guard head != nil else { return head }
+////    var result = ListNode(0, head)
+//    var result = head
+//    
+////    while result.next?.val
+//    var head = head
+//    
+//    while head != nil {
+//      head
+//    }
+//      
+//    return result.next
+//  }
+//}

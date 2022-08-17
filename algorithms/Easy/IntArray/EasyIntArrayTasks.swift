@@ -137,3 +137,20 @@ extension Solution.Easy {
     return result.first!
   }
 }
+
+// MARK: Contains duplicate
+extension Solution.Easy {
+  func containsDuplicate(_ nums: [Int]) -> Bool {
+//    // I
+//    return Set(nums).count == nums.count
+//    // II
+    var cache = Set<Int>(), count: Int
+    for num in nums {
+      count = cache.count
+      cache.insert(num)
+      guard count != cache.count else { continue }
+      return true
+    }
+    return false
+  }
+}
