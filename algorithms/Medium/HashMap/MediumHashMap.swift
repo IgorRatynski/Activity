@@ -29,5 +29,28 @@ extension Solution.Medium {
     }
 
     return max(result, tempCount)
+//    var result = 0, substring = Set<String>(), tempCount = 0, stepsCount = 0, stringArray = s.//[String](arrayLiteral:s)
+//
+//
+//    while s.count > stepsCount {
+//    print("# \(stringArray), stepsCount: \(stepsCount)")
+//    for index in stride(from: stringArray.count - 1 - stepsCount, to: -1, by: -1) {
+//      tempCount = substring.count
+//      substring.insert(stringArray[index])
+//
+//      if substring.count == tempCount {
+//        if substring.count > result {
+//          print("substring: \(substring) count: \(substring.count)")
+//          result = substring.count
+//        }
+//        substring.removeAll()
+////        stringArray.removeLast()
+//        stepsCount += 1
+//        break
+//      }
+//    }
+//  }
+//
+//  return max(result, tempCount)
   }
 }
