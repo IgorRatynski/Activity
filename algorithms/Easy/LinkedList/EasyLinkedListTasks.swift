@@ -7,9 +7,9 @@
 
 import Foundation
 
-// MARK: - Delete duplicates
+// MARK: Delete duplicates
 extension Solution.Easy {
-  static func deleteDuplicates(_ head: ListNode?) -> ListNode? {
+  func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     let result = head
     var currentNode = result
     var head = head?.next
@@ -27,23 +27,11 @@ extension Solution.Easy {
 
     return result
   }
-  
-  static func testDeleteDuplicates() {
-    //let a = ListNode(0, ListNode(0, ListNode(1, ListNode(1, ListNode(1)))))
-    //let a = ListNode(1, ListNode(1, ListNode(1, ListNode(1, ListNode(1)))))
-    let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3))))))
-    var result: ListNode? = deleteDuplicates(a)
-
-    while result != nil {
-     print("result: \(result!.val)")
-      result = result?.next
-    }
-  }
 }
 
 // MARK: Reverse list
 extension Solution.Easy {
-  static func reverseList(_ head: ListNode?) -> ListNode? {
+  func reverseList(_ head: ListNode?) -> ListNode? {
     let result = head
     var head = head
     var array: [Int] = []
@@ -61,21 +49,11 @@ extension Solution.Easy {
     
     return result
   }
-  
-  static func testReverseList() {
-    let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3))))))
-    var result: ListNode? = Solution.Easy.reverseList(a)
-
-    while result != nil {
-     print("result: \(result!.val)")
-      result = result?.next
-    }
-  }
 }
 
 // MARK: Reverse list
 extension Solution.Easy {
-  static func isPalindrome(_ head: ListNode?) -> Bool {
+  func isPalindrome(_ head: ListNode?) -> Bool {
     var head = head
     var array: [Int] = []
     
@@ -85,7 +63,7 @@ extension Solution.Easy {
     }
     
     let max = array.count - 1
-    for (index, value) in array.enumerated() {
+    for index in 0..<array.count {
       if array[index] != array[max - index] {
         return false
       }
@@ -93,27 +71,24 @@ extension Solution.Easy {
     
     return true
   }
-  
-  static func testIsPalindrome() {
-    let a =  ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(2, ListNode(1))))))
-    
-     print("result: \(Solution.Easy.isPalindrome(a))")
-  }
 }
 
-//extension Solution.Easy {
-//  func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
-//    guard head != nil else { return head }
-////    var result = ListNode(0, head)
-//    var result = head
-//    
-////    while result.next?.val
-//    var head = head
-//    
-//    while head != nil {
-//      head
-//    }
-//      
-//    return result.next
-//  }
-//}
+// MARK: Remove elements
+extension Solution.Easy {
+  func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
+    guard head != nil, val != 0 else { return head }
+    
+    let result: ListNode? = ListNode(0, head)
+    var head = result
+    
+    while head?.next != nil {
+      if head?.next?.val == val {
+        head?.next = head?.next?.next
+      } else {
+        head = head?.next
+      }
+    }
+      
+    return result?.next
+  }
+}
