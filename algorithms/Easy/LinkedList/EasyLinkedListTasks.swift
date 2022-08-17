@@ -78,17 +78,29 @@ extension Solution.Easy {
   func removeElements(_ head: ListNode?, _ val: Int) -> ListNode? {
     guard head != nil, val != 0 else { return head }
     
-    let result: ListNode? = ListNode(0, head)
-    var head = result
+//    // I. while
+//
+//    let result: ListNode? = ListNode(0, head)
+//    var head = result
+//
+//    while head?.next != nil {
+//      if head?.next?.val == val {
+//        head?.next = head?.next?.next
+//      } else {
+//        head = head?.next
+//      }
+//    }
+//
+//    return result?.next
     
-    while head?.next != nil {
-      if head?.next?.val == val {
-        head?.next = head?.next?.next
-      } else {
-        head = head?.next
-      }
+    // II. recursion
+    
+    var head = head
+    if head?.val == val {
+      head = removeElements(head?.next, val)
+    } else {
+      head?.next = removeElements(head?.next, val)
     }
-      
-    return result?.next
+    return head
   }
 }
