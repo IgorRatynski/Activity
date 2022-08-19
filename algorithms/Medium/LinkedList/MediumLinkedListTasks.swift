@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - Delete duplicates
+// MARK: Delete duplicates
 extension Solution.Medium {
   func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     let result = ListNode()
@@ -31,18 +31,27 @@ extension Solution.Medium {
 
     return result.next
   }
-  
-  func testDeleteDuplicates() {
-    let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3, ListNode(3)))))))
-    var result: ListNode? = deleteDuplicates(a)
+}
 
-    while result != nil {
-     print("result: \(result!.val)")
-      result = result?.next
+// TODO: MARK: Odd even list
+extension Solution.Medium {
+  func oddEvenList(_ head: ListNode?) -> ListNode? {
+    let result = head, evenHead = ListNode(0)
+    var head = head, even: ListNode? = evenHead, lastAlive = head
+    
+    while head != nil {
+      lastAlive = head!
+      even?.next = head?.next
+      even = even?.next
+      head?.next = head?.next?.next
+      head = head?.next
     }
+    lastAlive?.next = evenHead.next
+    return result
   }
 }
 
+// MARK: TODO: Check
 extension Solution.Medium {
   func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
     guard left != right else { return head }
@@ -88,6 +97,7 @@ extension Solution.Medium {
   }
 }
 
+// TODO: Check
 extension Solution.Medium {
   func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
     let result = l1
@@ -95,10 +105,12 @@ extension Solution.Medium {
         
     while l2 != nil || needToAdd {
       l1?.val = (l1?.val ?? 0) + (l2?.val ?? 0) + (needToAdd ? 1 : 0)
-      needToAdd = false
+      
       if l1!.val > 9 {
         l1!.val = l1!.val - 10
         needToAdd = true
+      } else {
+        needToAdd = false
       }
       
       if l1?.next == nil && (l2?.next != nil || needToAdd) {
