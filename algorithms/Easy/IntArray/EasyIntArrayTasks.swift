@@ -52,7 +52,7 @@ extension Solution.Easy {
     for num in nums {
       count = cache.count
       cache.insert(num)
-      guard count != cache.count else { continue }
+      guard count == cache.count else { continue }
       return true
     }
     return false
