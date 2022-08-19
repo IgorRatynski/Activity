@@ -35,7 +35,7 @@ class TestAlgorithms: XCTestCase {
     
     measure(metrics: metrics, options: measureOptions) {
 //      solution.climbStairsI(n) // passed (0.036 seconds). // 4.636
-      _ = solution.climbStairsII(n) //  5.107
+      _ = solution.climbStairs(n) //  5.107
     }
   }
   
