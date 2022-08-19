@@ -38,12 +38,14 @@ extension Solution.Easy {
 // MARK: Climb stairs
 extension Solution.Easy {
   func climbStairs(_ n: Int) -> Int {
-    fibonacciRecursiveNum1(num1: 0, num2: 1, steps: n)
+    fibonacciRecursive(num1: 1, num2: 1, steps: n)
   }
-  
-  // Using Recursion
-  private func fibonacciRecursiveNum1(num1: Int, num2: Int, steps: Int) -> Int {
-    steps > 0 ? fibonacciRecursiveNum1(num1: num2, num2: num1 + num2, steps: steps - 1) : num2
+}
+
+// MARK: Fibonacci n
+extension Solution.Easy {
+  func fib(_ n: Int) -> Int {
+      fibonacciRecursive(num1: 0, num2: 1, steps: n)
   }
 }
 
@@ -55,4 +57,11 @@ extension Solution.Easy {
 ////    let string = String(
 //
 //  }
+}
+
+// MARK: Supporting: climb stairs, fibonacci n
+private extension Solution.Easy {
+  func fibonacciRecursive(num1: Int, num2: Int, steps: Int) -> Int {
+    steps > 0 ? fibonacciRecursive(num1: num2, num2: num1 + num2, steps: steps - 1) : num1
+  }
 }
