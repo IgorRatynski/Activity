@@ -51,7 +51,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Reverse list
+// MARK: Is palindrome
 extension Solution.Easy {
   func isPalindrome(_ head: ListNode?) -> Bool {
     var head = head
@@ -102,5 +102,13 @@ extension Solution.Easy {
       head?.next = removeElements(head?.next, val)
     }
     return head
+  }
+}
+
+// MARK: Delete node
+extension Solution.Easy {
+  func deleteNode(_ node: ListNode?) {
+    node?.val = node!.next!.val
+    node?.next = node?.next?.next
   }
 }
