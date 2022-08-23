@@ -77,8 +77,7 @@ extension Solution.Medium {
   func testMN() {
     var head: ListNode?
     for _ in 0...1 {//100000
-      head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6, ListNode(7, ListNode(8, ListNode(9, ListNode(10, ListNode(11, ListNode(12, ListNode(13, ListNode(14, ListNode(15, ListNode(16, ListNode(17, ListNode(18, ListNode(19, ListNode(20, ListNode(21, ListNode(22, ListNode(23, ListNode(24, ListNode(25)))))))))))))))))))))))))
-      
+      head = ListNode.testCases1
       head = deleteMiddle(head)
     }
   }
@@ -106,6 +105,34 @@ extension Solution.Medium {
     return head
   }
 }
+
+// MARK: Remove nth from end
+extension Solution.Medium {
+  func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
+    guard head?.next != nil else { return nil }
+    var count = 1, tempHead = head
+    
+    while tempHead?.next != nil {
+      count += 1
+      tempHead = tempHead?.next
+    }
+    
+    guard n < count else { return head?.next }
+    
+    tempHead = head
+    count -= n
+    
+    while count > 1 {
+      count -= 1
+      tempHead = tempHead?.next
+    }
+    
+    tempHead?.next = tempHead!.next?.next
+    
+    return head
+  }
+}
+
 // MARK: TODO: Check
 extension Solution.Medium {
   func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
