@@ -51,6 +51,27 @@ extension Solution.Medium {
   }
 }
 
+// MARK: Pair sum
+extension Solution.Medium {
+  func pairSum(_ head: ListNode?) -> Int {
+    var head = head, result = 0, temp = 0, array: [Int] = []
+    
+    while head != nil {
+      array.append(head!.val)
+      head = head?.next
+    }
+    
+    let max = array.count - 1
+    for index in 0..<array.count / 2 {
+      temp = array[index] + array[max - index]
+      guard temp > result else { continue }
+      result = temp
+    }
+    
+    return result
+  }
+}
+
 // MARK: TODO: Check
 extension Solution.Medium {
   func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
