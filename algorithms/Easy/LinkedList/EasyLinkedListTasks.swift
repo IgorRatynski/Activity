@@ -33,13 +33,13 @@ extension Solution.Easy {
 extension Solution.Easy {
   func reverseList(_ head: ListNode?) -> ListNode? {
     let result = head
-    var head = head
-    var array: [Int] = []
+    var head = head, array: [Int] = []
     
     while head != nil {
       array.append(head!.val)
       head = head?.next
     }
+    
     head = result
     let max = array.count - 1
     for index in 0..<array.count {
@@ -101,6 +101,37 @@ extension Solution.Easy {
       head?.next = removeElements(head?.next, val)
     }
     return head
+  }
+}
+
+// MARK: Middle node
+extension Solution.Easy {
+  func middleNode(_ head: ListNode?) -> ListNode? {
+    var count = 1, iteration = 0, steelNeed = 0, tempHead = head
+    
+    while tempHead?.next != nil {
+      count += 1
+      tempHead = tempHead?.next
+    }
+    
+    tempHead = head
+    count = count / 2
+    while iteration < count {
+      steelNeed = count - iteration
+      switch steelNeed {
+        case 1:
+          return tempHead?.next
+        case 2:
+          return tempHead?.next?.next
+        case 3...:
+          tempHead = tempHead?.next?.next?.next
+          iteration += 3
+        default:
+          return tempHead
+      }
+    }
+    
+    return tempHead
   }
 }
 
