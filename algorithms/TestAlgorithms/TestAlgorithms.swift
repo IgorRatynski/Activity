@@ -27,15 +27,15 @@ class TestAlgorithms: XCTestCase {
     let metrics: [XCTMetric] = [XCTMemoryMetric(), XCTStorageMetric(), XCTClockMetric()]
     
     let measureOptions = XCTMeasureOptions.default
-    measureOptions.iterationCount = 3
+    measureOptions.iterationCount = 1
     
 //      let nums = [1,2,3,4,5,4,4,5,4,4,3,5,5,3,4,5,54,5,4,543,3,5,3,4,5,4]
     let n = 45
-    let solution = Solution.Easy()
+    let solution = Solution.Medium()
     
     measure(metrics: metrics, options: measureOptions) {
 //      solution.climbStairsI(n) // passed (0.036 seconds). // 4.636
-      _ = solution.climbStairs(n) //  5.107
+      solution.testMN() //  5.107
     }
   }
   
