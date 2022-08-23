@@ -54,8 +54,7 @@ extension Solution.Easy {
 // MARK: Is palindrome
 extension Solution.Easy {
   func isPalindrome(_ head: ListNode?) -> Bool {
-    var head = head
-    var array: [Int] = []
+    var head = head, array: [Int] = []
     
     while head != nil {
       array.append(head!.val)
@@ -63,7 +62,7 @@ extension Solution.Easy {
     }
     
     let max = array.count - 1
-    for index in 0..<array.count {
+    for index in 0..<array.count / 2 {
       if array[index] != array[max - index] {
         return false
       }
