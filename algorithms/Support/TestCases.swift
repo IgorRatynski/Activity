@@ -21,6 +21,15 @@ public extension ListNode {
   static var testCases4: ListNode? {
     ListNode(1, ListNode(2, ListNode(3, ListNode(4))))
   }
+  static var testCases5: ListNode? {
+    ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+  }
+  static var testCases6: ListNode? {
+    ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6))))))
+  }
+  static var testCases7: ListNode? {
+    ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6, ListNode(7)))))))
+  }
   
   static var testCases22: ListNode? {
     ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5, ListNode(6, ListNode(7, ListNode(8, ListNode(9, ListNode(10, ListNode(11, ListNode(12, ListNode(13, ListNode(14, ListNode(15, ListNode(16, ListNode(17, ListNode(18, ListNode(19, ListNode(20, ListNode(21, ListNode(22))))))))))))))))))))))
