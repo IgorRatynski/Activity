@@ -133,6 +133,41 @@ extension Solution.Medium {
   }
 }
 
+// MARK: Swap nodes
+extension Solution.Medium {
+  func swapNodes(_ head: ListNode?, _ k: Int) -> ListNode? {
+    guard head?.next != nil else { return head }
+    var count = 1, tempHead = head, leftNode: ListNode?, last: Int
+    
+    while tempHead?.next != nil {
+      count += 1
+      tempHead = tempHead?.next
+    }
+    
+    last = count - k + 1
+    tempHead = head
+    count = min(k, last)
+    
+    while count > 1 {
+      count -= 1
+      tempHead = tempHead?.next
+    }
+    leftNode = tempHead
+    
+    count = max(k, last) - min(k, last) + 1
+    while count > 1 {
+      count -= 1
+      tempHead = tempHead?.next
+    }
+    
+    count = leftNode!.val
+    leftNode?.val = tempHead!.val
+    tempHead?.val = count
+    
+    return head
+  }
+}
+
 // MARK: TODO: Check
 extension Solution.Medium {
   func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
