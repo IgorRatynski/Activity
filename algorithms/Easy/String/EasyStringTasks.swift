@@ -186,6 +186,38 @@ extension Solution.Easy {
   }
 }
 
+// MARK: Is anagram
+extension Solution.Easy {
+  
+  func isAnagram(_ s: String, _ t: String) -> Bool {
+    guard s.count == t.count else { return false }
+    // I
+//    var sDict: [Character:Int] = [:], tDict = sDict
+//
+//    for char in s {
+//      sDict[char] = (sDict[char] ?? 0) + 1
+//    }
+//    for char in t {
+//      tDict[char] = (tDict[char] ?? 0) + 1
+//    }
+//
+//    return sDict == tDict
+    
+    // II
+    var sDict: [Character:Int] = [:]
+    
+    for char in s {
+      sDict[char] = (sDict[char] ?? 0) + 1
+    }
+    for char in t {
+      sDict[char] = (sDict[char] ?? 0) - 1
+      guard sDict[char]! > -1 else { return false }
+    }
+    
+    return true
+  }
+}
+
 // TODO: is palindrome
 extension Solution.Easy {
   func isPalindrome(_ s: String) -> Bool {
