@@ -45,7 +45,7 @@ extension Solution.Easy {
 // MARK: Fibonacci n
 extension Solution.Easy {
   func fib(_ n: Int) -> Int {
-      fibonacciRecursive(num1: 0, num2: 1, steps: n)
+    fibonacciRecursive(num1: 0, num2: 1, steps: n)
   }
 }
 
