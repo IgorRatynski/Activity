@@ -7,7 +7,28 @@
 
 import Foundation
 
-// MARK: Length of longest substring
+// MARK: MapSum
+extension Solution.Medium {
+  class MapSum {
+    
+    // MARK: Properties
+    private var hashMap: [String:Int] = [:]
+    
+    // MARK: Init
+    init() { }
+    
+    // MARK: Functions
+    func insert(_ key: String, _ val: Int) {
+      hashMap[key] = val
+    }
+    
+    func sum(_ prefix: String) -> Int {
+      hashMap.filter { $0.key.hasPrefix(prefix) }.values.reduce(0, +)
+    }
+  }
+}
+
+// TODO: Length of longest substring
 extension Solution.Medium {
   func lengthOfLongestSubstring(_ s: String) -> Int {
     var result = 0, substring = Set<Character>(), tempCount = 0, stringArray: [Character] = s.reversed()
