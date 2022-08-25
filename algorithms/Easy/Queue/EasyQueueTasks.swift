@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: Implement queue by stack
+// MARK: Implement fifo queue by array
 extension Solution.Easy {
   class MyQueue {
     
@@ -28,6 +28,35 @@ extension Solution.Easy {
     
     func peek() -> Int {
       stack.first!
+    }
+    
+    func empty() -> Bool {
+      stack.isEmpty
+    }
+  }
+}
+
+// MARK: Implement stack by array
+extension Solution.Easy {
+  class MyStack {
+    
+    // MARK: Properties
+    private var stack: [Int] = []
+    
+    // MARK: Init
+    init() { }
+    
+    // MARK: Functions
+    func push(_ x: Int) {
+      stack.append(x)
+    }
+    
+    func pop() -> Int {
+      stack.removeLast()
+    }
+    
+    func top() -> Int {
+      stack.last!
     }
     
     func empty() -> Bool {
