@@ -165,6 +165,27 @@ extension Solution.Easy {
   }
 }
 
+// MARK: Can construct
+extension Solution.Easy {
+  func canConstruct(_ ransomNote: String, _ magazine: String) -> Bool {
+    guard ransomNote.count <= magazine.count else { return false }
+    var ransomNoteDict: [Character:Int] = [:], magazineDict: [Character:Int] = [:]
+    
+    for letter in ransomNote {
+      ransomNoteDict[letter] = (ransomNoteDict[letter] ?? 0) + 1
+    }
+    for letter in magazine {
+      magazineDict[letter] = (magazineDict[letter] ?? 0) + 1
+    }
+    
+    for (key, value) in ransomNoteDict {
+      guard (magazineDict[key] ?? -1) >= value else { return false }
+    }
+    
+    return true
+  }
+}
+
 // TODO: is palindrome
 extension Solution.Easy {
   func isPalindrome(_ s: String) -> Bool {
