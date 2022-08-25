@@ -49,6 +49,31 @@ extension Solution.Easy {
   }
 }
 
+// MARK: generate Pascal's triangle I
+extension Solution.Easy {
+  func test() {
+    print(generate(10))
+//    print(7/2)
+  }
+  
+  func generate(_ numRows: Int) -> [[Int]] {
+    guard numRows > 1 else { return [[1]] }
+    var result: [[Int]] = [[1], [1,1]], temp: [Int], prev: Int
+    
+    for iteration in 2..<numRows {
+      prev = iteration - 1
+      temp = [1]
+      for lineIndex in 1..<iteration {
+        temp.append(result[prev][lineIndex - 1] + result[prev][lineIndex])
+      }
+      temp.append(1)
+      result.append(temp)
+    }
+    
+    return result
+  }
+}
+
 // TODO: Descending order
 extension Solution.Easy {
 //  func descendingOrder(of number: Int) -> Int {
