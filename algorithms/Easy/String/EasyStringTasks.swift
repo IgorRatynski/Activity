@@ -214,7 +214,28 @@ extension Solution.Easy {
       guard sDict[char]! > -1 else { return false }
     }
     
-    return true
+    
+    return sDict.values.first { $0 > 0 } == nil
+  }
+}
+
+// MARK:
+extension Solution.Easy {
+  func longestCommonPrefix(_ strs: [String]) -> String {
+    guard strs.count > 1 else { return strs.first! }
+    var result: String = strs.first!, goNext: Bool
+    
+    for index in 1..<strs.count {
+      guard !strs[index].hasPrefix(result) else { continue }
+      goNext = false
+      while !goNext && !result.isEmpty {
+        result.removeLast()
+        guard strs[index].hasPrefix(result) else { continue }
+        goNext = true
+      }
+    }
+    
+    return result
   }
 }
 
