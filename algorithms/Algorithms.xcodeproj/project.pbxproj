@@ -53,6 +53,7 @@
 		4795A32E28ADB57B008B39EE /* EasyBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780DB0D28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift */; };
 		4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		4795A33028ADB5D7008B39EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A99282883956800D7ACEE /* main.swift */; };
+		47B8C48C28BE984700107689 /* TestEasyStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -118,6 +119,7 @@
 		4795A31428ADB089008B39EE /* EasyStringArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyStringArrayTasks.swift; sourceTree = "<group>"; };
 		4795A31B28ADB3D3008B39EE /* TestAlgorithms.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAlgorithms.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4795A31D28ADB3D3008B39EE /* TestAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlgorithms.swift; sourceTree = "<group>"; };
+		47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyStringTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,8 +338,17 @@
 			isa = PBXGroup;
 			children = (
 				4795A31D28ADB3D3008B39EE /* TestAlgorithms.swift */,
+				47B8C48A28BE980A00107689 /* EasyStringTasks */,
 			);
 			path = TestAlgorithms;
+			sourceTree = "<group>";
+		};
+		47B8C48A28BE980A00107689 /* EasyStringTasks */ = {
+			isa = PBXGroup;
+			children = (
+				47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */,
+			);
+			path = EasyStringTasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +573,7 @@
 				4766BF4A28B574FA00081145 /* DataStructuresSupporing.swift in Sources */,
 				4795A32E28ADB57B008B39EE /* EasyBinaryTreeTasks.swift in Sources */,
 				4795A32828ADB550008B39EE /* HardIntArrayTasks.swift in Sources */,
+				47B8C48C28BE984700107689 /* TestEasyStringTasks.swift in Sources */,
 				4795A32928ADB55F008B39EE /* MediumLinkedListTasks.swift in Sources */,
 				4766BF5128B830E300081145 /* EasyQueueTasks.swift in Sources */,
 				4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */,
