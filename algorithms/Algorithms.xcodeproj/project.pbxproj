@@ -12,6 +12,7 @@
 		472706CB288B936E00E2CCB1 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		472706CC288B937100E2CCB1 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472706CF288B955800E2CCB1 /* HardIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47189D0F288B932500FFB1A1 /* HardIntArrayTasks.swift */; };
+		472A608B28BFE2D400F614D7 /* EasySQLTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A608A28BFE2D400F614D7 /* EasySQLTasks.swift */; };
 		472A995D2883984000D7ACEE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A99282883956800D7ACEE /* main.swift */; };
 		472A99602883985B00D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472A99612883986600D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
@@ -100,6 +101,7 @@
 		47189D0F288B932500FFB1A1 /* HardIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardIntArrayTasks.swift; sourceTree = "<group>"; };
 		472621CF288C768B00B8D183 /* LongTextCase.rtf */ = {isa = PBXFileReference; explicitFileType = text.json; path = LongTextCase.rtf; sourceTree = "<group>"; };
 		472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyIntArrayTasks.swift; sourceTree = "<group>"; };
+		472A608A28BFE2D400F614D7 /* EasySQLTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySQLTasks.swift; sourceTree = "<group>"; };
 		472A99252883956800D7ACEE /* Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		472A99282883956800D7ACEE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		472A99332883958200D7ACEE /* Easy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Easy; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,14 @@
 			path = IntArray;
 			sourceTree = "<group>";
 		};
+		472A608928BFE2C100F614D7 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				472A608A28BFE2D400F614D7 /* EasySQLTasks.swift */,
+			);
+			path = SQL;
+			sourceTree = "<group>";
+		};
 		472A991C2883956800D7ACEE = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +233,7 @@
 		472A99342883958200D7ACEE /* Easy */ = {
 			isa = PBXGroup;
 			children = (
+				472A608928BFE2C100F614D7 /* SQL */,
 				4766BF4D28B830C800081145 /* Queue */,
 				4780DB0C28A69A8D00CC3615 /* BinaryTree */,
 				472621D0288C910D00B8D183 /* IntArray */,
@@ -545,6 +556,7 @@
 				472621D3288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */,
 				4795A32A28ADB56C008B39EE /* EasyLinkedListTasks.swift in Sources */,
 				4766BF5028B830E300081145 /* EasyQueueTasks.swift in Sources */,
+				472A608B28BFE2D400F614D7 /* EasySQLTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
