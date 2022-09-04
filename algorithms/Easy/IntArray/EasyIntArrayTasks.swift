@@ -66,6 +66,32 @@ extension Solution.Easy {
   }
 }
 
+// MARK: Missing number
+extension Solution.Easy {
+  func missingNumber(_ nums: [Int]) -> Int {
+    // I
+    /*
+    let nums = nums.sorted()
+        
+    for index in 1..<nums.count {
+      guard nums[index - 1] == nums[index] - 1 else { return nums[index - 1] + 1 }
+    }
+    
+    return nums.first! == 0 ? nums.last! + 1 : 0
+    */
+    // II
+    var commonCount = 0, mustCount = 0, minValue = nums.first!
+    for (index, value) in nums.enumerated() {
+      commonCount += value
+      mustCount += index
+      guard minValue > value else { continue }
+      minValue = value
+    }
+    if minValue == 1 { return 0 }
+    return minValue + nums.count - (commonCount - (minValue * nums.count + mustCount))
+  }
+}
+
 // TODO: Merge
 extension Solution.Easy {
   func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {

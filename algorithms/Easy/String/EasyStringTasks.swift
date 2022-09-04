@@ -233,11 +233,81 @@ extension Solution.Easy {
         guard strs[index].hasPrefix(result) else { continue }
         goNext = true
       }
+      guard !result.isEmpty else { return "" }
     }
     
     return result
   }
 }
+
+//extension Collection {
+//    /// Returns the element at the specified index if it is within bounds, otherwise nil.
+//    subscript (safe index: Index) -> Element? {
+//        return indices.contains(index) ? self[index] : nil
+//    }
+//}
+//
+//// TODO: is palindrome
+//extension Solution.Easy {
+////  func test() {
+////    print(addBinary("101011", "1011"))
+////  }
+//  func addBinary(_ a: String, _ b: String) -> String {
+//    var result = "", plusOne = false, a = a.reversed(), b = b.reversed() //f, a = a.reversed()
+////    let aaaaaa: String = zip(a.reversed(), b.reversed())
+////      .map( (String?, String?) -> String {
+//    var indexx: String.Index?
+//    for index in 0..<max(a.count, b.count) {
+//      indexx = String.Index(utf16Offset: index, in: <#T##StringProtocol#>)
+//      switch (a[safe: index] ?? "0", b[safe: index] ?? "0", plusOne) {
+//        case ("0", "0", false):
+//          return "0"
+//        case ("0", "0", true):
+//          plusOne = false
+//          return "1"
+//          
+//        case ("0", "1", false), ("1", "0", false): return "1"
+//        case ("0", "1", true), ("1", "0", true): return "0"
+//          
+//        case ("1", "1", false):
+//          plusOne = true
+//          return "0"
+//          
+//        case ("1", "1", true):
+//          plusOne = true
+//          return "1"
+//          
+//        default: return "0"
+//      }
+//    }
+////    }
+//////
+////      .map {
+////        " left: \($0.0), right: \($0.1) |"
+//////      switch ($0.0 ?? "0", $0.1, plusOne) {
+//////        case ("0", "0", false):
+//////          return "0"
+//////        case ("0", "0", true):
+//////          plusOne = false
+//////          return "1"
+//////
+//////        case ("0", "1", false), ("1", "0", false): return "1"
+//////        case ("0", "1", true), ("1", "0", true): return "0"
+//////
+//////        case ("1", "1", false):
+//////          plusOne = true
+//////          return "0"
+//////
+//////        case ("1", "1", true):
+//////          plusOne = true
+//////          return "1"
+//////
+//////        default: return "0"
+////      }.joined()
+////    aa
+//    return aaaaaa
+//  }
+//}
 
 // TODO: is palindrome
 extension Solution.Easy {
