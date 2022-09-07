@@ -253,3 +253,28 @@ extension Solution.Easy {
     return false
   }
 }
+
+// MARK: Check zero ones
+extension Solution.Easy {
+  func checkZeroOnes(_ s: String) -> Bool {
+    var s = s, previous = s.removeFirst(), count: [Character:Int] = [:], tempCount: Int = 1
+    
+    for character in s {
+      if character == previous {
+        tempCount += 1
+      } else {
+        if count[previous] ?? 0 < tempCount {
+          count[previous] = tempCount
+        }
+        tempCount = 1
+        previous = character
+      }
+    }
+    
+    if count[previous] ?? 0 < tempCount {
+      count[previous] = tempCount
+    }
+    
+    return (count["1"] ?? 0) > (count["0"] ?? 0)
+  }
+}

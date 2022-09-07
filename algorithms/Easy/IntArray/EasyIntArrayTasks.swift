@@ -107,37 +107,23 @@ extension Solution.Easy {
   }
 }
 
-// TODO: Merge
+// MARK: Find max consecutive ones
 extension Solution.Easy {
-  func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-    guard m > 0, n > 0 else {
-      if n > 0 {
-        nums1 = nums2
-      }
-      return
-    }
-    var inoutPointer = m + n - 1, m = max(m - 1, 0), n = max(n - 1, 0)
+  func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
+    var count = 0, tempCount = 0
     
-    while inoutPointer > -1 {
-      if nums1[m] < nums2[n] {
-        nums1[inoutPointer] = nums2[n]
-        
-        n = max(0, n - 1)
+    for number in nums {
+      if number == 1 {
+        tempCount += 1
       } else {
-        nums1[inoutPointer] = nums1[m]
-        nums1[m] = 0
-        m = max(0, m - 1)
+        if count < tempCount {
+          count = tempCount
+        }
+        tempCount = 0
       }
-      
-      inoutPointer -= 1
     }
+    
+    return max(count, tempCount)
   }
 }
 
-
-// TODO: Contains nearby duplicate
-//extension Solution.Easy {
-//  func containsNearbyDuplicate(_ nums: [Int], _ k: Int) -> Bool {
-//
-//  }
-//}

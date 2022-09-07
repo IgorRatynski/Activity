@@ -91,16 +91,6 @@ extension Solution.Easy {
   }
 }
 
-// TODO: Descending order
-extension Solution.Easy {
-//  func descendingOrder(of number: Int) -> Int {
-////    Int(String(number).sorted(by: { Int($0) > Int($1) }))
-//    String(number).sorted(by: { Int($0) > Int($1) })
-////    let string = String(
-//
-//  }
-}
-
 // MARK: Supporting: climb stairs, fibonacci n
 private extension Solution.Easy {
   func fibonacciRecursive(num1: Int, num2: Int, steps: Int) -> Int {
