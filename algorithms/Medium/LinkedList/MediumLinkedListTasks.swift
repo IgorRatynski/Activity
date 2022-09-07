@@ -74,14 +74,6 @@ extension Solution.Medium {
 
 // MARK: Delete middle
 extension Solution.Medium {
-  func testMN() {
-    var head: ListNode?
-    for _ in 0...1 {//100000
-      head = ListNode.testCases1
-      head = deleteMiddle(head)
-    }
-  }
-  
   func deleteMiddle(_ head: ListNode?) -> ListNode? {
     guard head?.next != nil else { return nil }
     var count = 1, tempHead = head

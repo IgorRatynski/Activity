@@ -49,6 +49,13 @@ extension Solution.Easy {
   }
 }
 
+// MARK: Supporting: climb stairs, fibonacci n
+private extension Solution.Easy {
+  func fibonacciRecursive(num1: Int, num2: Int, steps: Int) -> Int {
+    steps > 0 ? fibonacciRecursive(num1: num2, num2: num1 + num2, steps: steps - 1) : num1
+  }
+}
+
 // MARK: Generate Pascal's triangle I
 extension Solution.Easy {
   func generate(_ numRows: Int) -> [[Int]] {
@@ -91,9 +98,5 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Supporting: climb stairs, fibonacci n
-private extension Solution.Easy {
-  func fibonacciRecursive(num1: Int, num2: Int, steps: Int) -> Int {
-    steps > 0 ? fibonacciRecursive(num1: num2, num2: num1 + num2, steps: steps - 1) : num1
   }
 }

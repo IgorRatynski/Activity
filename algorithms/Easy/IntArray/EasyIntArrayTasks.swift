@@ -107,7 +107,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Find max consecutive ones
+// MARK: 485. Find max consecutive ones
 extension Solution.Easy {
   func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
     var count = 0, tempCount = 0
@@ -127,3 +127,19 @@ extension Solution.Easy {
   }
 }
 
+// MARK: 495. Find poisoned duration
+extension Solution.Easy {
+  func findPoisonedDuration(_ timeSeries: [Int], _ duration: Int) -> Int {
+    var poison = 0, temp: Int
+    for index in 1..<timeSeries.count {
+      temp = timeSeries[index] - timeSeries[index-1]
+      if temp >= duration {
+        poison += duration
+      } else {
+        poison += temp
+      }
+    }
+    
+    return poison + duration
+  }
+}
