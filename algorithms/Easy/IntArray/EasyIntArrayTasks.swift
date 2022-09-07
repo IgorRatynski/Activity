@@ -143,3 +143,34 @@ extension Solution.Easy {
     return poison + duration
   }
 }
+
+// MARK: 605. Can place flowers
+extension Solution.Easy {
+  func canPlaceFlowers(_ flowerbed: [Int], _ n: Int) -> Bool {
+    guard n > 0 else { return true }
+    var flowerbed = flowerbed, n = n, temp: Int, index = 0
+    
+    while index < flowerbed.count {
+      temp = flowerbed[index]
+      if index - 1 >= 0 {
+        temp += flowerbed[index-1]
+      }
+      if index + 1 < flowerbed.count {
+        temp += flowerbed[index+1]
+      }
+      
+      guard temp == 0 else {
+        index += 1
+        continue
+      }
+      
+      flowerbed[index] = 1
+      n -= 1
+      index += 2
+      guard n == 0 else { continue }
+      return true
+    }
+    
+    return false
+  }
+}
