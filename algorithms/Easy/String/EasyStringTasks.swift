@@ -278,3 +278,33 @@ extension Solution.Easy {
     return (count["1"] ?? 0) > (count["0"] ?? 0)
   }
 }
+
+// MARK: 557. Reverse words
+extension Solution.Easy {
+  func reverseWords(_ s: String) -> String {
+    // I
+//    s.components(separatedBy: " ")
+//      .map { String($0.reversed()) }
+//      .joined(separator: " ")
+    
+    // II
+    var word: [Character] = [], result = ""
+    for character in s {
+      guard character == " " else {
+        word.append(character)
+        continue
+      }
+      for index in stride(from: word.count - 1, through: 0, by: -1) {
+        result.append(word[index])
+      }
+      word.removeAll()
+      result.append(" ")
+    }
+    
+    for index in stride(from: word.count - 1, through: 0, by: -1) {
+      result.append(word[index])
+    }
+    
+    return result
+  }
+}
