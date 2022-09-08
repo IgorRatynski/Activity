@@ -10,8 +10,7 @@ import Foundation
 // MARK: Is happy
 extension Solution.Easy {
   func isHappy(_ n: Int) -> Bool {
-    var n = n, tempResult: Int, tempLast: Int
-    var cache = Set<Int>()
+    var n = n, tempResult: Int, tempLast: Int, cache = Set<Int>()
     
     while !cache.contains(n) {
       if n == 1 {
@@ -98,5 +97,18 @@ extension Solution.Easy {
   }
 }
 
+// MARK: Check ones segment
+extension Solution.Easy {
+  func checkOnesSegment(_ s: String) -> Bool {
+    var filter = "01"
+    for current in s {
+      guard current == filter.first else { continue }
+      filter.removeFirst()
+      guard !filter.isEmpty else { return false }
+    }
+    
+    return true
+  }
+}
   }
 }
