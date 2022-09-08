@@ -60,3 +60,25 @@ extension Solution.Medium {
 //    return pairs
   }
 }
+
+// MARK: 56. Merge intervals
+extension Solution.Medium {
+  func merge(_ intervals: [[Int]]) -> [[Int]] {
+    let intervals = intervals.sorted { $0[0] == $1[0] ? $0[1] < $1[1] : $0[0] < $1[0] }
+    var current: [Int] = intervals.first!, result: [[Int]] = []
+    
+    for index in 1..<intervals.count {
+      if current[1] >= intervals[index][0] {
+        current[0] = min(current[0], intervals[index][0])
+        current[1] = max(current[1], intervals[index][1])
+        
+      } else {
+        result.append(current)
+        current = intervals[index]
+      }
+    }
+    result.append(current)
+    
+    return result
+  }
+}
