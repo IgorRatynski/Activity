@@ -11,8 +11,7 @@ import Foundation
 extension Solution.Easy {
   func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     let result = head
-    var currentNode = result
-    var head = head?.next
+    var currentNode = result, head = head?.next
     currentNode?.next = nil
 
     while head != nil {
