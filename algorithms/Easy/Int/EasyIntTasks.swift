@@ -110,5 +110,24 @@ extension Solution.Easy {
     return true
   }
 }
+
+// MARK: Max power
+extension Solution.Easy {
+  func maxPower(_ s: String) -> Int {
+    var s = s, current = s.removeFirst(), count = 0, tempCount = 1
+    
+    for char in s {
+      if char == current {
+        tempCount += 1
+      } else {
+        if count < tempCount {
+          count = tempCount
+        }
+        tempCount = 1
+        current = char
+      }
+    }
+    
+    return max(count, tempCount)
   }
 }
