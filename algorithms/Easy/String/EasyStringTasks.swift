@@ -308,3 +308,25 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 819. Most common word
+private extension Bool {
+  var negation: Bool { !self }
+}
+extension Solution.Easy {
+  func mostCommonWord(_ paragraph: String, _ banned: [String]) -> String {
+    var dictionary: [String:Int] = [:], count = 0, word = ""
+    paragraph
+      .split(whereSeparator: \.isLetter.negation)
+      .map { String($0.lowercased()) }
+      .forEach {
+        guard !banned.contains($0) else { return }
+        dictionary[$0] = (dictionary[$0] ?? 0) + 1
+        if dictionary[$0]! > count {
+          count = dictionary[$0]!
+          word = $0
+        }
+      }
+    return word
+  }
+}
