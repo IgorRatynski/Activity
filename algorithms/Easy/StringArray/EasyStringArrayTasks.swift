@@ -46,3 +46,21 @@ extension Solution.Easy {
     }
   }
 }
+
+// MARK: 744. Find smallest letter greater than target
+extension Solution.Easy {
+  func nextGreatestLetter(_ letters: [Character], _ target: Character) -> Character {
+    var alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], target = target
+    
+    let leftPart = alphabet.dropFirst( alphabet.lastIndex(where: { $0 == target })! + 1 )
+    let rightPart = alphabet.dropLast( leftPart.count + 1)
+    
+    alphabet = Array(leftPart) + Array(rightPart)
+    
+    while true {
+      target = alphabet.removeFirst()
+      guard letters.contains(target) else { continue }
+      return target
+    }
+  }
+}
