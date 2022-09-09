@@ -212,3 +212,45 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 905. Sort array by parity
+extension Solution.Easy {
+  func sortArrayByParity(_ nums: [Int]) -> [Int] {
+//    // I
+//    var even: [Int] = [], odd: [Int] = []
+//    for num in nums {
+//      num % 2 == 0 ? even.append(num) : odd.append(num)
+//    }
+//
+//    return even + odd
+    // II
+    var nums = nums, temp: Int, leftPtr = 0, rightPth = nums.count - 1, leftValid = false, rightValid = false
+    
+    while leftPtr < rightPth {
+      if !leftValid {
+        leftValid = nums[leftPtr] % 2 == 1
+      }
+      if !rightValid {
+        rightValid = nums[rightPth] % 2 == 0
+      }
+      
+      if leftValid && rightValid {
+        temp = nums[leftPtr]
+        nums[leftPtr] = nums[rightPth]
+        nums[rightPth] = temp
+        leftPtr += 1
+        rightPth -= 1
+        leftValid = false
+        rightValid = false
+      } else {
+        if leftValid {
+          rightPth -= 1
+        } else {
+          leftPtr += 1
+        }
+      }
+    }
+    
+    return nums
+  }
+}
