@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4724E69228CBFEA5009DD73F /* EasyHashMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */; };
 		472621D2288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */; };
 		472621D3288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */; };
 		472706CB288B936E00E2CCB1 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
@@ -99,6 +100,7 @@
 /* Begin PBXFileReference section */
 		47189D07288B92BA00FFB1A1 /* Hard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hard; sourceTree = BUILT_PRODUCTS_DIR; };
 		47189D0F288B932500FFB1A1 /* HardIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardIntArrayTasks.swift; sourceTree = "<group>"; };
+		4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHashMapTasks.swift; sourceTree = "<group>"; };
 		472621CF288C768B00B8D183 /* LongTextCase.rtf */ = {isa = PBXFileReference; explicitFileType = text.json; path = LongTextCase.rtf; sourceTree = "<group>"; };
 		472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyIntArrayTasks.swift; sourceTree = "<group>"; };
 		472A608A28BFE2D400F614D7 /* EasySQLTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasySQLTasks.swift; sourceTree = "<group>"; };
@@ -234,7 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				472A608928BFE2C100F614D7 /* SQL */,
-				4766BF4D28B830C800081145 /* Queue */,
+				4766BF4D28B830C800081145 /* DataStructureTasks */,
 				4780DB0C28A69A8D00CC3615 /* BinaryTree */,
 				472621D0288C910D00B8D183 /* IntArray */,
 				476DFD6C288A43A1009C266B /* String */,
@@ -287,12 +289,13 @@
 			path = IntArray;
 			sourceTree = "<group>";
 		};
-		4766BF4D28B830C800081145 /* Queue */ = {
+		4766BF4D28B830C800081145 /* DataStructureTasks */ = {
 			isa = PBXGroup;
 			children = (
 				4766BF4E28B830E300081145 /* EasyQueueTasks.swift */,
+				4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */,
 			);
-			path = Queue;
+			path = DataStructureTasks;
 			sourceTree = "<group>";
 		};
 		476DFD4C2883A04D009C266B /* LinkedList */ = {
@@ -556,6 +559,7 @@
 				472621D3288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */,
 				4795A32A28ADB56C008B39EE /* EasyLinkedListTasks.swift in Sources */,
 				4766BF5028B830E300081145 /* EasyQueueTasks.swift in Sources */,
+				4724E69228CBFEA5009DD73F /* EasyHashMapTasks.swift in Sources */,
 				472A608B28BFE2D400F614D7 /* EasySQLTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -188,7 +188,6 @@ extension Solution.Easy {
 
 // MARK: Is anagram
 extension Solution.Easy {
-  
   func isAnagram(_ s: String, _ t: String) -> Bool {
     guard s.count == t.count else { return false }
     // I
