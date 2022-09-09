@@ -195,3 +195,20 @@ extension Solution.Easy {
     return mat
   }
 }
+
+// MARK: 2022. Construct 2d array
+extension Solution.Easy {
+  func construct2DArray(_ original: [Int], _ m: Int, _ n: Int) -> [[Int]] {
+    guard original.count == m * n else { return [] }
+    var tempArray: [Int], result: [[Int]] = [], original = original
+    
+    for _ in 0..<m {
+      tempArray = []
+      for _ in 0..<n {
+        tempArray.append(original.removeFirst())
+      }
+      result.append(tempArray)
+    }
+    return result
+  }
+}
