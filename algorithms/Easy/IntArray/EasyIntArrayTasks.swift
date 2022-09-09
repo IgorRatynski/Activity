@@ -254,3 +254,30 @@ extension Solution.Easy {
     return nums
   }
 }
+
+// MARK: 724. Find Pivot Index
+// MARK: 1991. Find the Middle Index in Array
+extension Solution.Easy {
+  func pivotIndex(_ nums: [Int]) -> Int {
+//  func findMiddleIndex(_ nums: [Int]) -> Int {
+    var left: Int, right: Int
+    
+    for index in 0..<nums.count {
+      left = 0
+      right = 0
+      
+      for leftIndex in 0..<index {
+        left += nums[leftIndex]
+      }
+      
+      for rightIndex in (index + 1)..<nums.count {
+        right += nums[rightIndex]
+      }
+      
+      guard left == right else { continue }
+      return index
+    }
+    
+    return -1
+  }
+}
