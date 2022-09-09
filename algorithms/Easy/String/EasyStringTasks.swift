@@ -355,3 +355,18 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 824. Goat Latin
+extension Solution.Easy {
+  func toGoatLatin(_ sentence: String) -> String {
+    let vowels: Set<Character> = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+    return sentence
+      .components(separatedBy: " ")
+      .enumerated().map {
+        var element = $0.element
+        return (vowels.contains($0.element.first!) ? $0.element : String(element.dropFirst()) + String(element.removeFirst()))
+        + "ma" + String(repeating: "a", count: $0.offset + 1)
+      }
+      .joined(separator: " ")
+  }
+}
