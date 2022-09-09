@@ -174,3 +174,24 @@ extension Solution.Easy {
     return false
   }
 }
+
+// MARK: 566. Matrix reshape
+extension Solution.Easy {
+  func matrixReshape(_ mat: [[Int]], _ r: Int, _ c: Int) -> [[Int]] {
+    var mat = mat, matCompact: [Int] = [], tempArray: [Int]
+    // TODO: optimization - from end to start
+    for array in mat {
+      matCompact.append(contentsOf: array)
+    }
+    guard matCompact.count == r * c else { return mat }
+    mat = []
+    for _ in 0..<r {
+      tempArray = []
+      for _ in 0..<c {
+        tempArray.append(matCompact.removeFirst())
+      }
+      mat.append(tempArray)
+    }
+    return mat
+  }
+}
