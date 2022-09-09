@@ -330,3 +330,28 @@ extension Solution.Easy {
     return word
   }
 }
+
+// MARK: 821. Shortest distance to a character
+extension Solution.Easy {
+  func shortestToChar(_ s: String, _ c: Character) -> [Int] {
+    var count = s.count, result: [Int] = [], s = s.enumerated().compactMap { $0.element == c ? $0.offset : nil }
+    var firstIndex = s.removeFirst(), secondIndex: Int?, firstIndexValue: Int, secondIndexValue: Int
+    if !s.isEmpty {
+      secondIndex = s.removeFirst()
+    }
+    
+    for index in 0..<count {
+      firstIndexValue = abs(firstIndex - index)
+      secondIndexValue = abs((secondIndex ?? firstIndex) - index)
+      result.append(min(firstIndexValue, secondIndexValue))
+      
+      guard firstIndexValue > secondIndexValue else { continue }
+      firstIndex = secondIndex!
+      
+      guard !s.isEmpty else { continue }
+      secondIndex = s.removeFirst()
+    }
+    
+    return result
+  }
+}
