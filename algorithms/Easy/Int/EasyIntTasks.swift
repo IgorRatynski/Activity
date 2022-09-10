@@ -131,3 +131,25 @@ extension Solution.Easy {
     return max(count, tempCount)
   }
 }
+
+// MARK: 728. Self dividing numbers
+extension Solution.Easy {
+  func selfDividingNumbers(_ left: Int, _ right: Int) -> [Int] {
+    var string: String, result: [Int] = [], isValid: Bool
+    for number in left...right {
+      isValid = true
+      string = String(number)
+      guard !string.contains("0") else { continue }
+      while !string.isEmpty {
+        guard number % Int(String(string.removeLast()))! != 0 else { continue }
+        isValid = false
+        break
+      }
+      
+      guard isValid else { continue }
+      result.append(number)
+    }
+    
+    return result
+  }
+}
