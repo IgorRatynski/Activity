@@ -369,3 +369,42 @@ extension Solution.Easy {
       .joined(separator: " ")
   }
 }
+
+// MARK: 844. Backspace string compare
+extension Solution.Easy {
+  func backspaceCompare(_ s: String, _ t: String) -> Bool {
+//    // I
+//    func cleaned(string: String) -> String {
+//      var result = ""
+//      for value in string {
+//        if value == "#" {
+//          guard !result.isEmpty else { continue }
+//          result.removeLast()
+//        } else {
+//          result.append(value)
+//        }
+//      }
+//      return result
+//    }
+//
+//    return cleaned(string: s) == cleaned(string: t)
+    // II
+    var s = s, t = t, index: String.Index?
+    
+    func clean(string: inout String) {
+      while true {
+        index = string.firstIndex(where: { $0 == "#" })
+        guard index != nil else { break }
+        string.remove(at: index!)
+        guard index != string.startIndex else { continue }
+        index = string.index(before: index!)
+        string.remove(at: index!)
+      }
+    }
+    
+    clean(string: &s)
+    clean(string: &t)
+    
+    return s == t
+  }
+}
