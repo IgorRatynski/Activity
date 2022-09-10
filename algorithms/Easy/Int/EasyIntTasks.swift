@@ -153,3 +153,17 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 507. Perfect number
+extension Solution.Easy {
+  func checkPerfectNumber(_ num: Int) -> Bool {
+    guard num > 1 else { return false }
+    var result = 0
+    
+    for devider in 1...num/2 {
+      guard num % devider == 0 else { continue }
+      result += devider
+    }
+    return result == num
+  }
+}
