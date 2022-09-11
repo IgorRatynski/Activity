@@ -167,3 +167,11 @@ extension Solution.Easy {
     return result == num
   }
 }
+
+// MARK: Add digits
+extension Solution.Easy {
+  func addDigits(_ num: Int) -> Int {
+    guard num > 9 else { return num }
+    return addDigits(addDigits(num / 10) + addDigits(num % 10))
+  }
+}
