@@ -82,3 +82,20 @@ extension Solution.Medium {
     return result
   }
 }
+
+// MARK: 1497. Check If Array Pairs Are Divisible by k
+extension Solution.Medium {
+  func tee() {
+    let arr = [-1,1,-2,2,-3,3,-4,4], k = 3
+    print(canArrange(arr, k))
+  }
+  func canArrange(_ arr: [Int], _ k: Int) -> Bool {
+    var rightIndex = arr.count - 1
+    for i in 0..<arr.count / 2 {
+      print("l: \(arr[i]), r: \(arr[rightIndex]), s: \(arr[i] + arr[rightIndex]) result: \((arr[i] + arr[rightIndex]) % k == 0)")
+      guard (arr[i] + arr[rightIndex]) % k == 0 else { return false }
+      rightIndex -= 1
+    }
+    return true
+  }
+}
