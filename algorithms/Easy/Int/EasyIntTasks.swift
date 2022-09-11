@@ -175,3 +175,26 @@ extension Solution.Easy {
     return addDigits(addDigits(num / 10) + addDigits(num % 10))
   }
 }
+
+// MARK: 2283. Check if Number Has Equal Digit Count and Digit Value
+extension Solution.Easy {
+  func digitCount(_ num: String) -> Bool {
+    var index = num.startIndex, digit: Character, string: String, count: Int
+    
+    for i in 0..<num.count {
+      digit = num[index]
+      string = String(i)
+      count = Int(String(digit))!
+      
+      for subdigit in num {
+        guard String(subdigit) == string else { continue }
+        count -= 1
+      }
+      guard count == 0 else { return false }
+      index = num.index(after: index)
+    }
+    
+    return true
+  }
+}
+}
