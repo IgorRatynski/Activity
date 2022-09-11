@@ -56,6 +56,7 @@
 		4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		4795A33028ADB5D7008B39EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A99282883956800D7ACEE /* main.swift */; };
 		47B8C48C28BE984700107689 /* TestEasyStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */; };
+		47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -124,6 +125,7 @@
 		4795A31B28ADB3D3008B39EE /* TestAlgorithms.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAlgorithms.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4795A31D28ADB3D3008B39EE /* TestAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlgorithms.swift; sourceTree = "<group>"; };
 		47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyStringTasks.swift; sourceTree = "<group>"; };
+		47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHashSetTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +296,7 @@
 			children = (
 				4766BF4E28B830E300081145 /* EasyQueueTasks.swift */,
 				4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */,
+				47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */,
 			);
 			path = DataStructureTasks;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				4795A31628ADB089008B39EE /* EasyStringArrayTasks.swift in Sources */,
 				476DFD6E288A43B1009C266B /* EasyStringTasks.swift in Sources */,
 				476DFD562883A092009C266B /* DataStructures.swift in Sources */,
+				47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */,
 				4780DB0E28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift in Sources */,
 				472621D3288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */,
 				4795A32A28ADB56C008B39EE /* EasyLinkedListTasks.swift in Sources */,
