@@ -425,3 +425,13 @@ extension Solution.Easy {
     return false
   }
 }
+
+// MARK: 2129. Capitalize the Title
+extension Solution.Easy {
+  func capitalizeTitle(_ title: String) -> String {
+    title
+      .components(separatedBy: " ")
+      .map { $0.count > 2 ? $0.prefix(1).uppercased() + $0.dropFirst().lowercased() : $0.lowercased() }
+      .joined(separator: " ")
+  }
+}
