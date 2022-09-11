@@ -408,3 +408,20 @@ extension Solution.Easy {
     return s == t
   }
 }
+
+// MARK: 796. Rotate String
+extension Solution.Easy {
+  func rotateString(_ s: String, _ goal: String) -> Bool {
+    guard s.count == goal.count else { return false }
+    guard s != goal else { return true }
+    var s = s
+    
+    for _ in 0..<s.count - 2 {
+      s = String(s.removeLast()) + s
+      guard s == goal else { continue }
+      return true
+    }
+    
+    return false
+  }
+}
