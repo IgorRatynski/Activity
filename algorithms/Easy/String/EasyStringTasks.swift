@@ -446,3 +446,29 @@ extension Solution.Easy {
     return String(s.map { alphabet[$0] != nil ? alphabet[$0]! : $0 })
   }
 }
+
+// TODO: 125. Valid Palindrome
+extension Solution.Easy {
+  func isPalindrome(_ s: String) -> Bool {
+//    // I
+//    let a = Array(s.lowercased().replacingOccurrences(of:"[^0-9a-z]", with: "", options: .regularExpression))
+//
+//    var last = a.count - 1
+//    for first in 0..<a.count / 2 {
+//      guard a[first] == a[last] else { return false }
+//      last -= 1
+//    }
+//    return true
+    
+    // II
+    let validCharacters: [Character:Character] = ["A":"a", "B":"b", "C":"c", "D":"d", "E":"e", "F":"f", "G":"g", "H":"h", "I":"i", "J":"j", "K":"k", "L":"l", "M":"m", "N":"n", "O":"o", "P":"p", "Q":"q", "R":"r", "S":"s", "T":"t", "U":"u", "V":"v", "W":"w", "X":"x", "Y":"y", "Z":"z", "0":"0", "1":"1", "2":"2", "3":"3", "4":"4", "5":"5", "6":"6", "7":"7", "8":"8", "9":"9"]
+    let s = s.compactMap { validCharacters[$0] != nil ? validCharacters[$0] : validCharacters.values.contains($0) ? $0 : nil }
+    var right = s.count - 1
+    for left in 0..<s.count / 2 {
+      guard s[left] == s[right] else { return false }
+      right -= 1
+    }
+    
+    return true
+  }
+}
