@@ -472,3 +472,33 @@ extension Solution.Easy {
     return true
   }
 }
+
+// MARK: 2108. Find First Palindromic String in the Array
+extension Solution.Easy {
+  func tee() {
+    let words = ["racecar","cool"]
+    print(firstPalindrome(words))
+  }
+  func firstPalindrome(_ words: [String]) -> String {
+    var isPalindrome: Bool, left: String.Index, right: String.Index
+    for word in words {
+      isPalindrome = true
+      left = word.startIndex
+      right = word.index(before: word.endIndex)
+      
+      for _ in 0..<word.count / 2 {
+        guard word[left] == word[right] else {
+          isPalindrome = false
+          break
+        }
+        left = word.index(after: left)
+        right = word.index(before: right)
+      }
+      
+      guard isPalindrome else { continue }
+      return word
+    }
+    
+    return ""
+  }
+}
