@@ -559,3 +559,16 @@ extension Solution.Easy {
     return String(result.reversed())
   }
 }
+
+// MARK: 344. Reverse String
+extension Solution.Easy {
+  func reverseString(_ s: inout [Character]) {
+    var temp: Character, right = s.count - 1
+    for i in 0..<s.count / 2 {
+      temp = s[i]
+      s[i] = s[right]
+      s[right] = temp
+      right -= 1
+    }
+  }
+}
