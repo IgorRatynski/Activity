@@ -502,3 +502,73 @@ extension Solution.Easy {
     return ""
   }
 }
+
+// MARK: 67. Add Binary
+extension Solution.Easy {
+  func addBinary(_ a: String, _ b: String) -> String {
+    // I
+//    var result = "", plusOne = false, tempA: Character, tempB: Character, a = a, b = b
+//    while !a.isEmpty || !b.isEmpty || plusOne {
+//      tempA = a.isEmpty ? "0" : a.removeLast()
+//      tempB = b.isEmpty ? "0" : b.removeLast()
+//
+//      switch (tempA, tempB, plusOne) {
+//        case ("0", "0", true):
+//          plusOne = false
+//          result.append("1")
+//
+//        case ("0", "1", false), ("1", "0", false): result.append("1")
+//        case ("0", "1", true), ("1", "0", true): result.append("0")
+//
+//        case ("1", "1", false), ("1", "1", true):
+//          result.append(plusOne ? "1" : "0")
+//          plusOne = true
+//
+//        default: result.append("0")
+//      }
+//    }
+//    return String(result.reversed())
+    
+    // II
+    func value(from string: String, by index: inout String.Index) -> Character {
+      guard index != string.startIndex else { return "0" }
+      index = string.index(before: index)
+      return string.indices.contains(index) ? string[index] : "0"
+    }
+    
+    var result = "", plusOne = false, indexA = a.endIndex, indexB = b.endIndex
+    
+    while indexA != a.startIndex || indexB != b.startIndex || plusOne {
+      
+      switch (value(from: a, by: &indexA), value(from: b, by: &indexB), plusOne) {
+          
+        case ("0", "0", true), ("0", "1", false), ("1", "0", false):
+          plusOne = false
+          result.append("1")
+
+        case ("0", "1", true), ("1", "0", true):
+          result.append("0")
+
+        case ("1", "1", false), ("1", "1", true):
+          result.append(plusOne ? "1" : "0")
+          plusOne = true
+
+        default: result.append("0")
+      }
+    }
+    return String(result.reversed())
+  }
+}
+
+// MARK: 344. Reverse String
+extension Solution.Easy {
+  func reverseString(_ s: inout [Character]) {
+    var temp: Character, right = s.count - 1
+    for i in 0..<s.count / 2 {
+      temp = s[i]
+      s[i] = s[right]
+      s[right] = temp
+      right -= 1
+    }
+  }
+}
