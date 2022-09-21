@@ -572,3 +572,22 @@ extension Solution.Easy {
     }
   }
 }
+
+// MARK: 345. Reverse Vowels of a String
+extension Solution.Easy {
+  func reverseVowels(_ s: String) -> String {
+    let vowels: Set<Character> = Set(["a", "A", "e", "E", "u", "U", "o", "O", "i", "I"]), vowelsString = s.filter { vowels.contains($0) }
+    var result = "", vowelIndex = vowelsString.endIndex
+    
+    for char in s {
+      if vowels.contains(char) {
+        vowelIndex = vowelsString.index(before: vowelIndex)
+        result.append(vowelsString[vowelIndex])
+      } else {
+        result.append(char)
+      }
+    }
+    
+    return result
+  }
+}
