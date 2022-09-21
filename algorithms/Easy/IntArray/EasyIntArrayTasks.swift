@@ -281,3 +281,39 @@ extension Solution.Easy {
     return -1
   }
 }
+
+// MARK: 989. Add to Array-Form of Integer
+extension Solution {
+  func addToArrayForm(_ num: [Int], _ k: Int) -> [Int] {
+    
+    // I
+//    var result: [Int] = []
+//    let k = String( Int(num.map { String($0) }.joined() )! + k )
+//    for char in k {
+//      result.append(Int(String(char))!)
+//    }
+//    return result
+    
+    // II
+    var result: [Int] = [], num = num, k = k, kArray: [Int] = [], plusNext = 0, indexA = num.count - 1, indexB = 0, tempResult: Int
+
+    while k > 0 {
+      kArray.append(k % 10)
+      k = k / 10
+    }
+
+    while indexA > -1 || indexB < kArray.count || plusNext > 0 {
+      tempResult = (indexA > -1 ? num[indexA] : 0) + (indexB < kArray.count ? kArray[indexB] : 0) + plusNext
+      plusNext = tempResult / 10
+      if plusNext > 0 {
+        tempResult = tempResult % 10
+      }
+      result.insert(tempResult, at: 0)
+
+      indexA -= 1
+      indexB += 1
+    }
+
+    return result
+  }
+}
