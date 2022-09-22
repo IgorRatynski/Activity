@@ -283,7 +283,7 @@ extension Solution.Easy {
 }
 
 // MARK: 989. Add to Array-Form of Integer
-extension Solution {
+extension Solution.Easy {
   func addToArrayForm(_ num: [Int], _ k: Int) -> [Int] {
     
     // I
@@ -314,6 +314,28 @@ extension Solution {
       indexB += 1
     }
 
+    return result
+  }
+}
+
+// MARK: 169. Majority Element
+extension Solution.Easy {
+  func majorityElement(_ nums: [Int]) -> Int {
+    var result: Int!, count = 0
+    
+    for num in nums {
+      if count == 0 {
+        result = num
+      }
+      
+      if result == num {
+        count += 1
+      } else {
+        count -= 1
+      }
+      
+    }
+    
     return result
   }
 }
