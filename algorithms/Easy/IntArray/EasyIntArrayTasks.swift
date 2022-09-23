@@ -339,3 +339,25 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 2404. Most Frequent Even Element
+extension Solution.Easy {
+  func mostFrequentEven(_ nums: [Int]) -> Int {
+    var result: [Int:Int] = [:], maxCount = 0
+    
+    for num in nums {
+      guard num % 2 == 0 else { continue }
+      result[num] = (result[num] ?? 0) + 1
+      
+      if result[num]! > maxCount {
+        maxCount = result[num]!
+      }
+    }
+    
+    return result
+      .filter { $0.value == maxCount }
+      .keys
+      .sorted { $0 < $1 }
+      .first ?? -1
+  }
+}
