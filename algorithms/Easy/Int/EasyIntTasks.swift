@@ -197,4 +197,18 @@ extension Solution.Easy {
     return true
   }
 }
+
+// MARK: 441. Arranging Coins
+extension Solution.Easy {
+  func arrangeCoins(_ n: Int) -> Int {
+    var result = 1, n = n - 1
+    
+    while result < n {
+      result += 1
+      n -= result
+    }
+    
+    return result
+  }
+}
 }
