@@ -591,3 +591,27 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 290. Word Pattern
+extension Solution.Easy {
+  func wordPattern(_ pattern: String, _ s: String) -> Bool {
+    var dict: [Character:String] = [:], letterIndex = pattern.startIndex, currentLetter: Character
+    let words = s.components(separatedBy: " ")
+    guard words.count == pattern.count else { return false }
+    
+    for word in words {
+      currentLetter = pattern[letterIndex]
+      
+      if dict[currentLetter] == nil {
+        guard !dict.values.contains(word) else { return false }
+        dict[currentLetter] = word
+      } else {
+        guard dict[currentLetter] == word else { return false }
+      }
+      
+      letterIndex = pattern.index(after: letterIndex)
+    }
+    
+    return true
+  }
+}
