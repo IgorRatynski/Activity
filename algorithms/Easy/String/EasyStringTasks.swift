@@ -615,3 +615,41 @@ extension Solution.Easy {
     return true
   }
 }
+
+// MARK: 1071. Greatest Common Divisor of Strings
+extension Solution.Easy {
+  func gcdOfStrings(_ str1: String, _ str2: String) -> String {
+    var dividable = str1, divider = str2, temp = str2
+    
+    while !dividable.isEmpty && !divider.isEmpty {
+      dividable = str1
+      
+      if dividable.count % divider.count == 0 {
+        while dividable.hasSuffix(divider) {
+          dividable.removeLast(divider.count)
+        }
+      }
+      
+      guard !dividable.isEmpty else { break }
+      dividable = str1
+      
+      divider.removeLast()
+      temp = divider
+      
+      while !temp.isEmpty && !divider.isEmpty {
+        temp = str2
+        
+        if str2.count % divider.count == 0 {
+          while temp.hasSuffix(divider) {
+            temp.removeLast(divider.count)
+          }
+        }
+        
+        guard !temp.isEmpty else { break }
+        divider.removeLast()
+      }
+    }
+    
+    return divider
+  }
+}
