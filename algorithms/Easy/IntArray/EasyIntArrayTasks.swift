@@ -361,3 +361,23 @@ extension Solution.Easy {
       .first ?? -1
   }
 }
+
+// MARK: 463. Island Perimeter
+extension Solution.Easy {
+  func islandPerimeter(_ grid: [[Int]]) -> Int {
+    var result = 0
+    
+    for i in 0..<grid.count {
+      for j in 0..<grid[i].count {
+        guard grid[i][j] == 1 else { continue }
+        result += i > 0 ? grid[i-1][j] == 1 ? 0 : 1 : 1
+        result += i < (grid.count - 1) ? grid[i+1][j] == 1 ? 0 : 1 : 1
+        
+        result += j > 0 ? grid[i][j-1] == 1 ? 0 : 1 : 1
+        result += j < (grid[i].count - 1) ? grid[i][j+1] == 1 ? 0 : 1 : 1
+      }
+    }
+    
+    return result
+  }
+}
