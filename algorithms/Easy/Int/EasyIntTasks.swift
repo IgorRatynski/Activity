@@ -211,4 +211,11 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 2413. Smallest Even Multiple
+extension Solution.Easy {
+  func smallestEvenMultiple(_ n: Int) -> Int {
+    n % 2 == 0 ? n : n * 2
+  }
+}
 }
