@@ -381,3 +381,31 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 747. Largest Number At Least Twice of Others
+extension Solution.Easy {
+  func dominantIndex(_ nums: [Int]) -> Int {
+    
+    // I
+    var max = max(nums[0], nums[1]), maxIndex = max == nums[0] ? 0 : 1,
+        beforeMax = min(nums[0], nums[1])
+    
+    for index in 2..<nums.count {
+      if nums[index] > max {
+        beforeMax = max
+        max = nums[index]
+        maxIndex = index
+      } else if nums[index] > beforeMax {
+        beforeMax = nums[index]
+      }
+    }
+    
+    guard beforeMax > 0 else { return maxIndex }
+    return max / beforeMax > 1 ? maxIndex : -1
+    
+    // II
+//    let sorted = nums.sorted { $0 > $1 }, max = sorted[0], beforeMax = sorted[1]
+//    guard beforeMax > 0 else { return nums.firstIndex(of: max)! }
+//    return max / beforeMax > 1 ? nums.firstIndex(of: max)! : -1
+  }
+}
