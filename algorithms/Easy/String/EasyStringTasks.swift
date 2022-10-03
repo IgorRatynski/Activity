@@ -671,3 +671,27 @@ extension Solution.Easy {
     stones.filter({ jewels.contains($0) }).count
   }
 }
+
+// MARK: 859. Buddy Strings
+extension Solution.Easy {
+  func buddyStrings(_ s: String, _ goal: String) -> Bool {
+    guard s.count == goal.count else { return false }
+    var differense: [Character] = [], sIndex = s.startIndex, goalIndex = goal.startIndex
+    
+    for _ in 0..<s.count {
+      if s[sIndex] != goal[goalIndex] {
+        differense.append(s[sIndex])
+        differense.append(goal[goalIndex])
+        guard differense.count < 5 else { return false }
+      }
+      sIndex = s.index(after: sIndex)
+      goalIndex = goal.index(after: goalIndex)
+    }
+    
+    if differense.count == 0 {
+      return Set(s).count != s.count
+    }
+    guard differense.count == 4 else { return false }
+    return differense[0] == differense[3] && differense[1] == differense[2]
+  }
+}
