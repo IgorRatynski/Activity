@@ -217,7 +217,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Longest common prefix
+// MARK: 14. Longest Common Prefix
 extension Solution.Easy {
   func longestCommonPrefix(_ strs: [String]) -> String {
     guard strs.count > 1 else { return strs.first! }
@@ -651,5 +651,23 @@ extension Solution.Easy {
     }
     
     return divider
+  }
+}
+
+// MARK: 771. Jewels and Stones
+extension Solution.Easy {
+  func numJewelsInStones(_ jewels: String, _ stones: String) -> Int {
+    // I
+//    var count = 0
+//
+//    for stone in stones {
+//      guard jewels.contains(stone) else { continue }
+//      count += 1
+//    }
+//
+//    return count
+    
+    // II
+    stones.filter({ jewels.contains($0) }).count
   }
 }
