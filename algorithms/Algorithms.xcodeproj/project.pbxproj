@@ -18,6 +18,8 @@
 		472A99602883985B00D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472A99612883986600D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472A99622883986600D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
+		47402BAF28EA69840000DF52 /* TestEasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */; };
+		47402BB128EA69D80000DF52 /* EasyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47402BB028EA69D80000DF52 /* EasyTestCase.swift */; };
 		4762805728A69FD10068F752 /* EasyBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780DB0D28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift */; };
 		4762805B28A6F3EB0068F752 /* MediumHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805A28A6F3EB0068F752 /* MediumHashMap.swift */; };
 		4762805C28A6F3EB0068F752 /* MediumHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805A28A6F3EB0068F752 /* MediumHashMap.swift */; };
@@ -111,6 +113,8 @@
 		472A994B2883970800D7ACEE /* Medium */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Medium; sourceTree = BUILT_PRODUCTS_DIR; };
 		472A99532883975B00D7ACEE /* MediumLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumLinkedListTasks.swift; sourceTree = "<group>"; };
 		472A995F2883985B00D7ACEE /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
+		47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyIntArrayTasks.swift; sourceTree = "<group>"; };
+		47402BB028EA69D80000DF52 /* EasyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTestCase.swift; sourceTree = "<group>"; };
 		4762805A28A6F3EB0068F752 /* MediumHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumHashMap.swift; sourceTree = "<group>"; };
 		4762805E28A836990068F752 /* MediumIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumIntArrayTasks.swift; sourceTree = "<group>"; };
 		4766BF4528B56D8200081145 /* TestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCases.swift; sourceTree = "<group>"; };
@@ -355,17 +359,19 @@
 			isa = PBXGroup;
 			children = (
 				4795A31D28ADB3D3008B39EE /* TestAlgorithms.swift */,
-				47B8C48A28BE980A00107689 /* EasyStringTasks */,
+				47B8C48A28BE980A00107689 /* EasyTasks */,
 			);
 			path = TestAlgorithms;
 			sourceTree = "<group>";
 		};
-		47B8C48A28BE980A00107689 /* EasyStringTasks */ = {
+		47B8C48A28BE980A00107689 /* EasyTasks */ = {
 			isa = PBXGroup;
 			children = (
+				47402BB028EA69D80000DF52 /* EasyTestCase.swift */,
 				47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */,
+				47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */,
 			);
-			path = EasyStringTasks;
+			path = EasyTasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -586,7 +592,9 @@
 				4795A33028ADB5D7008B39EE /* main.swift in Sources */,
 				4795A32C28ADB573008B39EE /* EasyLinkedListTasks.swift in Sources */,
 				4795A32428ADB44E008B39EE /* EasyIntArrayTasks.swift in Sources */,
+				47402BAF28EA69840000DF52 /* TestEasyIntArrayTasks.swift in Sources */,
 				4795A32628ADB548008B39EE /* MediumHashMap.swift in Sources */,
+				47402BB128EA69D80000DF52 /* EasyTestCase.swift in Sources */,
 				4766BF4728B56D8200081145 /* TestCases.swift in Sources */,
 				4795A31E28ADB3D3008B39EE /* TestAlgorithms.swift in Sources */,
 				4795A32D28ADB576008B39EE /* EasyStringTasks.swift in Sources */,
