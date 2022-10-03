@@ -409,3 +409,17 @@ extension Solution.Easy {
 //    return max / beforeMax > 1 ? nums.firstIndex(of: max)! : -1
   }
 }
+
+// MARK: 1331. Rank Transform of an Array
+extension Solution.Easy {
+  func arrayRankTransform(_ arr: [Int]) -> [Int] {
+    var positions: [Int:Int] = [:], count = 1
+    
+    for element in Set(arr).sorted() {
+      positions[element] = count
+      count += 1
+    }
+    
+    return arr.map { positions[$0]! }
+  }
+}
