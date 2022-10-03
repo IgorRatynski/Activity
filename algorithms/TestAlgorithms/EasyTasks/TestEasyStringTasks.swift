@@ -22,6 +22,20 @@ extension TestEasyStringTasks {
   }
 }
 
+// MARK: 771. Jewels and Stones
+extension TestEasyStringTasks {
+  func testNumJewelsInStones() {
+    let inputs = ["aA", "oO", "ds"], arguments = ["aAAAbbbb", "fsoFFpsekfpkpSKFPOK", "II"]
+    let outputs = [4, 2, 0]
+    XCTAssertTrue(inputs.count == arguments.count)
+    XCTAssertTrue(arguments.count == outputs.count)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.numJewelsInStones(inputs[i], arguments[i]), outputs[i])
+    }
+  }
+}
+
 // MARK: 859. Buddy Strings
 extension TestEasyStringTasks {
   func testBuddyStrings() {
