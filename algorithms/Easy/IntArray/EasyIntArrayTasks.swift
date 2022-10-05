@@ -437,3 +437,17 @@ extension Solution.Easy {
     return original
   }
 }
+
+// MARK: 1346. Check If N and Its Double Exist
+extension Solution.Easy {
+  func checkIfExist(_ arr: [Int]) -> Bool {
+    let evensArray = arr.filter { $0 % 2 == 0 }, arr = Set(arr)
+    guard evensArray.filter({ $0 == 0 }).count < 2 else { return true }
+    
+    for even in evensArray {
+      guard even != 0, arr.contains(even / 2) else { continue }
+      return true
+    }
+    return false
+  }
+}
