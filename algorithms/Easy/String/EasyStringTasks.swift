@@ -695,3 +695,24 @@ extension Solution.Easy {
     return differense[0] == differense[3] && differense[1] == differense[2]
   }
 }
+
+// MARK: 1790. Check if One String Swap Can Make Strings Equal
+extension Solution.Easy {
+  func areAlmostEqual(_ s1: String, _ s2: String) -> Bool {
+    guard s1 != s2 else { return true }
+    var differense: [Character] = [], s1Index = s1.startIndex, s2Index = s2.startIndex
+    
+    for _ in 0..<s1.count {
+      if s1[s1Index] != s2[s2Index] {
+        differense.append(s1[s1Index])
+        differense.append(s2[s2Index])
+        guard differense.count < 5 else { return false }
+      }
+      s1Index = s1.index(after: s1Index)
+      s2Index = s2.index(after: s2Index)
+    }
+    
+    guard differense.count == 4 else { return false }
+    return differense[0] == differense[3] && differense[1] == differense[2]
+  }
+}
