@@ -451,3 +451,21 @@ extension Solution.Easy {
     return false
   }
 }
+
+// MARK: 832. Flipping an Image
+extension Solution.Easy {
+  func flipAndInvertImage(_ image: [[Int]]) -> [[Int]] {
+    // I
+    var result: [[Int]] = Array(repeating: [], count: image.count)
+    
+    for i in 0..<image.count {
+      for j in stride(from: image[i].count - 1, through: 0, by: -1) {
+        result[i].append(image[i][j] == 0 ? 1 : 0)
+      }
+    }
+    
+    return result
+    // II
+//    image.map { $0.reversed().map { $0 == 0 ? 1 : 0 } }
+  }
+}
