@@ -7,7 +7,6 @@
 
 import XCTest
 
-
 class TestEasyLinkedListTasks: EasyTestCase { }
 
 // MARK: 938. Range Sum of BST

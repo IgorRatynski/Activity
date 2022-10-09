@@ -59,6 +59,9 @@
 		4795A33028ADB5D7008B39EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A99282883956800D7ACEE /* main.swift */; };
 		47B09BC428F2F9C100D0553D /* TestEasyLinkedListTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B09BC328F2F9C100D0553D /* TestEasyLinkedListTasks.swift */; };
 		47B09BC828F3494400D0553D /* TestEasyIntTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B09BC728F3494400D0553D /* TestEasyIntTasks.swift */; };
+		47B09BCA28F35A8900D0553D /* EasyRecentCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B09BC928F35A8900D0553D /* EasyRecentCounter.swift */; };
+		47B09BCC28F35ADA00D0553D /* TestEasyDataStructureTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B09BCB28F35ADA00D0553D /* TestEasyDataStructureTasks.swift */; };
+		47B09BCD28F35B6E00D0553D /* EasyRecentCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B09BC928F35A8900D0553D /* EasyRecentCounter.swift */; };
 		47B8C48C28BE984700107689 /* TestEasyStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */; };
 		47BD610128EEB72400EC683A /* TimeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD610028EEB72400EC683A /* TimeMap.swift */; };
 		47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */; };
@@ -133,6 +136,8 @@
 		4795A31D28ADB3D3008B39EE /* TestAlgorithms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAlgorithms.swift; sourceTree = "<group>"; };
 		47B09BC328F2F9C100D0553D /* TestEasyLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyLinkedListTasks.swift; sourceTree = "<group>"; };
 		47B09BC728F3494400D0553D /* TestEasyIntTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyIntTasks.swift; sourceTree = "<group>"; };
+		47B09BC928F35A8900D0553D /* EasyRecentCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyRecentCounter.swift; sourceTree = "<group>"; };
+		47B09BCB28F35ADA00D0553D /* TestEasyDataStructureTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyDataStructureTasks.swift; sourceTree = "<group>"; };
 		47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyStringTasks.swift; sourceTree = "<group>"; };
 		47BD610028EEB72400EC683A /* TimeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeMap.swift; sourceTree = "<group>"; };
 		47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHashSetTasks.swift; sourceTree = "<group>"; };
@@ -305,9 +310,10 @@
 		4766BF4D28B830C800081145 /* DataStructureTasks */ = {
 			isa = PBXGroup;
 			children = (
-				4766BF4E28B830E300081145 /* EasyQueueTasks.swift */,
 				4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */,
 				47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */,
+				47B09BC928F35A8900D0553D /* EasyRecentCounter.swift */,
+				4766BF4E28B830E300081145 /* EasyQueueTasks.swift */,
 			);
 			path = DataStructureTasks;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 				47B09BC728F3494400D0553D /* TestEasyIntTasks.swift */,
 				47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */,
 				47B09BC328F2F9C100D0553D /* TestEasyLinkedListTasks.swift */,
+				47B09BCB28F35ADA00D0553D /* TestEasyDataStructureTasks.swift */,
 			);
 			path = EasyTasks;
 			sourceTree = "<group>";
@@ -580,6 +587,7 @@
 				4766BF5028B830E300081145 /* EasyQueueTasks.swift in Sources */,
 				4724E69228CBFEA5009DD73F /* EasyHashMapTasks.swift in Sources */,
 				472A608B28BFE2D400F614D7 /* EasySQLTasks.swift in Sources */,
+				47B09BCA28F35A8900D0553D /* EasyRecentCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,8 +622,10 @@
 				4795A32828ADB550008B39EE /* HardIntArrayTasks.swift in Sources */,
 				47B8C48C28BE984700107689 /* TestEasyStringTasks.swift in Sources */,
 				4795A32928ADB55F008B39EE /* MediumLinkedListTasks.swift in Sources */,
+				47B09BCD28F35B6E00D0553D /* EasyRecentCounter.swift in Sources */,
 				47B09BC428F2F9C100D0553D /* TestEasyLinkedListTasks.swift in Sources */,
 				4766BF5128B830E300081145 /* EasyQueueTasks.swift in Sources */,
+				47B09BCC28F35ADA00D0553D /* TestEasyDataStructureTasks.swift in Sources */,
 				4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */,
 				4795A32528ADB485008B39EE /* Solution.swift in Sources */,
 				4795A32728ADB54C008B39EE /* MediumIntArrayTasks.swift in Sources */,
