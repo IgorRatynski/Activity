@@ -50,6 +50,7 @@ extension TestEasyStringTasks {
   }
 }
 
+// MARK: 917. Reverse Only Letters
 extension TestEasyStringTasks {
   func testReverseOnlyLetters() {
     let inputs = ["ab-cd", "a-bC-dEf-ghIj", "Test1ng-Leet=code-Q!", "_fa_", "-f-", "-fae-", "ab", "a", "-", "--", "---", "aaa", "7_28]"]
@@ -59,6 +60,21 @@ extension TestEasyStringTasks {
     for i in 0..<inputs.count {
       XCTAssertEqual(solution.reverseOnlyLetters(inputs[i]), outputs[i])
     }
+  }
+}
+
+// MARK: 925. Long Pressed Name
+extension TestEasyStringTasks {
+  func testIsLongPressedName() {
+    let name = ["alex", "alex", "a", "alex", "saeed"]
+    let typed = ["aaleexeex", "aaleexa", "e", "aaleex", "ssaaedd"]
+    let outputs = [false, false, false, true, false]
+    XCTAssertTrue(Set([name.count, typed.count, outputs.count]).count == 1)
     
+    for i in 0..<name.count {
+      XCTAssertEqual(solution.isLongPressedName(name[i], typed[i]), outputs[i])
+    }
+  }
+}
   }
 }

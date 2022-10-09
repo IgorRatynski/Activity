@@ -685,8 +685,6 @@ extension Solution.Easy {
     // I
 //    var s = Array(s), tempChar: Character, leftPointer = s.startIndex, rightPointer = s.index(before: s.endIndex)
 //
-//    let range: Range<UInt8> = Range(65...122)
-//
 //    while leftPointer < rightPointer {
 //      while !isLetter(asciiValue: s[leftPointer].asciiValue!), leftPointer != s.endIndex {
 //        leftPointer = s.index(after: leftPointer)
@@ -709,6 +707,36 @@ extension Solution.Easy {
     // II
     var s = s, letters = s.filter { isLetter(asciiValue: $0.asciiValue!) }
     return String(s.map { isLetter(asciiValue: $0.asciiValue!) ? letters.removeLast() : $0 })
+  }
+}
+
+// MARK: 925. Long Pressed Name
+extension Solution.Easy {
+  func isLongPressedName(_ name: String, _ typed: String) -> Bool {
+    var nameIndex = name.startIndex, nameCount: Int, typedIndex = typed.startIndex, typedCount: Int, currentCharacter: Character
+    let nameUpperBound = name.index(before: name.endIndex), typedUpperBound = typed.index(before: typed.endIndex)
+    
+    func updateLetters(count: inout Int, in string: String, withIndex index: inout String.Index, and upperBoundIndex: String.Index) {
+      while index != upperBoundIndex {
+        index = string.index(after: index)
+        guard string[index] == currentCharacter else { break }
+        count += 1
+      }
+    }
+    
+    while nameIndex != nameUpperBound || typedIndex != typedUpperBound {
+      guard name[nameIndex] == typed[typedIndex] else { return false }
+      currentCharacter = name[nameIndex]
+      nameCount = 1
+      typedCount = 1
+      
+      updateLetters(count: &nameCount, in: name, withIndex: &nameIndex, and: nameUpperBound)
+      updateLetters(count: &typedCount, in: typed, withIndex: &typedIndex, and: typedUpperBound)
+      
+      guard nameCount <= typedCount else { return false }
+    }
+    
+    return name[nameIndex] == typed[typedIndex]
   }
 }
 // MARK: 859. Buddy Strings
