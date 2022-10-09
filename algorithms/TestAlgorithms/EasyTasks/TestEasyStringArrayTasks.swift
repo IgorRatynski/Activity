@@ -53,3 +53,18 @@ extension TestEasyStringArrayTasks {
     }
   }
 }
+
+// MARK: 1662. Check If Two String Arrays are Equivalent
+extension TestEasyStringArrayTasks {
+  func testCheckIfTwoStringArraysEquivalent() {
+    let inputs1 = [["abc", "d", "defg"], ["ab", "c"], ["a", "cb"], ["abc", "d", "defg"]]
+    let inputs2 = [["abcddef"], ["a", "bc"], ["ab", "c"], ["abcddefg"]]
+    let outputs = [false, true, false, true]
+    let set = Set([inputs1.count, inputs2.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.arrayStringsAreEqual(inputs1[i], inputs2[i]), outputs[i])
+    }
+  }
+}

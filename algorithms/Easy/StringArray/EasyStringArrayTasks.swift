@@ -94,3 +94,35 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1662. Check If Two String Arrays are Equivalent
+extension Solution.Easy {
+  func arrayStringsAreEqual(_ word1: [String], _ word2: [String]) -> Bool {
+    // I
+//    word1.joined() == word2.joined()
+    
+    // II
+    var word1Index = 0, word2Index = 0, leftIndex = word1[0].startIndex, leftEndIndex = word1[0].endIndex, rightIndex = word2[0].startIndex, rightEndIndex = word2[0].endIndex
+    
+    
+    func move(index: inout String.Index, checkBy endIndex: inout String.Index, in word: [String], with wordIndex: inout Int) {
+      index = word[wordIndex].index(after: index)
+      
+      guard index == endIndex else { return }
+      wordIndex += 1
+      
+      guard wordIndex < word.count else { return }
+      index = word[wordIndex].startIndex
+      endIndex = word[wordIndex].endIndex
+    }
+    
+    while word1Index < word1.count, word2Index < word2.count {
+      guard word1[word1Index][leftIndex] == word2[word2Index][rightIndex] else { return false }
+      
+      move(index: &leftIndex, checkBy: &leftEndIndex, in: word1, with: &word1Index)
+      move(index: &rightIndex, checkBy: &rightEndIndex, in: word2, with: &word2Index)
+    }
+    
+    return leftIndex == leftEndIndex && rightIndex == rightEndIndex
+  }
+}
