@@ -49,3 +49,16 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+extension TestEasyStringTasks {
+  func testReverseOnlyLetters() {
+    let inputs = ["ab-cd", "a-bC-dEf-ghIj", "Test1ng-Leet=code-Q!", "_fa_", "-f-", "-fae-", "ab", "a", "-", "--", "---", "aaa", "7_28]"]
+    let outputs = ["dc-ba", "j-Ih-gfE-dCba", "Qedo1ct-eeLg=ntse-T!", "_af_", "-f-", "-eaf-", "ba", "a", "-", "--", "---", "aaa", "7_28]"]
+    XCTAssertTrue(inputs.count == outputs.count)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.reverseOnlyLetters(inputs[i]), outputs[i])
+    }
+    
+  }
+}

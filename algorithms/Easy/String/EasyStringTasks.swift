@@ -672,6 +672,45 @@ extension Solution.Easy {
   }
 }
 
+// MARK: 917. Reverse Only Letters
+extension Solution.Easy {
+  func reverseOnlyLetters(_ s: String) -> String {
+    
+    // Common
+    let uppercaseRange: Range<UInt8> = Range(97...122), lowercaseRange: Range<UInt8> = Range(65...90)
+    func isLetter(asciiValue: UInt8) -> Bool {
+      uppercaseRange.contains(asciiValue) || lowercaseRange.contains(asciiValue)
+    }
+    
+    // I
+//    var s = Array(s), tempChar: Character, leftPointer = s.startIndex, rightPointer = s.index(before: s.endIndex)
+//
+//    let range: Range<UInt8> = Range(65...122)
+//
+//    while leftPointer < rightPointer {
+//      while !isLetter(asciiValue: s[leftPointer].asciiValue!), leftPointer != s.endIndex {
+//        leftPointer = s.index(after: leftPointer)
+//      }
+//      while !isLetter(asciiValue: s[rightPointer].asciiValue!), rightPointer != s.startIndex {
+//        rightPointer = s.index(before: rightPointer)
+//      }
+//      guard leftPointer < rightPointer else { break }
+//
+//      tempChar = s[leftPointer]
+//      s[leftPointer] = s[rightPointer]
+//      s[rightPointer] = tempChar
+//
+//      leftPointer = s.index(after: leftPointer)
+//      rightPointer = s.index(before: rightPointer)
+//    }
+//
+//    return String(s)
+    
+    // II
+    var s = s, letters = s.filter { isLetter(asciiValue: $0.asciiValue!) }
+    return String(s.map { isLetter(asciiValue: $0.asciiValue!) ? letters.removeLast() : $0 })
+  }
+}
 // MARK: 859. Buddy Strings
 extension Solution.Easy {
   func buddyStrings(_ s: String, _ goal: String) -> Bool {
