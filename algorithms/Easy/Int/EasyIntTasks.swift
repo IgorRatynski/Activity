@@ -218,4 +218,18 @@ extension Solution.Easy {
     n % 2 == 0 ? n : n * 2
   }
 }
+
+// MARK: 1281. Subtract the Product and Sum of Digits of an Integer
+extension Solution.Easy {
+  func subtractProductAndSum(_ n: Int) -> Int {
+    var digits: [Int] = [], n = n
+    
+    while n > 0 {
+      digits.append(n % 10)
+      n = n / 10
+    }
+    
+    return digits.reduce(1, *) - digits.reduce(0, +)
+  }
+}
 }
