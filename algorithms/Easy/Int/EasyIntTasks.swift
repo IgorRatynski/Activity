@@ -168,7 +168,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Add digits
+// MARK: 258. Add Digits
 extension Solution.Easy {
   func addDigits(_ num: Int) -> Int {
     guard num > 9 else { return num }
