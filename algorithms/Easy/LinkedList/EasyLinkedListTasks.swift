@@ -151,3 +151,11 @@ extension Solution.Easy {
     return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val)
   }
 }
+
+// MARK: 938. Range Sum of BST
+extension Solution.Easy {
+  func rangeSumBST(_ root: TreeNode?, _ low: Int, _ high: Int) -> Int {
+    guard let root = root else { return 0 }
+    return rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high) + (root.val >= low && root.val <= high ? root.val : 0)
+  }
+}
