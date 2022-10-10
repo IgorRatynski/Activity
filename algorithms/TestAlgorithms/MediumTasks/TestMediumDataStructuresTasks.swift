@@ -20,25 +20,34 @@ extension TestEasyDataStructureTasks {
   }
   
   func testTwitter() {
-    let twitter = Solution.Medium.Twitter()
-    let inputs = [[1,5],[1,3],[1]]
-    let actions: [TwitterActions] = [.postTweet(byUser: 1, tweetId: 5), .postTweet(byUser: 1, tweetId: 3),
-                                     .getNewsFeed(of: 1)]
-    let outputs = [[],[],[3,5]]
+    var twitter: Solution.Medium.Twitter
+    let actions: [[TwitterActions]] = [
+      [.postTweet(byUser: 1, tweetId: 5), .postTweet(byUser: 1, tweetId: 3), .getNewsFeed(of: 1)],
+      [.postTweet(byUser: 1, tweetId: 5), .getNewsFeed(of: 1), .follow(user: 1, folowee: 2), .postTweet(byUser: 2, tweetId: 6), .getNewsFeed(of: 1), .unfollow(user: 1, followee: 2), .getNewsFeed(of: 1)],
+      [.postTweet(byUser: 1, tweetId: 5), .postTweet(byUser: 1, tweetId: 3), .postTweet(byUser: 1, tweetId: 101), .postTweet(byUser: 1, tweetId: 13), .postTweet(byUser: 1, tweetId: 10), .postTweet(byUser: 1, tweetId: 2), .postTweet(byUser: 1, tweetId: 94), .postTweet(byUser: 1, tweetId: 505), .postTweet(byUser: 1, tweetId: 333), .postTweet(byUser: 1, tweetId: 22), .postTweet(byUser: 1, tweetId: 11), .getNewsFeed(of: 1)]
+    ]
+    let outputs = [
+      [[],[],[3,5]],
+      [[],[5],[],[],[6,5],[],[5]],
+      [[],[],[],[],[],[],[],[],[],[],[],[11,22,333,505,94,2,10,13,101,3]]
+    ]
     
-    let set = Set([inputs.count, actions.count, outputs.count])
+    let set = Set([actions.count, outputs.count])
     XCTAssertTrue(set.count == 1)
     
     for i in 0..<set.first! {
-      switch actions[i] {
-        case .postTweet(byUser: let user, tweetId: let tweetId):
-          twitter.postTweet(user, tweetId)
-        case .follow(user: let user, folowee: let folowee):
-          twitter.follow(user, folowee)
-        case .unfollow(user: let user, followee: let folowee):
-          twitter.unfollow(user, folowee)
-        case .getNewsFeed(of: let user):
-          XCTAssertEqual(twitter.getNewsFeed(user), outputs[i])
+    twitter = Solution.Medium.Twitter()
+      for (index, action) in actions[i].enumerated() {
+        switch action {
+          case .postTweet(byUser: let user, tweetId: let tweetId):
+            twitter.postTweet(user, tweetId)
+          case .follow(user: let user, folowee: let folowee):
+            twitter.follow(user, folowee)
+          case .unfollow(user: let user, followee: let folowee):
+            twitter.unfollow(user, folowee)
+          case .getNewsFeed(of: let user):
+            XCTAssertEqual(twitter.getNewsFeed(user), outputs[i][index])
+        }
       }
     }
   }
