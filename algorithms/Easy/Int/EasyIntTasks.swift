@@ -232,4 +232,23 @@ extension Solution.Easy {
     return digits.reduce(1, *) - digits.reduce(0, +)
   }
 }
+
+// MARK: 2427. Number of Common Factors
+extension Solution.Easy {
+  func commonFactors(_ a: Int, _ b: Int) -> Int {
+    let min = Float(min(a, b)), max = Float(max(a, b))
+    guard min > 1 else { return 1 }
+    var result = 1, divider: Float
+    
+    for i in 2...Int(min) {
+      divider = Float(i)
+      guard (min / divider).truncatingRemainder(dividingBy: 1) == 0,
+            (max / divider).truncatingRemainder(dividingBy: 1) == 0
+      else { continue }
+      result += 1
+    }
+    
+    return result
+  }
+}
 }

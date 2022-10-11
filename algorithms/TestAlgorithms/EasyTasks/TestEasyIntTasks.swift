@@ -52,3 +52,17 @@ extension TestEasyIntArrayTasks {
   }
 }
 
+// MARK: 2427. Number of Common Factors
+extension TestEasyIntArrayTasks {
+  func testCommonFactors() {
+    let inputs1 = [12, 25, 10, 11, 144, 1, 344, 999]
+    let inputs2 = [6, 30, 15, 17, 12, 1, 451, 999]
+    let outputs = [4, 2, 2, 1, 6, 1, 1, 8]
+    let set = Set([inputs1.count, inputs2.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.commonFactors(inputs1[i], inputs2[i]), outputs[i])
+    }
+  }
+}
