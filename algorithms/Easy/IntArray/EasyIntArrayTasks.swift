@@ -469,3 +469,18 @@ extension Solution.Easy {
 //    image.map { $0.reversed().map { $0 == 0 ? 1 : 0 } }
   }
 }
+
+// MARK: 1089. Duplicate Zeros
+extension Solution.Easy {
+  func duplicateZeros(_ arr: inout [Int]) {
+    let count = arr.count
+    var ptr = 0
+    while ptr < arr.count {
+      guard arr[ptr] == 0 else { ptr += 1; continue }
+      arr.insert(0, at: ptr)
+      ptr += 2
+    }
+    
+    arr.removeLast(arr.count - count)
+  }
+}

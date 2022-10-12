@@ -66,3 +66,18 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1089. Duplicate Zeros
+extension TestEasyIntArrayTasks {
+  func testDuplicateZeros() {
+    var inputs = [[1,0,2,3,0,4,5,0], [0,0], [0,1], [1,1], [4,2,0]]
+    let outputs = [[1,0,0,2,3,0,0,4], [0,0], [0,0], [1,1], [4,2,0]]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      solution.duplicateZeros(&inputs[i])
+      XCTAssertEqual(inputs[i], outputs[i])
+    }
+  }
+}
