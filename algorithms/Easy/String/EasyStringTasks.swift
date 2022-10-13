@@ -739,6 +739,26 @@ extension Solution.Easy {
     return name[nameIndex] == typed[typedIndex]
   }
 }
+
+// MARK: 1876. Substrings of Size Three with Distinct Characters
+extension Solution.Easy {
+  func countGoodSubstrings(_ s: String) -> Int {
+    guard s.count > 2 else { return 0 }
+    var count = 0, first = s.startIndex, second = s.index(after: first), third = s.index(after: second), tempSet: Set<Character>
+    
+    for _ in 0..<s.count - 2 {
+      tempSet = [s[first], s[second], s[third]]
+      if tempSet.count == 3 {
+        count += 1
+      }
+      first = second
+      second = third
+      third = s.index(after: third)
+    }
+    
+    return count
+  }
+}
 // MARK: 859. Buddy Strings
 extension Solution.Easy {
   func buddyStrings(_ s: String, _ goal: String) -> Bool {

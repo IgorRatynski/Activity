@@ -76,5 +76,19 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1876. Substrings of Size Three with Distinct Characters
+extension TestEasyStringTasks {
+  func testCountGoodSubstrings() {
+    let inputs = ["jnndjbnlanbbashbbiuwefiuhwiufh", "xyzzaz", "aababcabc", "sdafmgiojaiofjkei", "d", "sf", "saf"]
+    let outputs = [22, 1, 4, 15, 0, 0, 1]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.countGoodSubstrings(inputs[i]), outputs[i])
+    }
+  }
+}
   }
 }
