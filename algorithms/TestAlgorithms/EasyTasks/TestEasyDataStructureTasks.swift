@@ -22,3 +22,18 @@ extension TestEasyDataStructureTasks {
     }
   }
 }
+
+// MARK: 1603. Design Parking System
+extension TestEasyDataStructureTasks {
+  func testDesignParkingSystem() {
+    let parkingSystem = Solution.Easy.ParkingSystem(1, 1, 0)
+    
+    let inputs = [[1], [2], [3], [1]]
+    let outputs = [true, true, false, false]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(parkingSystem.addCar(inputs[i].first!), outputs[i])
+    }
+  }
+}

@@ -81,6 +81,8 @@
 		47BD6946293953BD00A201EF /* MediumIntTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD6942293952FF00A201EF /* MediumIntTasks.swift */; };
 		47BD6947293953BE00A201EF /* MediumIntTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47BD6942293952FF00A201EF /* MediumIntTasks.swift */; };
 		47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */; };
+		47FE5298293BFB83007DA1CC /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE5297293BFB83007DA1CC /* ParkingSystem.swift */; };
+		47FE5299293BFB83007DA1CC /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE5297293BFB83007DA1CC /* ParkingSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -169,6 +171,7 @@
 		47BD6942293952FF00A201EF /* MediumIntTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumIntTasks.swift; sourceTree = "<group>"; };
 		47BD69442939535C00A201EF /* TestMediumIntTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumIntTasks.swift; sourceTree = "<group>"; };
 		47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHashSetTasks.swift; sourceTree = "<group>"; };
+		47FE5297293BFB83007DA1CC /* ParkingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +374,7 @@
 				47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */,
 				47B09BC928F35A8900D0553D /* EasyRecentCounter.swift */,
 				4766BF4E28B830E300081145 /* EasyQueueTasks.swift */,
+				47FE5297293BFB83007DA1CC /* ParkingSystem.swift */,
 			);
 			path = DataStructureTasks;
 			sourceTree = "<group>";
@@ -671,6 +675,7 @@
 				476DFD562883A092009C266B /* DataStructures.swift in Sources */,
 				47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */,
 				4780DB0E28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift in Sources */,
+				47FE5298293BFB83007DA1CC /* ParkingSystem.swift in Sources */,
 				474FC11E28FA843B00770403 /* EasyDoubleTasks.swift in Sources */,
 				4795A32A28ADB56C008B39EE /* EasyLinkedListTasks.swift in Sources */,
 				4766BF5028B830E300081145 /* EasyQueueTasks.swift in Sources */,
@@ -733,6 +738,7 @@
 				4795A32528ADB485008B39EE /* Solution.swift in Sources */,
 				4795A32728ADB54C008B39EE /* MediumIntArrayTasks.swift in Sources */,
 				47700B7D293209BC00F5C61D /* EasyStringArrayTasks.swift in Sources */,
+				47FE5299293BFB83007DA1CC /* ParkingSystem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
