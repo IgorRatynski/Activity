@@ -47,3 +47,16 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1929. Concatenation of Array
+extension TestEasyIntArrayTasks {
+  func testConcatenationOfArray() {
+    let inputs = [[1,2,1], [1,3,2,1]]
+    let outputs = [[1,2,1,1,2,1], [1,3,2,1,1,3,2,1]]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.getConcatenation(inputs[i]), outputs[i])
+    }
+  }
+}

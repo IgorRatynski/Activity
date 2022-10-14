@@ -533,3 +533,16 @@ extension Solution.Easy {
     nums.map { nums[$0] }
   }
 }
+
+// MARK: 1920. Build Array from Permutation
+extension Solution.Easy {
+  func getConcatenation(_ nums: [Int]) -> [Int] {
+    // 1
+    var result: [Int] = []
+    result.append(contentsOf: nums)
+    result.append(contentsOf: nums)
+    return result
+    // 2
+//    nums + nums
+  }
+}
