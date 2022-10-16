@@ -90,5 +90,19 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1221. Split a String in Balanced Strings
+extension TestEasyStringTasks {
+  func testBalancedStringSplit() {
+    let inputs = ["RLRRLLRLRL", "RLRRRLLRLL", "LLLLRRRR", "RLRLRLRLRLRLRRLLRLRLRLRLLRRL", "RL"]
+    let outputs = [4, 2, 1, 13, 1]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.balancedStringSplit(inputs[i]), outputs[i])
+    }
+  }
+}
   }
 }

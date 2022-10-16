@@ -759,6 +759,25 @@ extension Solution.Easy {
     return count
   }
 }
+
+// MARK: 1221. Split a String in Balanced Strings
+extension Solution.Easy {
+  func balancedStringSplit(_ s: String) -> Int {
+    var result = 0, count = 0, left: Character = s.first!
+    
+    for char in s {
+      if count == 0 {
+        left = char
+        count += 1
+        result += 1
+      } else {
+        count += left == char ? 1 : -1
+      }
+    }
+    
+    return result
+  }
+}
 // MARK: 859. Buddy Strings
 extension Solution.Easy {
   func buddyStrings(_ s: String, _ goal: String) -> Bool {
