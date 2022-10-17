@@ -104,5 +104,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1154. Day of the Year
+extension TestEasyStringTasks {
+  func testDayOfTheYear() {
+    let inputs = ["1900-04-20", "1904-04-20", "2019-01-09", "2019-02-10", "2019-12-10"]
+    let outputs = [110, 111, 9, 41, 344]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.dayOfYear(inputs[i]), outputs[i])
+    }
   }
 }

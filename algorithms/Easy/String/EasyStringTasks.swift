@@ -778,6 +778,17 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1154. Day of the Year
+extension Solution.Easy {
+  func dayOfYear(_ date: String) -> Int {
+    let date = date.components(separatedBy: "-").map { Int($0)! }
+    let isLeap = date[0] == 1900 ? false : date[0] % 4 == 0
+    let months = [1:31, 2: isLeap ? 29 : 28, 3:31, 4:30, 5:31, 6:30, 7:31, 8:31, 9:30, 10:31, 11:30]
+    return date[2] + (1..<date[1]).map { months[$0]! }.reduce(0, +)
+  }
+}
+
 // MARK: 859. Buddy Strings
 extension Solution.Easy {
   func buddyStrings(_ s: String, _ goal: String) -> Bool {
