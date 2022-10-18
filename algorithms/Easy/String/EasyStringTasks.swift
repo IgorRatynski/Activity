@@ -833,3 +833,17 @@ extension Solution.Easy {
     return differense[0] == differense[3] && differense[1] == differense[2]
   }
 }
+
+// MARK: 1832. Check if the Sentence Is Pangram
+extension Solution.Easy {
+  func checkIfPangram(_ sentence: String) -> Bool {
+    // I
+//    Set(sentence).count == 26
+    
+    // II
+    var alphabet = Set((Unicode.Scalar("a").value...Unicode.Scalar("z").value))
+    sentence.unicodeScalars.forEach { alphabet.remove($0.value) }
+    
+    return alphabet.isEmpty
+  }
+}

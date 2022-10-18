@@ -118,3 +118,16 @@ extension TestEasyStringTasks {
     }
   }
 }
+// MARK: 1790. Check if One String Swap Can Make Strings Equal
+extension TestEasyStringTasks {
+  func testCheckIfPangram() {
+    let inputs = ["thequickbrownfoxjumpsoverthelazydog", "leetcode", "s", "akoekfpokvmdkmzcxmvbbnmlsdlakdsofrlekoasolfoaoqeqwertyuioph"]
+    let outputs = [true, false, false, false]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.checkIfPangram(inputs[i]), outputs[i])
+    }
+  }
+}
