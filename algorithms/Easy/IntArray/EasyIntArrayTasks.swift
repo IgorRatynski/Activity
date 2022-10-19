@@ -526,3 +526,10 @@ extension Solution.Easy {
     return gcd(a: a, b: b)
   }
 }
+
+// MARK: 1920. Build Array from Permutation
+extension Solution.Easy {
+  func buildArray(_ nums: [Int]) -> [Int] {
+    nums.map { nums[$0] }
+  }
+}

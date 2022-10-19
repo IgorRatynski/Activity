@@ -34,3 +34,16 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1920. Build Array from Permutation
+extension TestEasyIntArrayTasks {
+  func testBuildArrayFromPermutation() {
+    let inputs = [[0,2,1,5,3,4], [5,0,1,2,3,4]]
+    let outputs = [[0,1,2,4,5,3], [4,5,0,1,2,3]]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.buildArray(inputs[i]), outputs[i])
+    }
+  }
+}
