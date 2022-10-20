@@ -95,3 +95,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 2160. Minimum Sum of Four Digit Number After Splitting Digits
+extension TestEasyIntArrayTasks {
+  func testMinimumSumOfFourDigitNumberAfterSplittingDigits() {
+    let inputs = [2932, 4009]
+    let outputs = [52, 13]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.minimumSum(inputs[i]), outputs[i])
+    }
+  }
+}

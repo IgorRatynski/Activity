@@ -258,4 +258,20 @@ extension Solution.Easy {
       num1 + num2
   }
 }
+
+// MARK: 2160. Minimum Sum of Four Digit Number After Splitting Digits
+extension Solution.Easy {
+  func minimumSum(_ num: Int) -> Int {
+    var digits: [Int] = [], num = num, ten = 10
+    
+    while num > 0 {
+      digits.append(num % ten)
+      num /= ten
+    }
+    
+    digits.sort()
+    
+    return (digits[0] * ten + digits[2]) + (digits[1] * ten + digits[3])
+  }
+}
 }
