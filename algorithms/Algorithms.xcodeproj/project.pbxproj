@@ -20,6 +20,9 @@
 		472A99622883986600D7ACEE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		47402BAF28EA69840000DF52 /* TestEasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */; };
 		47402BB128EA69D80000DF52 /* EasyTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47402BB028EA69D80000DF52 /* EasyTestCase.swift */; };
+		474244AD2901C2040030B299 /* TestMediumStringsTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474244AC2901C2040030B299 /* TestMediumStringsTasks.swift */; };
+		474244AE2901C5AD0030B299 /* MediumStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474244AA2901C1CC0030B299 /* MediumStringTasks.swift */; };
+		474244AF2901C5AE0030B299 /* MediumStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474244AA2901C1CC0030B299 /* MediumStringTasks.swift */; };
 		4762805728A69FD10068F752 /* EasyBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780DB0D28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift */; };
 		4762805B28A6F3EB0068F752 /* MediumHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805A28A6F3EB0068F752 /* MediumHashMap.swift */; };
 		4762805C28A6F3EB0068F752 /* MediumHashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4762805A28A6F3EB0068F752 /* MediumHashMap.swift */; };
@@ -125,6 +128,8 @@
 		472A995F2883985B00D7ACEE /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestEasyIntArrayTasks.swift; sourceTree = "<group>"; };
 		47402BB028EA69D80000DF52 /* EasyTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTestCase.swift; sourceTree = "<group>"; };
+		474244AA2901C1CC0030B299 /* MediumStringTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumStringTasks.swift; sourceTree = "<group>"; };
+		474244AC2901C2040030B299 /* TestMediumStringsTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumStringsTasks.swift; sourceTree = "<group>"; };
 		4762805A28A6F3EB0068F752 /* MediumHashMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumHashMap.swift; sourceTree = "<group>"; };
 		4762805E28A836990068F752 /* MediumIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumIntArrayTasks.swift; sourceTree = "<group>"; };
 		4766BF4528B56D8200081145 /* TestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCases.swift; sourceTree = "<group>"; };
@@ -278,6 +283,7 @@
 				4762805928A6F3D50068F752 /* HashMap */,
 				4762805D28A8367A0068F752 /* IntArray */,
 				472A99522883975200D7ACEE /* LinkedList */,
+				474244A92901C1A80030B299 /* String */,
 			);
 			path = Medium;
 			sourceTree = "<group>";
@@ -296,6 +302,14 @@
 				472A995F2883985B00D7ACEE /* Solution.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		474244A92901C1A80030B299 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				474244AA2901C1CC0030B299 /* MediumStringTasks.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		4762805928A6F3D50068F752 /* HashMap */ = {
@@ -399,6 +413,7 @@
 			children = (
 				47B09BD228F4232400D0553D /* MediumTestCase.swift */,
 				47B09BD428F4234700D0553D /* TestMediumDataStructuresTasks.swift */,
+				474244AC2901C2040030B299 /* TestMediumStringsTasks.swift */,
 			);
 			path = MediumTasks;
 			sourceTree = "<group>";
@@ -587,6 +602,7 @@
 				4762806028A8384A0068F752 /* MediumIntArrayTasks.swift in Sources */,
 				4762805B28A6F3EB0068F752 /* MediumHashMap.swift in Sources */,
 				4766BF4928B574FA00081145 /* DataStructuresSupporing.swift in Sources */,
+				474244AE2901C5AD0030B299 /* MediumStringTasks.swift in Sources */,
 				472621D2288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */,
 				472A99602883985B00D7ACEE /* Solution.swift in Sources */,
 				476DFD6F288A43C0009C266B /* EasyStringTasks.swift in Sources */,
@@ -651,11 +667,13 @@
 				4795A32828ADB550008B39EE /* HardIntArrayTasks.swift in Sources */,
 				47B8C48C28BE984700107689 /* TestEasyStringTasks.swift in Sources */,
 				4795A32928ADB55F008B39EE /* MediumLinkedListTasks.swift in Sources */,
+				474244AD2901C2040030B299 /* TestMediumStringsTasks.swift in Sources */,
 				47B09BCD28F35B6E00D0553D /* EasyRecentCounter.swift in Sources */,
 				47B09BC428F2F9C100D0553D /* TestEasyLinkedListTasks.swift in Sources */,
 				47B09BD528F4234700D0553D /* TestMediumDataStructuresTasks.swift in Sources */,
 				4766BF5128B830E300081145 /* EasyQueueTasks.swift in Sources */,
 				47B09BCC28F35ADA00D0553D /* TestEasyDataStructureTasks.swift in Sources */,
+				474244AF2901C5AE0030B299 /* MediumStringTasks.swift in Sources */,
 				4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */,
 				4795A32528ADB485008B39EE /* Solution.swift in Sources */,
 				4795A32728ADB54C008B39EE /* MediumIntArrayTasks.swift in Sources */,
