@@ -58,3 +58,28 @@ private extension Int {
     fromLeft ? self - 3 : self
   }
 }
+
+// MARK: 2396. Strictly Palindromic Number
+extension Solution.Medium {
+  func isStrictlyPalindromic(_ n: Int) -> Bool {
+    // I
+//    var startIndex: String.Index, endIndex: String.Index, based: String
+//
+//    for i in 2...n-2 {
+//      based = String(n, radix: i)
+//      startIndex = based.startIndex
+//      endIndex = based.index(before: based.endIndex)
+//
+//      for _ in 0..<based.count / 2 {
+//        guard based[startIndex] == based[endIndex] else { return false }
+//        startIndex = based.index(after: startIndex)
+//        endIndex = based.index(before: endIndex)
+//      }
+//    }
+//
+//    return true
+    
+    // II
+    false
+  }
+}
