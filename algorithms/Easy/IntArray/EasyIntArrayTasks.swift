@@ -577,3 +577,11 @@ extension Solution.Easy {
     return nums
   }
 }
+
+// MARK: 1431. Kids With the Greatest Number of Candies
+extension Solution.Easy {
+  func kidsWithCandies(_ candies: [Int], _ extraCandies: Int) -> [Bool] {
+    let max = candies.max()! - extraCandies
+    return candies.map { $0 >= max }
+  }
+}

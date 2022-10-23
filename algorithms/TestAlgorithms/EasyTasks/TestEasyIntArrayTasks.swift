@@ -87,3 +87,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1431. Kids With the Greatest Number of Candies
+extension TestEasyIntArrayTasks {
+  func testKidsWithGreatestCandiesNumber() {
+    let inputs = [[2,3,5,1,3], [4,2,1,1,2], [12,1,12], [1,2,3,4]]
+    let extraCandies = [3, 1, 10, 1]
+    let outputs = [[true,true,true,false,true], [true,false,false,false,false], [true,false,true], [false,false,true,true]]
+    XCTAssertTrue(Set([inputs.count, extraCandies.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.kidsWithCandies(inputs[i], extraCandies[i]), outputs[i])
+    }
+  }
+}
