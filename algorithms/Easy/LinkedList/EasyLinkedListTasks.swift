@@ -134,7 +134,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Delete node
+// MARK: 237. Delete Node in a Linked List
 extension Solution.Easy {
   func deleteNode(_ node: ListNode?) {
     node?.val = node!.next!.val
