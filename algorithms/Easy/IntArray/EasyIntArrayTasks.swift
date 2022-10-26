@@ -655,3 +655,24 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 704. Binary Search
+extension Solution.Easy {
+  func search(_ nums: [Int], _ target: Int) -> Int {
+    var range: Range = 0..<nums.count, mid: Int
+    
+    while range.lowerBound < range.upperBound {
+      mid = range.lowerBound + (range.upperBound - range.lowerBound) / 2
+      
+      guard nums[mid] != target else { return mid }
+      
+      if nums[mid] < target {
+        range = (mid + 1)..<range.upperBound
+      } else {
+        range = range.lowerBound..<mid
+      }
+    }
+    
+    return -1
+  }
+}

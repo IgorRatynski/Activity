@@ -155,3 +155,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 704. Binary Search
+extension TestEasyIntArrayTasks {
+  func testBinarySearch() {
+    let inputs = [[-1,0,3,5,9,12],[-1,0,3,5,9,12]]
+    let targets = [9,2]
+    let outputs = [4,-1]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.search(inputs[i], targets[i]), outputs[i])
+    }
+  }
+}
