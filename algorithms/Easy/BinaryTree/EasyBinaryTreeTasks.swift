@@ -13,3 +13,26 @@ extension Solution.Easy {
     root?.val ?? 0 == (root?.left?.val ?? 0) + (root?.right?.val ?? 0)
   }
 }
+
+// MARK: 872. Leaf-Similar Trees
+extension Solution.Easy {
+  func leafSimilar(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
+    func getLeafs(from root: TreeNode?, to array: inout [Int]) {
+      guard let root = root else { return }
+      
+      if root.left == nil && root.right == nil {
+        array.append(root.val)
+      }
+      
+      getLeafs(from: root.left, to: &array)
+      getLeafs(from: root.right, to: &array)
+    }
+    
+    var leftLeafs: [Int] = [], rightLeafs: [Int] = []
+    
+    getLeafs(from: root1, to: &leftLeafs)
+    getLeafs(from: root2, to: &rightLeafs)
+    
+    return leftLeafs == rightLeafs
+  }
+}
