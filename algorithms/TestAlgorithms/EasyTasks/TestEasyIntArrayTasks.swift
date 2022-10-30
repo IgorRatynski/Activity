@@ -141,3 +141,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 2006. Count Number of Pairs With Absolute Difference K
+extension TestEasyIntArrayTasks {
+  func testCountNumberOfPairsWithAbsoluteDifferenceK() {
+    let inputs = [[1,2,2,1],[1,3],[3,2,1,5,4]]
+    let ks = [1,3,2]
+    let outputs = [4,0,3]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.countKDifference(inputs[i], ks[i]), outputs[i])
+    }
+  }
+}

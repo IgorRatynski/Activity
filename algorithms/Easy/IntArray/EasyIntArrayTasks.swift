@@ -638,3 +638,20 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 2006. Count Number of Pairs With Absolute Difference K
+extension Solution.Easy {
+  func countKDifference(_ nums: [Int], _ k: Int) -> Int {
+    var result = 0
+    let k = Set([k, -k])
+    
+    for i in 0..<nums.count - 1 {
+      for j in i..<nums.count {
+        guard k.contains(nums[i] - nums[j]) else { continue }
+        result += 1
+      }
+    }
+    
+    return result
+  }
+}
