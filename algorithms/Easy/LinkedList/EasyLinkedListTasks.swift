@@ -159,3 +159,20 @@ extension Solution.Easy {
     return rangeSumBST(root.left, low, high) + rangeSumBST(root.right, low, high) + (root.val >= low && root.val <= high ? root.val : 0)
   }
 }
+
+// MARK: 1290. Convert Binary Number in a Linked List to Integer
+extension Solution.Easy {
+  func getDecimalValue(_ head: ListNode?) -> Int {
+    var result = 0, head = head
+
+    while head != nil {
+      if head!.val == 1 {
+        result += 1
+      }
+      result *= 2
+      head = head?.next
+    }
+
+    return result / 2
+  }
+}
