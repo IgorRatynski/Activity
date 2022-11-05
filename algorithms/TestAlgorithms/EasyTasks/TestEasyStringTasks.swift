@@ -245,3 +245,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1614. Maximum Nesting Depth of the Parentheses
+extension TestEasyStringTasks {
+  func testMaximumNestingDepthParentheses() {
+    let inputs = ["(1+(2*3)+((8)/4))+1", "(1)+((2))+(((3)))", "+(+(+)+)+", "()"]
+    let outputs = [3,3,2,1]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.maxDepth(inputs[i]), outputs[i])
+    }
+  }
+}

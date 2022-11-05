@@ -1002,3 +1002,22 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1614. Maximum Nesting Depth of the Parentheses
+extension Solution.Easy {
+  func maxDepth(_ s: String) -> Int {
+    var result = 0, depth = 0, plus: Character = "(", minus: Character = ")"
+    
+    for char in s {
+      if char == plus {
+        depth += 1
+      } else if char == minus {
+        depth -= 1
+      }
+      guard depth > result else { continue }
+      result = depth
+    }
+    
+    return result
+  }
+}
