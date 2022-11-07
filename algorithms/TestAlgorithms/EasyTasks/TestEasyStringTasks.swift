@@ -231,3 +231,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 2315. Count Asterisks
+extension TestEasyStringTasks {
+  func testCountAsterisks() {
+    let inputs = ["l|*e*et|c**o|*de|","iamprogrammer","yo|uar|e**|b|e***au|tifu|l"]
+    let outputs = [2,0,5]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.countAsterisks(inputs[i]), outputs[i])
+    }
+  }
+}

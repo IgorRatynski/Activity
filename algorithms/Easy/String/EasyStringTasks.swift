@@ -983,3 +983,22 @@ extension Solution.Easy {
       .joined(separator: " ")
   }
 }
+
+// MARK: 2315. Count Asterisks
+extension Solution.Easy {
+  func countAsterisks(_ s: String) -> Int {
+    var result = 0, needCount = true
+    let sign: Character = "|", asterics: Character = "*"
+    
+    for char in s {
+      if needCount && char == asterics {
+        result += 1
+        continue
+      }
+      guard char == sign else { continue }
+      needCount = !needCount
+    }
+    
+    return result
+  }
+}
