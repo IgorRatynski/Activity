@@ -292,4 +292,11 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1688. Count of Matches in Tournament
+extension Solution.Easy {
+  func numberOfMatches(_ n: Int) -> Int {
+    n - 1
+  }
+}
 }
