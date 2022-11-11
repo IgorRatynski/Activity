@@ -73,3 +73,24 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1773. Count Items Matching a Rule
+extension Solution.Easy {
+  func countMatches(_ items: [[String]], _ ruleKey: String, _ ruleValue: String) -> Int {
+    let ruleNumber: Int
+    var result = 0
+    
+    switch ruleKey {
+      case "type": ruleNumber = 0
+      case "color": ruleNumber = 1
+      default: ruleNumber = 2 // "name". in prod 4 default case would be preffered another behaviour
+    }
+    
+    for item in items {
+      guard item[ruleNumber] == ruleValue else { continue }
+      result += 1
+    }
+    
+    return result
+  }
+}

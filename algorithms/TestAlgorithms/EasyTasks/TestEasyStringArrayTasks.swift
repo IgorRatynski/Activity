@@ -37,3 +37,19 @@ extension TestEasyStringArrayTasks {
     }
   }
 }
+
+// MARK: 1773. Count Items Matching a Rule
+extension TestEasyStringArrayTasks {
+  func testCountItemsMatchingRule() {
+    let inputs = [[["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold","iphone"]], [["phone","blue","pixel"],["computer","silver","phone"],["phone","gold","iphone"]]]
+    let ruleKeys = ["color","type"]
+    let ruleValues = ["silver","phone"]
+    let outputs = [1,2]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.countMatches(inputs[i], ruleKeys[i], ruleValues[i]), outputs[i])
+    }
+  }
+}
