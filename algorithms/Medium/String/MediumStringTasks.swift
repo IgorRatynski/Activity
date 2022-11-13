@@ -19,3 +19,35 @@ extension Solution.Medium {
       .map { $0.key }
   }
 }
+
+// MARK: 151. Reverse Words in a String
+extension Solution.Medium {
+  func reverseWords(_ s: String) -> String {
+    // I
+//    s.components(separatedBy: " ")
+//      .filter { !$0.isEmpty }
+//      .reversed()
+//      .joined(separator: " ")
+    
+    // II
+    var word = "", result: String, results: [String] = []
+    
+    for char in s {
+      if char == " " {
+        guard !word.isEmpty else { continue }
+        results.append(word)
+        word = ""
+      } else {
+        word.append(char)
+      }
+    }
+
+    result = word.isEmpty ? results.last! : word
+
+    for i in stride(from: results.count - (word.isEmpty ? 2 : 1), through: 0, by: -1) {
+      result += " " + results[i]
+    }
+    
+    return result
+  }
+}

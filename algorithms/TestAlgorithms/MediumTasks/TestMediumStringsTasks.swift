@@ -26,3 +26,17 @@ extension TestMediumStringsTasks {
     }
   }
 }
+
+// MARK: 151. Reverse Words in a String
+extension TestMediumStringsTasks {
+  func testReverseWords() {
+    let inputs = ["the sky is blue", "  hello world  ", "a good   example"]
+    let outputs = ["blue is sky the", "world hello", "example good a"]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.reverseWords(inputs[i]), outputs[i])
+    }
+  }
+}
