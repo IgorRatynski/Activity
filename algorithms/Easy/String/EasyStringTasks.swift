@@ -973,3 +973,13 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1859. Sorting the Sentence
+extension Solution.Easy {
+  func sortSentence(_ s: String) -> String {
+    s.components(separatedBy: " ")
+      .sorted { $0.last! < $1.last! }
+      .map { $0.dropLast() }
+      .joined(separator: " ")
+  }
+}

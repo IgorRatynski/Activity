@@ -217,3 +217,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1859. Sorting the Sentence
+extension TestEasyStringTasks {
+  func testSortingTheSentence() {
+    let inputs = ["is2 sentence4 This1 a3", "Myself2 Me1 I4 and3"]
+    let outputs = ["This is a sentence", "Me Myself and I"]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.sortSentence(inputs[i]), outputs[i])
+    }
+  }
+}
