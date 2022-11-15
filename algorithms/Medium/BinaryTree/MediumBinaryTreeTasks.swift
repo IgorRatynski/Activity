@@ -17,3 +17,25 @@ extension Solution.Medium {
            sumEvenGrandparent(root?.left) + sumEvenGrandparent(root?.right)
   }
 }
+
+// MARK: 1026. Maximum Difference Between Node and Ancestor
+extension Solution.Medium {
+  func maxAncestorDiff(_ root: TreeNode?) -> Int {
+    guard let root = root else { return 0 }
+    
+    var result = 0
+    getDiff(from: root, minValue: root.val, maxValue: root.val, and: &result)
+    return result
+  }
+  
+  private func getDiff(from root: TreeNode?, minValue: Int, maxValue: Int, and result: inout Int) {
+    guard let root = root else { return }
+    
+    let minValue = min(root.val, minValue), maxValue = max(root.val, maxValue),
+        diff = max(abs(minValue - root.val), abs(maxValue - root.val))
+    result = max(result, diff)
+    
+    getDiff(from: root.left, minValue: minValue, maxValue: maxValue, and: &result)
+    getDiff(from: root.right, minValue: minValue, maxValue: maxValue, and: &result)
+  }
+}
