@@ -950,3 +950,26 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 2325. Decode the Message
+extension Solution.Easy {
+  func decodeMessage(_ key: String, _ message: String) -> String {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    var result = "", letter: Character, index = alphabet.startIndex, keyIndex = key.startIndex, table: [Character:Character] = [" ":" "]
+    
+    while table.count < 27 {
+      letter = key[keyIndex]
+      if letter != " ", table[letter] == nil {
+        table[letter] = alphabet[index]
+        index = alphabet.index(after: index)
+      }
+      keyIndex = key.index(after: keyIndex)
+    }
+    
+    for char in message {
+      result.append(table[char]!)
+    }
+    
+    return result
+  }
+}

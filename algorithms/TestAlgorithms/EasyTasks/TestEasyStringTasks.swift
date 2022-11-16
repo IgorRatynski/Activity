@@ -202,3 +202,18 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 2325. Decode the Message
+extension TestEasyStringTasks {
+  func testDecodeTheMessage() {
+    let keys = ["the quick brown fox jumps over the lazy dog", "eljuxhpwnyrdgtqkviszcfmabo"]
+    let messages = ["vkbs bs t suepuv", "zwx hnfx lqantp mnoeius ycgk vcnjrdb"]
+    let outputs = ["this is a secret", "the five boxing wizards jump quickly"]
+    let set = Set([keys.count, messages.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.decodeMessage(keys[i], messages[i]), outputs[i])
+    }
+  }
+}
