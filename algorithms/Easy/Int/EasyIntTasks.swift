@@ -274,4 +274,22 @@ extension Solution.Easy {
     return (digits[0] * ten + digits[2]) + (digits[1] * ten + digits[3])
   }
 }
+
+// MARK: 1342. Number of Steps to Reduce a Number to Zero
+extension Solution.Easy {
+  func numberOfSteps(_ num: Int) -> Int {
+    var result = 0, num = num
+    
+    while num > 0 {
+      if num % 2 == 0 {
+        num /= 2
+      } else {
+        num -= 1
+      }
+      result += 1
+    }
+    
+    return result
+  }
+}
 }

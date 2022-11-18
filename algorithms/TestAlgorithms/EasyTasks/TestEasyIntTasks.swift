@@ -109,3 +109,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1342. Number of Steps to Reduce a Number to Zero
+extension TestEasyIntArrayTasks {
+  func testNumberStepsReduceNumberToZero() {
+    let inputs = [14,8,123]
+    let outputs = [6,4,12]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.numberOfSteps(inputs[i]), outputs[i])
+    }
+  }
+}
