@@ -30,3 +30,21 @@ extension TestMediumIntArrayTasks {
 //    }
   }
 }
+
+// MARK: 74. Search a 2D Matrix
+extension TestMediumIntArrayTasks {
+  func testSearchA2DMatrix() {
+    let stones = [
+      [[1,3,5,7],[10,11,16,20],[23,30,34,60]], [[1,3,5,7],[10,11,16,20],[23,30,34,60]], [[1,3]], [[1]]
+    ]
+    let targets = [3,13,3,0]
+    let outputs = [true, false, true, false]
+
+    let set = Set([stones.count, targets.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.searchMatrix(stones[i], targets[i]), outputs[i])
+    }
+  }
+}

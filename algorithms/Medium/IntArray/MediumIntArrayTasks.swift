@@ -83,3 +83,31 @@ extension Solution.Medium {
   }
 }
 
+// MARK: 74. Search a 2D Matrix
+extension Solution.Medium {
+  func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
+    var p: Int?
+    
+    for i in 0..<matrix.count {
+      guard matrix[i].first! <= target && target <= matrix[i].last! else { continue }
+      p = i
+      break
+    }
+    guard let p = p else { return false }
+
+    var low = 0, high = matrix[p].count - 1, mid = high / 2
+    
+    while low < high {
+      guard matrix[p][mid] != target else { return true }
+      if matrix[p][mid] > target {
+        high = mid - 1
+        mid = (low + high) / 2
+      } else {
+        low = mid + 1
+        mid = (low + high) / 2
+      }
+    }
+    
+    return matrix[p][mid] == target
+  }
+}
