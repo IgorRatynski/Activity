@@ -929,3 +929,24 @@ extension Solution.Easy {
     return address
   }
 }
+
+// MARK: 2194. Cells in a Range on an Excel Sheet
+extension Solution.Easy {
+  func cellsInRange(_ s: String) -> [String] {
+    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        minNumber = Int(String(s[s.index(after: s.startIndex)]))!, maxNumber = Int(String(s[s.index(before: s.endIndex)]))!
+    var result: [String] = [], index = alphabet.firstIndex(of: s[s.startIndex])!,
+        endIndex = alphabet.index(after: alphabet.firstIndex(of: s[s.index(s.startIndex, offsetBy: 3)])!),
+        letter: Character
+    
+    while index != endIndex {
+      letter = alphabet[index]
+      for i in minNumber...maxNumber {
+        result.append("\(letter)\(i)")
+      }
+      index = alphabet.index(after: index)
+    }
+    
+    return result
+  }
+}

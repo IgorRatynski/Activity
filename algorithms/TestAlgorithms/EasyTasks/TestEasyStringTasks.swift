@@ -188,3 +188,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 2194. Cells in a Range on an Excel Sheet
+extension TestEasyStringTasks {
+  func testCellsRangeExcelSheet() {
+    let inputs = ["K1:L2", "A1:F1", "Y1:Z2", "Z1:Z1", "U7:X9"]
+    let outputs = [["K1","K2","L1","L2"], ["A1","B1","C1","D1","E1","F1"], ["Y1","Y2","Z1","Z2"], ["Z1"], ["U7","U8","U9","V7","V8","V9","W7","W8","W9","X7","X8","X9"]]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.cellsInRange(inputs[i]), outputs[i])
+    }
+  }
+}
