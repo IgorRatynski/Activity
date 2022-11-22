@@ -847,3 +847,23 @@ extension Solution.Easy {
     return alphabet.isEmpty
   }
 }
+
+// MARK: 1678. Goal Parser Interpretation
+extension Solution.Easy {
+  func interpret(_ command: String) -> String {
+    var result = "", temp = "", index = command.startIndex
+    
+    while index < command.endIndex {
+      defer { index = command.index(after: index) }
+      guard command[index] != "G" else { result += "G"; continue }
+      guard command[index] != "(" else { continue }
+      if command[index] == ")" {
+        result += "o"
+      } else {
+        result += "al"
+        index = command.index(index, offsetBy: 2)
+      }
+    }
+    return result
+  }
+}

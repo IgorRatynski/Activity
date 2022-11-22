@@ -118,6 +118,7 @@ extension TestEasyStringTasks {
     }
   }
 }
+
 // MARK: 1790. Check if One String Swap Can Make Strings Equal
 extension TestEasyStringTasks {
   func testCheckIfPangram() {
@@ -128,6 +129,20 @@ extension TestEasyStringTasks {
     
     for i in 0..<set.first! {
       XCTAssertEqual(solution.checkIfPangram(inputs[i]), outputs[i])
+    }
+  }
+}
+
+// MARK: 1678. Goal Parser Interpretation
+extension TestEasyStringTasks {
+  func testzGoalParserInterpretation() {
+    let inputs = ["G()(al)", "G()()()()(al)", "(al)G(al)()()G", "G", "()", "(al)"]
+    let outputs = ["Goal", "Gooooal", "alGalooG", "G", "o", "al"]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.interpret(inputs[i]), outputs[i])
     }
   }
 }
