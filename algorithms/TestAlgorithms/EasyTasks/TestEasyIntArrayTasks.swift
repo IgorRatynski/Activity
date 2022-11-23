@@ -128,3 +128,16 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1313. Decompress Run-Length Encoded List
+extension TestEasyIntArrayTasks {
+  func testDecompressRunLengthEncodedList() {
+    let inputs = [[1,2,3,4], [1,1,2,3]]
+    let outputs = [[2,4,4,4], [1,3,3]]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.decompressRLElist(inputs[i]), outputs[i])
+    }
+  }
+}
