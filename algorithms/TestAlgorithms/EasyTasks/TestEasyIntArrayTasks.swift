@@ -114,3 +114,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1389. Create Target Array in the Given Order
+extension TestEasyIntArrayTasks {
+  func testCreateTargetArrayInGivenOrder() {
+    let inputsNums = [[0,1,2,3,4], [1,2,3,4,0], [1]]
+    let inputsIndexies = [[0,1,2,2,1], [0,1,2,3,0], [0]]
+    let outputs = [[0,4,1,3,2], [0,1,2,3,4], [1]]
+    XCTAssertTrue(Set([inputsNums.count, inputsIndexies.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputsNums.count {
+      XCTAssertEqual(solution.createTargetArray(inputsNums[i], inputsIndexies[i]), outputs[i])
+    }
+  }
+}

@@ -611,3 +611,16 @@ extension Solution.Easy {
     return nums.map { dict[$0]! }
   }
 }
+
+// MARK: 1389. Create Target Array in the Given Order
+extension Solution.Easy {
+  func createTargetArray(_ nums: [Int], _ index: [Int]) -> [Int] {
+    var result: [Int] = []
+    
+    for i in 0..<nums.count {
+      result.insert(nums[i], at: index[i])
+    }
+    
+    return result
+  }
+}
