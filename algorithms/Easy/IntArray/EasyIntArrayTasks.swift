@@ -561,3 +561,19 @@ extension Solution.Easy {
     return nums
   }
 }
+
+// MARK: 1470. Shuffle the Array
+extension Solution.Easy {
+  func shuffle(_ nums: [Int], _ n: Int) -> [Int] {
+    var nums = nums, xIndex = 1, yIndex = n
+    
+    for _ in 0..<n - 1 {
+      nums.insert(nums[yIndex], at: xIndex)
+      yIndex += 1
+      nums.remove(at: yIndex)
+      xIndex += 2
+    }
+    
+    return nums
+  }
+}

@@ -64,3 +64,12 @@ extension Solution.Easy {
     }
   }
 }
+
+// MARK: 2011. Final Value of Variable After Performing Operations
+extension Solution.Easy {
+  func finalValueAfterOperations(_ operations: [String]) -> Int {
+    var result = 0, index = operations.first!.index(after: operations.first!.startIndex)
+    operations.forEach { result = $0[index] == "+" ? result + 1 : result - 1 }
+    return result
+  }
+}

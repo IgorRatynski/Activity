@@ -73,3 +73,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1470. Shuffle the Array
+extension TestEasyIntArrayTasks {
+  func testShuffleTheArray() {
+    let inputs = [[2,5,1,3,4,7], [1,2,3,4,4,3,2,1], [1,1,2,2]]
+    let nums = [3, 4, 2]
+    let outputs = [[2,3,5,4,1,7], [1,4,2,3,3,2,4,1], [1,2,1,2]]
+    XCTAssertTrue(Set([inputs.count, nums.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.shuffle(inputs[i], nums[i]), outputs[i])
+    }
+  }
+}

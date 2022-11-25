@@ -10,7 +10,6 @@
 		47089EC8292271EB003838A3 /* TestMediumIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */; };
 		4724E69228CBFEA5009DD73F /* EasyHashMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */; };
 		472621D2288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */; };
-		472621D3288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */; };
 		472706CB288B936E00E2CCB1 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4F2883A066009C266B /* DataStructures.swift */; };
 		472706CC288B937100E2CCB1 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
 		472706CF288B955800E2CCB1 /* HardIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47189D0F288B932500FFB1A1 /* HardIntArrayTasks.swift */; };
@@ -673,7 +672,6 @@
 				47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */,
 				4780DB0E28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift in Sources */,
 				474FC11E28FA843B00770403 /* EasyDoubleTasks.swift in Sources */,
-				472621D3288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */,
 				4795A32A28ADB56C008B39EE /* EasyLinkedListTasks.swift in Sources */,
 				4766BF5028B830E300081145 /* EasyQueueTasks.swift in Sources */,
 				4724E69228CBFEA5009DD73F /* EasyHashMapTasks.swift in Sources */,
