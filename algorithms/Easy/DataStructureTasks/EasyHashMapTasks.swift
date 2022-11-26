@@ -28,7 +28,7 @@ extension Solution.Easy {
     
     func get(_ key: Int) -> Int {
       guard keys.contains(key) else { return -1 }
-      let index = keys.firstIndex(of: { $0 == key })
+      let index = keys.firstIndex(of: { $0 == key } )
       return values[index]
     }
     

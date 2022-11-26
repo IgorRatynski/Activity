@@ -23,3 +23,17 @@ extension TestEasyStringArrayTasks {
   //    }
   //  }
 }
+
+// MARK: 2011. Final Value of Variable After Performing Operations
+extension TestEasyStringArrayTasks {
+  func testFinalValueOfVariableAfterPerformingOperations() {
+    let inputs = [["--X","X++","X++","X++","X++", "++X"], ["X++", "--X","X++","X++","++X", "X--"], ["X++","++X","--X","X--"]]
+    let outputs = [4, 2, 0]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.finalValueAfterOperations(inputs[i]), outputs[i])
+    }
+  }
+}

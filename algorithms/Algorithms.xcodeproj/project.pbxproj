@@ -50,9 +50,9 @@
 		476DFD6A288A3931009C266B /* EasyLinkedListTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD4D2883A04D009C266B /* EasyLinkedListTasks.swift */; };
 		476DFD6E288A43B1009C266B /* EasyStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD6D288A43B1009C266B /* EasyStringTasks.swift */; };
 		476DFD6F288A43C0009C266B /* EasyStringTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476DFD6D288A43B1009C266B /* EasyStringTasks.swift */; };
+		47700B7D293209BC00F5C61D /* EasyStringArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4795A31428ADB089008B39EE /* EasyStringArrayTasks.swift */; };
 		4780DB0E28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4780DB0D28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift */; };
 		4795A31528ADB089008B39EE /* EasyStringArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4795A31428ADB089008B39EE /* EasyStringArrayTasks.swift */; };
-		4795A31628ADB089008B39EE /* EasyStringArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4795A31428ADB089008B39EE /* EasyStringArrayTasks.swift */; };
 		4795A31E28ADB3D3008B39EE /* TestAlgorithms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4795A31D28ADB3D3008B39EE /* TestAlgorithms.swift */; };
 		4795A32428ADB44E008B39EE /* EasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */; };
 		4795A32528ADB485008B39EE /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472A995F2883985B00D7ACEE /* Solution.swift */; };
@@ -668,7 +668,6 @@
 			files = (
 				472A99622883986600D7ACEE /* Solution.swift in Sources */,
 				476DFD64288A125B009C266B /* EasyIntTasks.swift in Sources */,
-				4795A31628ADB089008B39EE /* EasyStringArrayTasks.swift in Sources */,
 				476DFD6E288A43B1009C266B /* EasyStringTasks.swift in Sources */,
 				476DFD562883A092009C266B /* DataStructures.swift in Sources */,
 				47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */,
@@ -735,6 +734,7 @@
 				4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */,
 				4795A32528ADB485008B39EE /* Solution.swift in Sources */,
 				4795A32728ADB54C008B39EE /* MediumIntArrayTasks.swift in Sources */,
+				47700B7D293209BC00F5C61D /* EasyStringArrayTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
