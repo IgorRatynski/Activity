@@ -546,3 +546,18 @@ extension Solution.Easy {
 //    nums + nums
   }
 }
+
+// MARK: 1480. Running Sum of 1d Array
+extension Solution.Easy {
+  func runningSum(_ nums: [Int]) -> [Int] {
+    var nums = nums, temp = 0, index = nums.startIndex
+    
+    for num in nums {
+      temp += num
+      nums[index] = temp
+      index = nums.index(after: index)
+    }
+    
+    return nums
+  }
+}

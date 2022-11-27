@@ -60,3 +60,16 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1480. Running Sum of 1d Array
+extension TestEasyIntArrayTasks {
+  func testRunningSumOf1dArray() {
+    let inputs = [[1,2,3,4], [1,1,1,1,1], [3,1,2,10,1], [420]]
+    let outputs = [[1,3,6,10], [1,2,3,4,5], [3,4,6,16,17], [420]]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.runningSum(inputs[i]), outputs[i])
+    }
+  }
+}
