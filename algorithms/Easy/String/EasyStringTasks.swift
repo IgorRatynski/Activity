@@ -904,3 +904,28 @@ extension Solution.Easy {
     n.max()!.wholeNumberValue!
   }
 }
+
+// MARK: 1108. Defanging an IP Address
+extension Solution.Easy {
+  func defangIPaddr(_ address: String) -> String {
+    // 1
+//    address.replacingOccurrences(of: ".", with: "[.]")
+    
+    // 2
+    var address = address, processedDots = 0, index: String.Index = address.index(address.endIndex, offsetBy: -2)
+    
+    while processedDots < 3 {
+      if address[index] == "." {
+        address.insert("]", at: address.index(after: index))
+        address.insert("[", at: index)
+        guard processedDots < 2 else { return address }
+        processedDots += 1
+        index = address.index(index, offsetBy: -2)
+        continue
+      }
+      index = address.index(index, offsetBy: -1)
+    }
+
+    return address
+  }
+}

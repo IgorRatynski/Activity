@@ -174,3 +174,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1108. Defanging an IP Address
+extension TestEasyStringTasks {
+  func testDefangingAnIpAddress() {
+    let inputs = ["1.1.1.1", "255.100.50.0"]
+    let outputs = ["1[.]1[.]1[.]1", "255[.]100[.]50[.]0"]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.defangIPaddr(inputs[i]), outputs[i])
+    }
+  }
+}
