@@ -81,3 +81,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 2235. Add Two Integers
+extension TestEasyIntArrayTasks {
+  func testAddTwoIntegers() {
+    let inputs1 = [12, -10], inputs2 = [5, 4]
+    let outputs = [17, -6]
+    let set = Set([inputs1.count, inputs2.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.sum(inputs1[i], inputs2[i]), outputs[i])
+    }
+  }
+}
