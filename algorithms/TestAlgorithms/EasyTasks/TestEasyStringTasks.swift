@@ -160,3 +160,17 @@ extension TestEasyStringTasks {
     }
   }
 }
+
+// MARK: 1689. Partitioning Into Minimum Number Of Deci-Binary Numbers
+extension TestEasyStringTasks {
+  func testPartitioningIntoMinimumNumberOfDeciBinaryNumbers() {
+    let inputs = ["32", "82734", "27346209830709182346", "1010101010101"]
+    let outputs = [3, 8, 9, 1]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.minPartitions(inputs[i]), outputs[i])
+    }
+  }
+}

@@ -884,3 +884,23 @@ extension Solution.Easy {
     return count == 0
   }
 }
+
+// MARK: 1689. Partitioning Into Minimum Number Of Deci-Binary Numbers
+extension Solution.Easy {
+  func minPartitions(_ n: String) -> Int {
+    // 1
+//    var n = n, temp: Int, result = 0
+//
+//    while !n.isEmpty {
+//      temp = n.removeLast().wholeNumberValue!
+//      guard temp > result else { continue }
+//      result = temp
+//      guard temp < 9 else { return 9 }
+//    }
+//
+//    return result
+    
+    // 2
+    n.max()!.wholeNumberValue!
+  }
+}
