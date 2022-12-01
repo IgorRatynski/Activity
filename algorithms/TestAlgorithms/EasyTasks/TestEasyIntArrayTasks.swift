@@ -21,3 +21,16 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 836. Rectangle Overlap
+extension TestEasyIntArrayTasks {
+  func testIsRectangleOverlap() {
+    let inputs1 = [[0,0,2,2], [0,0,1,1], [0,0,1,1]], inputs2 = [[1,1,3,3], [1,0,2,1], [2,2,3,3]]
+    let outputs = [true, false, false]
+    XCTAssertTrue(Set([inputs1.count, inputs2.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs1.count {
+      XCTAssertEqual(solution.isRectangleOverlap(inputs1[i], inputs2[i]), outputs[i])
+    }
+  }
+}
