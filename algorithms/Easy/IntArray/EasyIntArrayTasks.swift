@@ -534,7 +534,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: 1920. Build Array from Permutation
+// MARK: 1929. Concatenation of Array
 extension Solution.Easy {
   func getConcatenation(_ nums: [Int]) -> [Int] {
     // 1
