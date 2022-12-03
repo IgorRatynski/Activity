@@ -867,3 +867,20 @@ extension Solution.Easy {
     return result
   }
 }
+
+// MARK: 1704. Determine if String Halves Are Alike
+extension Solution.Easy {
+  func halvesAreAlike(_ s: String) -> Bool {
+    let vowels: Set<Character> = Set(["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"])
+    var aIndex: String.Index = s.startIndex, bIndex = s.index(s.startIndex, offsetBy: s.count / 2), count = 0
+    
+    for _ in 0..<(s.count / 2) {
+      if vowels.contains(s[aIndex]) { count += 1 }
+      if vowels.contains(s[bIndex]) { count -= 1 }
+      aIndex = s.index(after: aIndex)
+      bIndex = s.index(after: bIndex)
+    }
+    
+    return count == 0
+  }
+}

@@ -446,8 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				47402BB028EA69D80000DF52 /* EasyTestCase.swift */,
-				474244B029029F320030B299 /* TestEasyStringArrayTasks.swift */,
 				47B8C48B28BE984700107689 /* TestEasyStringTasks.swift */,
+				474244B029029F320030B299 /* TestEasyStringArrayTasks.swift */,
 				47B09BC728F3494400D0553D /* TestEasyIntTasks.swift */,
 				47402BAE28EA69840000DF52 /* TestEasyIntArrayTasks.swift */,
 				47B09BC328F2F9C100D0553D /* TestEasyLinkedListTasks.swift */,

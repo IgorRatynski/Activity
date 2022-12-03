@@ -135,7 +135,7 @@ extension TestEasyStringTasks {
 
 // MARK: 1678. Goal Parser Interpretation
 extension TestEasyStringTasks {
-  func testzGoalParserInterpretation() {
+  func testGoalParserInterpretation() {
     let inputs = ["G()(al)", "G()()()()(al)", "(al)G(al)()()G", "G", "()", "(al)"]
     let outputs = ["Goal", "Gooooal", "alGalooG", "G", "o", "al"]
     let set = Set([inputs.count, outputs.count])
@@ -143,6 +143,20 @@ extension TestEasyStringTasks {
     
     for i in 0..<set.first! {
       XCTAssertEqual(solution.interpret(inputs[i]), outputs[i])
+    }
+  }
+}
+
+// MARK: 1704. Determine if String Halves Are Alike
+extension TestEasyStringTasks {
+  func testStringHalvesAreAlike() {
+    let inputs = ["book", "textbook", "notebook"]
+    let outputs = [true, false, true]
+    let set = Set([inputs.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.halvesAreAlike(inputs[i]), outputs[i])
     }
   }
 }
