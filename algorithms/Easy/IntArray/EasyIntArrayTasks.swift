@@ -585,3 +585,29 @@ extension Solution.Easy {
     return candies.map { $0 >= max }
   }
 }
+
+// MARK: 1365. How Many Numbers Are Smaller Than the Current Number
+extension Solution.Easy {
+  func smallerNumbersThanCurrent(_ nums: [Int]) -> [Int] {
+    // I
+//    var result: [Int] = [], temp: Int
+//
+//    for num in nums {
+//      temp = 0
+//      nums.forEach { if num > $0 { temp += 1 } }
+//      result.append(temp)
+//    }
+//
+//    return result
+    
+    // II
+    let sorted = nums.sorted { $0 > $1 }
+    var dict: [Int:Int] = [:]
+
+    for (index, value) in sorted.enumerated() {
+      dict[value] = sorted.count - (index + 1)
+    }
+
+    return nums.map { dict[$0]! }
+  }
+}

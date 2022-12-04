@@ -101,3 +101,16 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 1365. How Many Numbers Are Smaller Than the Current Number
+extension TestEasyIntArrayTasks {
+  func testHowManyNumbersAreSmallerThanCurrentNumber() {
+    let inputs = [[8,1,2,2,3], [6,5,4,8], [7,7,7,7]]
+    let outputs = [[4,0,1,1,3], [2,1,0,3], [0,0,0,0]]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.smallerNumbersThanCurrent(inputs[i]), outputs[i])
+    }
+  }
+}
