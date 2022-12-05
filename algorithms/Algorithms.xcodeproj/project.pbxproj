@@ -83,6 +83,7 @@
 		47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */; };
 		47FE5298293BFB83007DA1CC /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE5297293BFB83007DA1CC /* ParkingSystem.swift */; };
 		47FE5299293BFB83007DA1CC /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE5297293BFB83007DA1CC /* ParkingSystem.swift */; };
+		47FE529B293DF1B4007DA1CC /* TestMediumLinkedListTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE529A293DF1B3007DA1CC /* TestMediumLinkedListTasks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -172,6 +173,7 @@
 		47BD69442939535C00A201EF /* TestMediumIntTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumIntTasks.swift; sourceTree = "<group>"; };
 		47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHashSetTasks.swift; sourceTree = "<group>"; };
 		47FE5297293BFB83007DA1CC /* ParkingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSystem.swift; sourceTree = "<group>"; };
+		47FE529A293DF1B3007DA1CC /* TestMediumLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumLinkedListTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -454,6 +456,7 @@
 				47B09BD428F4234700D0553D /* TestMediumDataStructuresTasks.swift */,
 				47BD69442939535C00A201EF /* TestMediumIntTasks.swift */,
 				47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */,
+				47FE529A293DF1B3007DA1CC /* TestMediumLinkedListTasks.swift */,
 				474244AC2901C2040030B299 /* TestMediumStringsTasks.swift */,
 			);
 			path = MediumTasks;
@@ -728,6 +731,7 @@
 				474244AD2901C2040030B299 /* TestMediumStringsTasks.swift in Sources */,
 				47B09BCD28F35B6E00D0553D /* EasyRecentCounter.swift in Sources */,
 				47B09BC428F2F9C100D0553D /* TestEasyLinkedListTasks.swift in Sources */,
+				47FE529B293DF1B4007DA1CC /* TestMediumLinkedListTasks.swift in Sources */,
 				47089EC8292271EB003838A3 /* TestMediumIntArrayTasks.swift in Sources */,
 				47B09BD528F4234700D0553D /* TestMediumDataStructuresTasks.swift in Sources */,
 				474244B129029F320030B299 /* TestEasyStringArrayTasks.swift in Sources */,

@@ -16,6 +16,20 @@ public class ListNode {
   public init(_ val: Int, _ next: ListNode?) { self.val = val; self.next = next; }
 }
 
+extension ListNode: Equatable {
+  public static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+    guard lhs.val == rhs.val else { return false }
+    var lhs: ListNode? = lhs.next, rhs: ListNode? = rhs.next
+    while lhs != nil {
+      guard lhs?.val == rhs?.val else { return false }
+      lhs = lhs?.next
+      rhs = rhs?.next
+    }
+    
+    return true
+  }
+}
+
 // MARK: - TreeNode
 public class TreeNode {
   public var val: Int

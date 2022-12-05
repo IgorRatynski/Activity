@@ -160,74 +160,19 @@ extension Solution.Medium {
   }
 }
 
-// MARK: TODO: Check
+// MARK: 2181. Merge Nodes in Between Zeros
 extension Solution.Medium {
-  func reverseBetween(_ head: ListNode?, _ left: Int, _ right: Int) -> ListNode? {
-    guard left != right else { return head }
-    
+  func mergeNodes(_ head: ListNode?) -> ListNode? {
+    guard head?.next != nil else { return nil }
     let result = head
-    var count = 1
     var head = head
-    var tempArray: [ListNode] = []
     
-    while head != nil {
-      if count >= left && count <= right {
-        tempArray.append(head!)
-      } else if count > right {
-        break
-      }
+    while head?.next?.val != 0 {
       head = head?.next
-      count += 1
+      result?.val += head?.val ?? 0
     }
     
-    var temp: Int
-    count = tempArray.count - 1
-    for index in 0...count / 2 {
-      temp = tempArray[index].val
-      tempArray[index].val = tempArray[count - index].val
-      tempArray[count - index].val = temp
-    }
-    
-    return result
-  }
-  
-  func testReverseBetween() {
-    let a =  ListNode(0, ListNode(1, ListNode(1, ListNode(2, ListNode(3, ListNode(3))))))
-    var result: ListNode? = reverseBetween(a, 2, 5)
-
-    while result != nil {
-     print("result: \(result?.val)")
-      result = result?.next
-    }
-    
-//    [3,5] == [5,3]
-//    1
-//    2
-  }
-}
-
-// TODO: Check
-extension Solution.Medium {
-  func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
-    let result = l1
-    var l1 = l1, l2 = l2, needToAdd = false
-        
-    while l2 != nil || needToAdd {
-      l1?.val = (l1?.val ?? 0) + (l2?.val ?? 0) + (needToAdd ? 1 : 0)
-      
-      if l1!.val > 9 {
-        l1!.val = l1!.val - 10
-        needToAdd = true
-      } else {
-        needToAdd = false
-      }
-      
-      if l1?.next == nil && (l2?.next != nil || needToAdd) {
-        l1?.next = ListNode()
-      }
-      l1 = l1?.next
-      l2 = l2?.next
-    }
+    result?.next = mergeNodes(head?.next)
     
     return result
   }
