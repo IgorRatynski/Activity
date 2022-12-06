@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47083A98293ED0E7008114FF /* OrderedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47083A97293ED0E7008114FF /* OrderedStream.swift */; };
+		47083A99293ED0E7008114FF /* OrderedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47083A97293ED0E7008114FF /* OrderedStream.swift */; };
 		47089EC8292271EB003838A3 /* TestMediumIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */; };
 		4724E69228CBFEA5009DD73F /* EasyHashMapTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724E69128CBFEA5009DD73F /* EasyHashMapTasks.swift */; };
 		472621D2288C913300B8D183 /* EasyIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472621D1288C913300B8D183 /* EasyIntArrayTasks.swift */; };
@@ -126,6 +128,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		47083A97293ED0E7008114FF /* OrderedStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedStream.swift; sourceTree = "<group>"; };
 		47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumIntArrayTasks.swift; sourceTree = "<group>"; };
 		47189D07288B92BA00FFB1A1 /* Hard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hard; sourceTree = BUILT_PRODUCTS_DIR; };
 		47189D0F288B932500FFB1A1 /* HardIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardIntArrayTasks.swift; sourceTree = "<group>"; };
@@ -376,6 +379,7 @@
 				47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */,
 				47B09BC928F35A8900D0553D /* EasyRecentCounter.swift */,
 				4766BF4E28B830E300081145 /* EasyQueueTasks.swift */,
+				47083A97293ED0E7008114FF /* OrderedStream.swift */,
 				47FE5297293BFB83007DA1CC /* ParkingSystem.swift */,
 			);
 			path = DataStructureTasks;
@@ -679,6 +683,7 @@
 				47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */,
 				4780DB0E28A69B1C00CC3615 /* EasyBinaryTreeTasks.swift in Sources */,
 				47FE5298293BFB83007DA1CC /* ParkingSystem.swift in Sources */,
+				47083A98293ED0E7008114FF /* OrderedStream.swift in Sources */,
 				474FC11E28FA843B00770403 /* EasyDoubleTasks.swift in Sources */,
 				4795A32A28ADB56C008B39EE /* EasyLinkedListTasks.swift in Sources */,
 				4766BF5028B830E300081145 /* EasyQueueTasks.swift in Sources */,
@@ -715,6 +720,7 @@
 				47B09BD328F4232400D0553D /* MediumTestCase.swift in Sources */,
 				47402BAF28EA69840000DF52 /* TestEasyIntArrayTasks.swift in Sources */,
 				4795A32628ADB548008B39EE /* MediumHashMap.swift in Sources */,
+				47083A99293ED0E7008114FF /* OrderedStream.swift in Sources */,
 				47402BB128EA69D80000DF52 /* EasyTestCase.swift in Sources */,
 				474FC12129387D4800770403 /* TestEasyDoubleTasks.swift in Sources */,
 				474FC11F28FA843D00770403 /* EasyDoubleTasks.swift in Sources */,

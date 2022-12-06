@@ -37,3 +37,19 @@ extension TestEasyDataStructureTasks {
     }
   }
 }
+
+// MARK: 1656. Design an Ordered Stream
+extension TestEasyDataStructureTasks {
+  func testDesignOrderedStream() {
+    let orderedStream = Solution.Easy.OrderedStream(5)
+    
+    let inputIds = [3,1,2,5,4]
+    let inputValues = ["ccccc","aaaaa","bbbbb","eeeee","ddddd"]
+    let outputs = [[], ["aaaaa"], ["bbbbb", "ccccc"], [], ["ddddd", "eeeee"]]
+    XCTAssertTrue(Set([inputIds.count, inputValues.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputIds.count {
+      XCTAssertEqual(orderedStream.insert(inputIds[i], inputValues[i]), outputs[i])
+    }
+  }
+}
