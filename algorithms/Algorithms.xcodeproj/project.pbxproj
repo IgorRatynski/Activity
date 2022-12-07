@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4701C9C8293F1CAA00497E8F /* MediumBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4701C9C7293F1CAA00497E8F /* MediumBinaryTreeTasks.swift */; };
+		4701C9CD293F1D0300497E8F /* TestMediumBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4701C9CC293F1D0300497E8F /* TestMediumBinaryTreeTasks.swift */; };
+		4701C9CE293F1E6900497E8F /* MediumBinaryTreeTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4701C9C7293F1CAA00497E8F /* MediumBinaryTreeTasks.swift */; };
 		47083A98293ED0E7008114FF /* OrderedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47083A97293ED0E7008114FF /* OrderedStream.swift */; };
 		47083A99293ED0E7008114FF /* OrderedStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47083A97293ED0E7008114FF /* OrderedStream.swift */; };
 		47089EC8292271EB003838A3 /* TestMediumIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */; };
@@ -128,6 +131,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4701C9C7293F1CAA00497E8F /* MediumBinaryTreeTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumBinaryTreeTasks.swift; sourceTree = "<group>"; };
+		4701C9CC293F1D0300497E8F /* TestMediumBinaryTreeTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumBinaryTreeTasks.swift; sourceTree = "<group>"; };
 		47083A97293ED0E7008114FF /* OrderedStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedStream.swift; sourceTree = "<group>"; };
 		47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumIntArrayTasks.swift; sourceTree = "<group>"; };
 		47189D07288B92BA00FFB1A1 /* Hard */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hard; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +223,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4701C9C6293F1C9600497E8F /* BinaryTree */ = {
+			isa = PBXGroup;
+			children = (
+				4701C9C7293F1CAA00497E8F /* MediumBinaryTreeTasks.swift */,
+			);
+			path = BinaryTree;
+			sourceTree = "<group>";
+		};
 		47189D08288B92BA00FFB1A1 /* Hard */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +317,7 @@
 		472A994C2883970800D7ACEE /* Medium */ = {
 			isa = PBXGroup;
 			children = (
+				4701C9C6293F1C9600497E8F /* BinaryTree */,
 				474244B229070AB20030B299 /* CharaterArrayTasks */,
 				47B09BCE28F41E0100D0553D /* DataStructureTasks */,
 				4762805928A6F3D50068F752 /* HashMap */,
@@ -457,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				47B09BD228F4232400D0553D /* MediumTestCase.swift */,
+				4701C9CC293F1D0300497E8F /* TestMediumBinaryTreeTasks.swift */,
 				47B09BD428F4234700D0553D /* TestMediumDataStructuresTasks.swift */,
 				47BD69442939535C00A201EF /* TestMediumIntTasks.swift */,
 				47089EC7292271EB003838A3 /* TestMediumIntArrayTasks.swift */,
@@ -703,6 +718,7 @@
 				476DFD592883A09D009C266B /* DataStructures.swift in Sources */,
 				472A99612883986600D7ACEE /* Solution.swift in Sources */,
 				474244B629070B600030B299 /* MediumCharaterArrayTasks.swift in Sources */,
+				4701C9C8293F1CAA00497E8F /* MediumBinaryTreeTasks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,6 +753,7 @@
 				474244AD2901C2040030B299 /* TestMediumStringsTasks.swift in Sources */,
 				47B09BCD28F35B6E00D0553D /* EasyRecentCounter.swift in Sources */,
 				47B09BC428F2F9C100D0553D /* TestEasyLinkedListTasks.swift in Sources */,
+				4701C9CE293F1E6900497E8F /* MediumBinaryTreeTasks.swift in Sources */,
 				47FE529B293DF1B4007DA1CC /* TestMediumLinkedListTasks.swift in Sources */,
 				47089EC8292271EB003838A3 /* TestMediumIntArrayTasks.swift in Sources */,
 				47B09BD528F4234700D0553D /* TestMediumDataStructuresTasks.swift in Sources */,
@@ -744,6 +761,7 @@
 				4766BF5128B830E300081145 /* EasyQueueTasks.swift in Sources */,
 				47B09BCC28F35ADA00D0553D /* TestEasyDataStructureTasks.swift in Sources */,
 				474244AF2901C5AE0030B299 /* MediumStringTasks.swift in Sources */,
+				4701C9CD293F1D0300497E8F /* TestMediumBinaryTreeTasks.swift in Sources */,
 				4795A32F28ADB580008B39EE /* DataStructures.swift in Sources */,
 				4795A32528ADB485008B39EE /* Solution.swift in Sources */,
 				4795A32728ADB54C008B39EE /* MediumIntArrayTasks.swift in Sources */,
