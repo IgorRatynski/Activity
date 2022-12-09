@@ -169,3 +169,17 @@ extension TestEasyIntArrayTasks {
     }
   }
 }
+
+// MARK: 136. Single Number
+extension TestEasyIntArrayTasks {
+  func testSingleNumber() {
+    let inputs = [[2,2,1],[4,1,2,1,2],[1]]
+    let outputs = [1,4,1]
+    XCTAssertTrue(Set([inputs.count, outputs.count]).count == 1)
+    
+    for i in 0..<inputs.count {
+      XCTAssertEqual(solution.singleNumber(inputs[i]), outputs[i])
+    }
+  }
+}
+

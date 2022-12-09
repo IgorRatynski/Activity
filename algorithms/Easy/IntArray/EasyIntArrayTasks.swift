@@ -23,22 +23,35 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Single number
+// MARK: 136. Single Number
 extension Solution.Easy {
   func singleNumber(_ nums: [Int]) -> Int {
-    var result: [Int] = [], cache: [Int:Int] = [:]
     
-    for value in nums {
-      cache[value] = (cache[value] ?? 0) + 1
-      if cache[value] == 1 {
-        result.append(value)
-      } else {
-        guard let index = result.firstIndex(of: value) else { continue }
-        result.remove(at: index)
+//    // I: hashmap
+//    var cache: [Int:Int] = [:]
+//
+//    for value in nums {
+//      cache[value] = (cache[value] ?? 0) + 1
+//      guard cache[value] == 2 else { continue }
+//      cache[value] = nil
+//    }
+//
+//    return cache.first!.key
+    
+    // II: two pointers
+    var match: Bool
+    
+    for i in 0..<nums.count {
+      match = false
+      for j in 0..<nums.count {
+        guard i != j, nums[i] == nums[j] else { continue }
+        match = true
+        break
       }
+      guard match else { return nums[i] }
     }
     
-    return result.first!
+    return 0
   }
 }
 
