@@ -151,9 +151,3 @@ extension Solution.Medium {
     return -1
   }
 }
-      }
-    }
-    
-    return matrix[p][mid] == target
-  }
-}
