@@ -38,20 +38,29 @@ extension Solution.Easy {
 //
 //    return cache.first!.key
     
-    // II: two pointers
-    var match: Bool
+//    // II: two pointers
+//    var match: Bool
+//
+//    for i in 0..<nums.count {
+//      match = false
+//      for j in 0..<nums.count {
+//        guard i != j, nums[i] == nums[j] else { continue }
+//        match = true
+//        break
+//      }
+//      guard match else { return nums[i] }
+//    }
+//
+//    return 0
     
-    for i in 0..<nums.count {
-      match = false
-      for j in 0..<nums.count {
-        guard i != j, nums[i] == nums[j] else { continue }
-        match = true
-        break
-      }
-      guard match else { return nums[i] }
-    }
+    // III: bit multiplying
+    nums.reduce(0, ^)
     
-    return 0
+//    var element = nums[0]
+//    for i in 1..<nums.count {
+//        element ^= nums[i]
+//    }
+//    return element
   }
 }
 
