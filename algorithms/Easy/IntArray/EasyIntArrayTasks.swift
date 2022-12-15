@@ -698,3 +698,20 @@ extension Solution.Easy {
     return -1
   }
 }
+
+// MARK: 121. Best Time to Buy and Sell Stock
+extension Solution.Easy {
+  func maxProfit(_ prices: [Int]) -> Int {
+    var result = 0, minProfit = prices[0]
+
+    for i in 1..<prices.count {
+      if minProfit > prices[i] {
+        minProfit = prices[i]
+      } else {
+        result = max(result, prices[i] - minProfit)
+      }
+    }
+    
+    return result
+  }
+}
