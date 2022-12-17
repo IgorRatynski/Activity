@@ -94,3 +94,19 @@ extension TestMediumIntArrayTasks {
     }
   }
 }
+
+// MARK: 347. Top K Frequent Elements
+extension TestMediumIntArrayTasks {
+  func testTopKFrequentElements() {
+    let arrays = [[1,1,1,2,2,3], [1]]
+    let ks = [2, 1]
+    let outputs = [[1,2], [1]]
+
+    let set = Set([arrays.count, ks.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.topKFrequent(arrays[i], ks[i]), outputs[i])
+    }
+  }
+}

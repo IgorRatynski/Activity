@@ -185,7 +185,6 @@ extension Solution.Medium {
 // MARK: 54. Spiral Matrix
 extension Solution.Medium {
   func spiralOrder(_ matrix: [[Int]]) -> [Int] {
-    guard matrix.count > 1 else { return matrix.first! }
     guard matrix[0].count > 1 else { return matrix.map { $0.first! } }
     var directions = [true, true], currentDirection = 0, result: [Int] = [], horizontalPointer = 0, verticalPointer = 0, leftLimit = 0, rightLimit = matrix[0].count - 1, upLimit = 1, downLimit = matrix.count - 1
     result.append(matrix[verticalPointer][horizontalPointer])
@@ -229,5 +228,20 @@ extension Solution.Medium {
     }
     
     return result
+  }
+}
+
+// MARK: 347. Top K Frequent Elements
+extension Solution.Medium {
+  func topKFrequent(_ nums: [Int], _ k: Int) -> [Int] {
+    var map: [Int:Int] = [:]
+    
+    for num in nums {
+      map[num] = (map[num] ?? 0) + 1
+    }
+    
+    return map.sorted { $0.value > $1.value }
+              .dropLast(map.count - k)
+              .map { $0.key }
   }
 }
