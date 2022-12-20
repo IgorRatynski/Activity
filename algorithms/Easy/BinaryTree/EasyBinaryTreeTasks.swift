@@ -36,3 +36,11 @@ extension Solution.Easy {
     return leftLeafs == rightLeafs
   }
 }
+
+// MARK: 100. Same Tree
+extension Solution.Easy {
+  func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
+    guard let p = p, let q = q else { return p?.val == q?.val }
+    return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
+  }
+}

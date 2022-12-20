@@ -43,3 +43,18 @@ extension TestEasyBinaryTreeTasks {
     }
   }
 }
+
+// MARK: 100. Same Tree
+extension TestEasyBinaryTreeTasks {
+  func testSameTree() {
+    let rootsLeft = [TreeNode(1, TreeNode(2), TreeNode(1))]
+    let rootsRight = [TreeNode(1, TreeNode(1), TreeNode(2))]
+    let outputs = [false]
+    let set = Set([rootsLeft.count, rootsRight.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+    
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.isSameTree(rootsLeft[i], rootsRight[i]), outputs[i])
+    }
+  }
+}
