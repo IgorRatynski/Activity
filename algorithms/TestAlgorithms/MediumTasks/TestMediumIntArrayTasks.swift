@@ -64,3 +64,18 @@ extension TestMediumIntArrayTasks {
     }
   }
 }
+
+// MARK: 11. Container With Most Water
+extension TestMediumIntArrayTasks {
+  func testContainerWithMostWater() {
+    let arrays = [[1,8,6,2,5,4,8,3,7], [1,1]]
+    let outputs = [49,1]
+
+    let set = Set([arrays.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.maxArea(arrays[i]), outputs[i])
+    }
+  }
+}

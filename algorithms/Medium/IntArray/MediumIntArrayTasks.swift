@@ -151,3 +151,33 @@ extension Solution.Medium {
     return -1
   }
 }
+
+// MARK: 11. Container With Most Water
+extension Solution.Medium {
+  func maxArea(_ height: [Int]) -> Int {
+    var l = 0, r = height.count - 1, result = 0, waterAmount: Int, value: Int, maxValue = 10000, breakCycle = false
+    
+    while l < r {
+      
+      if height[l] <= height[r] {
+        value = height[l]
+        breakCycle = value == maxValue && height[r] == maxValue
+        l += 1
+      } else {
+        value = height[r]
+        breakCycle = value == maxValue && height[r] == maxValue
+        r -= 1
+      }
+      
+      waterAmount = value * (r - l + 1)
+      
+      if waterAmount > result {
+        result = waterAmount
+      }
+      
+      guard !breakCycle else { break }
+    }
+    
+    return result
+  }
+}
