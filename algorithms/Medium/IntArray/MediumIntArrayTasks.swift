@@ -181,3 +181,53 @@ extension Solution.Medium {
     return result
   }
 }
+
+// MARK: 54. Spiral Matrix
+extension Solution.Medium {
+  func spiralOrder(_ matrix: [[Int]]) -> [Int] {
+    guard matrix.count > 1 else { return matrix.first! }
+    guard matrix[0].count > 1 else { return matrix.map { $0.first! } }
+    var directions = [true, true], currentDirection = 0, result: [Int] = [], horizontalPointer = 0, verticalPointer = 0, leftLimit = 0, rightLimit = matrix[0].count - 1, upLimit = 1, downLimit = matrix.count - 1
+    result.append(matrix[verticalPointer][horizontalPointer])
+    
+    for _ in 2...(matrix.count * matrix[0].count) {
+      if currentDirection == 0 {
+        horizontalPointer += directions[currentDirection] ? 1 : -1
+        
+        if directions[currentDirection] {
+          if horizontalPointer == rightLimit {
+            directions[currentDirection] = !directions[currentDirection]
+            currentDirection = currentDirection == 0 ? 1 : 0
+            rightLimit -= 1
+          }
+        } else {
+          if horizontalPointer == leftLimit {
+            directions[currentDirection] = !directions[currentDirection]
+            currentDirection = currentDirection == 0 ? 1 : 0
+            leftLimit += 1
+          }
+        }
+        
+      } else {
+        verticalPointer += directions[currentDirection] ? 1 : -1
+        
+        if directions[currentDirection] {
+          if verticalPointer == downLimit {
+            directions[currentDirection] = !directions[currentDirection]
+            currentDirection = currentDirection == 0 ? 1 : 0
+            downLimit -= 1
+          }
+        } else {
+          if verticalPointer == upLimit {
+            directions[currentDirection] = !directions[currentDirection]
+            currentDirection = currentDirection == 0 ? 1 : 0
+            upLimit += 1
+          }
+        }
+      }
+      result.append(matrix[verticalPointer][horizontalPointer])
+    }
+    
+    return result
+  }
+}

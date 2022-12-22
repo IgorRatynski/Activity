@@ -79,3 +79,18 @@ extension TestMediumIntArrayTasks {
     }
   }
 }
+
+// MARK: 54. Spiral Matrix
+extension TestMediumIntArrayTasks {
+  func testSpiralMatrix() {
+    let arrays = [[[1,2,3],[4,5,6],[7,8,9]], [[1,2,3,4],[5,6,7,8],[9,10,11,12]], [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]], [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]]]
+    let outputs = [[1,2,3,6,9,8,7,4,5], [1,2,3,4,8,12,11,10,9,5,6,7], [1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10], [1,2,3,4,5,10,15,20,19,18,17,16,11,6,7,8,9,14,13,12]]
+
+    let set = Set([arrays.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.spiralOrder(arrays[i]), outputs[i])
+    }
+  }
+}
