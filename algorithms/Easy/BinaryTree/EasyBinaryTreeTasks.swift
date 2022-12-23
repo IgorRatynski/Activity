@@ -44,3 +44,15 @@ extension Solution.Easy {
     return p.val == q.val && isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
   }
 }
+
+// MARK: 101. Symmetric Tree
+extension Solution.Easy {
+  func isSymmetric(_ root: TreeNode?) -> Bool {
+    isEqual(root?.left, to: root?.right)
+  }
+  
+  private func isEqual(_ left: TreeNode?, to right: TreeNode?) -> Bool {
+    guard let left = left, let right = right else { return left?.val == right?.val }
+    return left.val == right.val && isEqual(left.left, to: right.right) && isEqual(left.right, to: right.left)
+  }
+}
