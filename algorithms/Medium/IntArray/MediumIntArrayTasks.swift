@@ -245,3 +245,17 @@ extension Solution.Medium {
               .map { $0.key }
   }
 }
+
+// MARK: 122. Best Time to Buy and Sell Stock II
+extension Solution.Medium {
+  func maxProfit(_ prices: [Int]) -> Int {
+    var result = 0
+
+    for i in 1..<prices.count {
+      guard prices[i-1] < prices[i] else { continue }
+      result += prices[i] - prices[i-1]
+   }
+
+   return result
+  }
+}
