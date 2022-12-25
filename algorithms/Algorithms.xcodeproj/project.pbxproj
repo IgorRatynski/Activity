@@ -92,6 +92,7 @@
 		47D2ADE42941E79F004BB9B5 /* HardTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D2ADE32941E79F004BB9B5 /* HardTestCase.swift */; };
 		47D2ADE62941E7C7004BB9B5 /* TestHardLinkedListTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D2ADE52941E7C7004BB9B5 /* TestHardLinkedListTasks.swift */; };
 		47D3147928CE78E700CF813C /* EasyHashSetTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */; };
+		47ED4F392957AD65008B8CEE /* TestHardIntArrayTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47ED4F382957AD65008B8CEE /* TestHardIntArrayTasks.swift */; };
 		47FE5298293BFB83007DA1CC /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE5297293BFB83007DA1CC /* ParkingSystem.swift */; };
 		47FE5299293BFB83007DA1CC /* ParkingSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE5297293BFB83007DA1CC /* ParkingSystem.swift */; };
 		47FE529B293DF1B4007DA1CC /* TestMediumLinkedListTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE529A293DF1B3007DA1CC /* TestMediumLinkedListTasks.swift */; };
@@ -193,6 +194,7 @@
 		47D2ADE52941E7C7004BB9B5 /* TestHardLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHardLinkedListTasks.swift; sourceTree = "<group>"; };
 		47D2ADE729422C9F004BB9B5 /* GuessGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessGame.swift; sourceTree = "<group>"; };
 		47D3147828CE78E700CF813C /* EasyHashSetTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyHashSetTasks.swift; sourceTree = "<group>"; };
+		47ED4F382957AD65008B8CEE /* TestHardIntArrayTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHardIntArrayTasks.swift; sourceTree = "<group>"; };
 		47FE5297293BFB83007DA1CC /* ParkingSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingSystem.swift; sourceTree = "<group>"; };
 		47FE529A293DF1B3007DA1CC /* TestMediumLinkedListTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestMediumLinkedListTasks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -543,6 +545,7 @@
 			isa = PBXGroup;
 			children = (
 				47D2ADE32941E79F004BB9B5 /* HardTestCase.swift */,
+				47ED4F382957AD65008B8CEE /* TestHardIntArrayTasks.swift */,
 				47D2ADE52941E7C7004BB9B5 /* TestHardLinkedListTasks.swift */,
 			);
 			path = HardTasks;
@@ -807,6 +810,7 @@
 				47D2ADDD2940B416004BB9B5 /* TestEasyBinaryTreeTasks.swift in Sources */,
 				474244B129029F320030B299 /* TestEasyStringArrayTasks.swift in Sources */,
 				4766BF5128B830E300081145 /* EasyQueueTasks.swift in Sources */,
+				47ED4F392957AD65008B8CEE /* TestHardIntArrayTasks.swift in Sources */,
 				47B09BCC28F35ADA00D0553D /* TestEasyDataStructureTasks.swift in Sources */,
 				474244AF2901C5AE0030B299 /* MediumStringTasks.swift in Sources */,
 				4701C9CD293F1D0300497E8F /* TestMediumBinaryTreeTasks.swift in Sources */,
