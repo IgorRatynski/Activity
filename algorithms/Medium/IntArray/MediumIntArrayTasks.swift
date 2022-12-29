@@ -260,3 +260,16 @@ extension Solution.Medium {
    return result
   }
 }
+
+// MARK: 1833. Maximum Ice Cream Bars
+extension Solution.Medium {
+    func maxIceCream(_ costs: [Int], _ coins: Int) -> Int {
+      var result = 0, coins = coins
+      for cost in costs.sorted(by: { $0 < $1 }) {
+        guard coins >= cost else { return result }
+        coins -= cost
+        result += 1
+      }
+      return result
+    }
+}
