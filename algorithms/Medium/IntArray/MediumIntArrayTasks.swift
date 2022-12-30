@@ -273,3 +273,21 @@ extension Solution.Medium {
       return result
     }
 }
+
+// MARK: 153. Find Minimum in Rotated Sorted Array
+extension Solution.Medium {
+  func findMin(_ nums: [Int]) -> Int {
+    var low = 0, high = nums.count - 1, mid: Int
+    
+    while low < high {
+      mid = (low + high) / 2
+      if nums[mid] > nums[high] {
+        low = mid + 1
+      } else {
+        high = mid
+      }
+    }
+    
+    return nums[low]
+  }
+}
