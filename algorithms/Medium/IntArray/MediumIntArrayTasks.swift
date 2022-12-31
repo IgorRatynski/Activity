@@ -291,3 +291,29 @@ extension Solution.Medium {
     return nums[low]
   }
 }
+
+// MARK: 81. Search in Rotated Sorted Array II
+extension Solution.Medium {
+  func search(_ nums: [Int], _ target: Int) -> Bool {
+    // I
+//    return Set(nums).contains(target)
+    
+    // II
+    let nums = Set(nums).sorted { $0 < $1 }
+    var low = 0, high = nums.count - 1, mid: Int
+    
+    while low <= high {
+      mid = (low + high) / 2
+
+      if nums[mid] > target {
+        high = mid - 1
+      } else if nums[mid] < target {
+        low = mid + 1
+      } else {
+        return true
+      }
+    }
+
+    return false
+  }
+}

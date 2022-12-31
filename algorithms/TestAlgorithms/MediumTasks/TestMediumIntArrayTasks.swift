@@ -110,3 +110,19 @@ extension TestMediumIntArrayTasks {
     }
   }
 }
+
+// MARK: Search in Rotated Sorted Array II
+extension TestMediumIntArrayTasks {
+  func testSearchInRotatedSortedArrayII() {
+    let arrays = [[1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,1,1,1,1],[6],[0],[6,0],[6,0],[2,5,6,0,0,1,2],[2,5,6,0,0,1,2]]
+    let targets = [2,0,0,0,3,3,0]
+    let outputs = [true,false,true,true,false,false,true]
+
+    let set = Set([arrays.count, targets.count, outputs.count])
+    XCTAssertTrue(set.count == 1)
+
+    for i in 0..<set.first! {
+      XCTAssertEqual(solution.search(arrays[i], targets[i]), outputs[i])
+    }
+  }
+}
