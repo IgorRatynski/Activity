@@ -24,7 +24,7 @@ extension Solution.Easy {
   }
 }
 
-// MARK: Reverse list
+// MARK: 206. Reverse Linked List
 extension Solution.Easy {
   func reverseList(_ head: ListNode?) -> ListNode? {
     let result = head
@@ -36,9 +36,8 @@ extension Solution.Easy {
     }
     
     head = result
-    let max = array.count - 1
-    for index in 0..<array.count {
-      head?.val = array[max - index]
+    for index in stride(from: array.count-1, through: 0, by: -1) {
+      head?.val = array[index]
       head = head?.next
     }
     
