@@ -7,25 +7,24 @@
 
 import Foundation
 
-// MARK: Delete duplicates
+// MARK: 82. Remove Duplicates from Sorted List II
 extension Solution.Medium {
   func deleteDuplicates(_ head: ListNode?) -> ListNode? {
     let result = ListNode()
-    var lastValue: Int?
-    var currentNode: ListNode? = result
-    var head = head
+    var temp: Int, currentNode: ListNode? = result, head = head
     
     while head != nil {
       if head?.val == head?.next?.val {
-        lastValue = head?.val
-      } else {
-        if head?.val != lastValue {
-          currentNode?.next = head
-          currentNode = currentNode?.next
+        temp = head!.val
+        while head?.val == temp {
+          head = head?.next
         }
+      } else {
+        currentNode?.next = head
+        currentNode = currentNode?.next
+        head = head?.next
       }
-      
-      head = head?.next
+
       currentNode?.next = nil
     }
 
