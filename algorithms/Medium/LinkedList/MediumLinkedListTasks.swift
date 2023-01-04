@@ -176,3 +176,30 @@ extension Solution.Medium {
     return result
   }
 }
+
+// MARK: 2. Add Two Numbers
+extension Solution.Medium {
+  func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    let result = l1
+    var l1 = l1, l2 = l2, needToAdd = false
+        
+    while l2 != nil || needToAdd {
+      l1?.val = (l1?.val ?? 0) + (l2?.val ?? 0) + (needToAdd ? 1 : 0)
+      
+      if l1!.val > 9 {
+        l1!.val = l1!.val - 10
+        needToAdd = true
+      } else {
+        needToAdd = false
+      }
+      
+      if l1?.next == nil && (l2?.next != nil || needToAdd) {
+        l1?.next = ListNode()
+      }
+      l1 = l1?.next
+      l2 = l2?.next
+    }
+    
+    return result
+  }
+}
