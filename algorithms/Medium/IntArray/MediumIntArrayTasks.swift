@@ -116,7 +116,7 @@ extension Solution.Medium {
   func search(_ nums: [Int], _ target: Int) -> Int {
     guard !nums.isEmpty else { return -1 }
     var low = 0, high = nums.count - 1, mid: Int
-    
+
     while low < high {
       mid = (high + low) / 2
       if nums[mid] > nums[high] {
@@ -125,29 +125,29 @@ extension Solution.Medium {
         high = mid
       }
     }
-    
+
     let pivot = low
     low = 0
     high = nums.count - 1
+
     if target >= nums[pivot] && target <= nums[high] {
       low = pivot
     } else {
       high = pivot
     }
-    
-    mid = (high + low) / 2
-    
+
     while low <= high {
-      guard nums[mid] != target else { return mid }
-      
-      if nums[mid] > target {
+      mid = (low + high) / 2
+
+      if nums[mid] < target {
+        low = mid + 1
+      } else if nums[mid] > target {
         high = mid - 1
       } else {
-        low = mid + 1
+        return mid
       }
-      mid = (low + high) / 2
     }
-    
+
     return -1
   }
 }
