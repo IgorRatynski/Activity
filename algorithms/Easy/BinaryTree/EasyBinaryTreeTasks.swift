@@ -56,3 +56,19 @@ extension Solution.Easy {
     return left.val == right.val && isEqual(left.left, to: right.right) && isEqual(left.right, to: right.left)
   }
 }
+
+// MARK: 144. Binary Tree Preorder Traversal
+extension Solution.Easy {
+  func preorderTraversal(_ root: TreeNode?) -> [Int] {
+    var result: [Int] = []
+    write(root: root, to: &result)
+    return result
+  }
+  
+  private func write(root: TreeNode?, to array: inout [Int]) {
+    guard root != nil else { return }
+    array.append(root!.val)
+    write(root: root?.left, to: &array)
+    write(root: root?.right, to: &array)
+  }
+}
