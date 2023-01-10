@@ -73,5 +73,18 @@ extension Solution.Easy {
   }
 }
 
+// MARK: 145. Binary Tree Postorder Traversal
+extension Solution.Easy {
+  func postorderTraversal(_ root: TreeNode?) -> [Int] {
+    var result: [Int] = []
+    postwrite(root: root, to: &result)
+    return result
+  }
+  
+  private func postwrite(root: TreeNode?, to array: inout [Int]) {
+    guard root != nil else { return }
+    postwrite(root: root?.left, to: &array)
+    postwrite(root: root?.right, to: &array)
+    array.append(root!.val)
   }
 }
