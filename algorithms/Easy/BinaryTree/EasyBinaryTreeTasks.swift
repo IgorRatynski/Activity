@@ -61,14 +61,17 @@ extension Solution.Easy {
 extension Solution.Easy {
   func preorderTraversal(_ root: TreeNode?) -> [Int] {
     var result: [Int] = []
-    write(root: root, to: &result)
+    prewrite(root: root, to: &result)
     return result
   }
   
-  private func write(root: TreeNode?, to array: inout [Int]) {
+  private func prewrite(root: TreeNode?, to array: inout [Int]) {
     guard root != nil else { return }
     array.append(root!.val)
-    write(root: root?.left, to: &array)
-    write(root: root?.right, to: &array)
+    prewrite(root: root?.left, to: &array)
+    prewrite(root: root?.right, to: &array)
+  }
+}
+
   }
 }
