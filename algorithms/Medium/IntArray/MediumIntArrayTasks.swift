@@ -119,7 +119,7 @@ extension Solution.Medium {
     var low = 0, high = nums.count - 1, mid: Int
 
     while low < high {
-      mid = (high + low) / 2
+      mid = (low + high) / 2
       if nums[mid] > nums[high] {
         low = mid + 1
       } else {
@@ -140,9 +140,9 @@ extension Solution.Medium {
     while low <= high {
       mid = (low + high) / 2
 
-      if nums[mid] < target {
+      if target > nums[mid] {
         low = mid + 1
-      } else if nums[mid] > target {
+      } else if target < nums[mid] {
         high = mid - 1
       } else {
         return mid
